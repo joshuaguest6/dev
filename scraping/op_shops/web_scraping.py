@@ -82,21 +82,91 @@ def get_salvos_stores():
         with open(SALVOS_FILE, 'r') as f:
             salvos_stores = json.load(f)
     else:
-        ## Selenium for Salvos website 
-        driver = webdriver.Chrome()
-        driver.get("https://www.salvosstores.com.au/stores")
+        # ## Selenium for Salvos website 
+        # driver = webdriver.Chrome()
+        # driver.get("https://www.salvosstores.com.au/stores")
 
-        # Execute JS inside the browser context to fetch the JSON
-        salvos_stores = driver.execute_script("""
-        return fetch('/api/uplister/store-list')
-            .then(response => response.json())
-        """)
+        # # Execute JS inside the browser context to fetch the JSON
+        # salvos_stores = driver.execute_script("""
+        # return fetch('/api/uplister/store-list')
+        #     .then(response => response.json())
+        # """)
 
-        print(len(salvos_stores))  # total stores
-        driver.quit()
+        # print(len(salvos_stores))  # total stores
+        # driver.quit()
 
-        with open(SALVOS_FILE, 'w') as f:
-            json.dump(salvos_stores, f)
+        # with open(SALVOS_FILE, 'w') as f:
+        #     json.dump(salvos_stores, f)
+        salvos_stores = {
+            "1": {
+                "EnablePickUp": 0,
+                "FeaturedProducts": [],
+                "FullAddress": "Units 3&4/38-40 Weedon Close<br>Belconnen ACT 2617",
+                "GoogleMapLink": "https://www.google.com/maps/dir//38+Weedon+Cl,+Belconnen+ACT+2617/@-35.2418099,149.0608735",
+                "HiddenStore": 0,
+                "Images": [],
+                "Introduction": None,
+                "LastEdited": "2025-09-29 09:36:13",
+                "Latitude": "-35.2418099",
+                "Longitude": "149.0608735",
+                "Name": "Belconnen",
+                "Number": "Units 3&4/38-40",
+                "OnlineOnly": 0,
+                "OpeningDate": None,
+                "OpeningHours": {
+                    "Friday": {
+                        "Closing": "17:30:00",
+                        "Opening": "09:00:00"
+                    },
+                    "Monday": {
+                        "Closing": "17:30:00",
+                        "Opening": "09:00:00"
+                    },
+                    "Saturday": {
+                        "Closing": "17:00:00",
+                        "Opening": "09:00:00"
+                    },
+                    "Sunday": "Close",
+                    "Thursday": {
+                        "Closing": "17:30:00",
+                        "Opening": "09:00:00"
+                    },
+                    "Tuesday": {
+                        "Closing": "17:30:00",
+                        "Opening": "09:00:00"
+                    },
+                    "Wednesday": {
+                        "Closing": "17:30:00",
+                        "Opening": "09:00:00"
+                    }
+                },
+                "Phone": "(02) 6251 0843",
+                "Postcode": "2617",
+                "SaleorId": "V2FyZWhvdXNlOmU3ZjRlOWRmLTY3MTgtNDdhYi1hMjM5LTU1NjM2NjRhYmZiNQ==",
+                "SeoCopyLeft": None,
+                "SeoCopyRight": None,
+                "StateAbbreviation": "ACT",
+                "StateName": "Australian Capital Territory",
+                "StoreID": "8607",
+                "StoreLink": "https://uplister.com.au/stores/act/2617-belconnen-8607",
+                "StreetName": "Weedon",
+                "StreetType": "Close",
+                "SuburbName": "Belconnen",
+                "URL": "https://uplister.com.au/act/2617-belconnen-8607",
+                "VirtualTourLink": None,
+                "isBooksToysCDs": 1,
+                "isClosed": 0,
+                "isClothing": 1,
+                "isElectricalGoods": 1,
+                "isFurniture": 0,
+                "isHomewares": 1,
+                "isNewMattresses": 1,
+                "isOpeningSoon": 0,
+                "isPermanentlyClosed": 0,
+                "isStreetBoutique": 0,
+                "isSundayDonation": 0
+            }
+        }
 
 
     store_data = []
