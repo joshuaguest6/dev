@@ -11,8 +11,8 @@ import json
 
 from geopy.geocoders import Nominatim
     
-CACHE_FILE = 'geocode_cache.json'
-SALVOS_FILE = 'salvos_stores.json'
+CACHE_FILE = 'scraping\op_shops\geocode_cache.json'
+SALVOS_FILE = 'scraping\op_shops\salvos_stores.json'
 
 if os.path.exists(CACHE_FILE):
     with open(CACHE_FILE, 'r') as f:
@@ -78,9 +78,6 @@ def get_salvos_stores():
         with open(SALVOS_FILE, 'r') as f:
             salvos_stores = json.load(f)
     else:
-        print(f'cant see {SALVOS_FILE}')
-        print("Current working directory:", os.getcwd())
-        print("Files in directory:", os.listdir('.'))
         ## Selenium for Salvos website 
         chrome_options = Options()
         chrome_options.add_argument("--headless")
