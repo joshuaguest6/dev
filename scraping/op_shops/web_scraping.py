@@ -10,10 +10,6 @@ import re
 import json
 
 from geopy.geocoders import Nominatim
-
-chrome_options = Options()
-chrome_options.add_argument("--headless")
-driver = webdriver.Chrome(options=chrome_options)
     
 CACHE_FILE = 'geocode_cache.json'
 SALVOS_FILE = 'salvos_stores.json'
@@ -83,7 +79,10 @@ def get_salvos_stores():
             salvos_stores = json.load(f)
     else:
         # ## Selenium for Salvos website 
-        # driver = webdriver.Chrome()
+        # chrome_options = Options()
+        # chrome_options.add_argument("--headless")
+        # driver = webdriver.Chrome(options=chrome_options)
+
         # driver.get("https://www.salvosstores.com.au/stores")
 
         # # Execute JS inside the browser context to fetch the JSON
