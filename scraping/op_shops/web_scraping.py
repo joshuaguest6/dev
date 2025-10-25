@@ -11,8 +11,8 @@ import json
 
 from geopy.geocoders import Nominatim
     
-CACHE_FILE = 'scraping\op_shops\geocode_cache.json'
-SALVOS_FILE = 'scraping\op_shops\salvos_stores.json'
+CACHE_FILE = 'scraping/op_shops/geocode_cache.json'
+SALVOS_FILE = 'scraping/op_shops/salvos_stores.json'
 
 if os.path.exists(CACHE_FILE):
     with open(CACHE_FILE, 'r') as f:
