@@ -1,20 +1,61 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 
 import pandas as pd
-import streamlit as st
 from datetime import datetime
+import streamlit as st
 import os
 import requests
 import re
+import json
 
 from geopy.geocoders import Nominatim
-import time
+
+chrome_options = Options()
+chrome_options.add_argument("--headless")
+driver = webdriver.Chrome(options=chrome_options)
+    
+CACHE_FILE = 'geocode_cache.json'
+
+if os.path.exists(CACHE_FILE):
+    with open(CACHE_FILE, 'r') as f:
+        geocode_cache = json.load(f)
+else:
+    geocode_cache = {}
 
 geolocator = Nominatim(user_agent="opshop_locator")
 
-def normalize_address(addr):
+def get_latlon(address):
+    if address in geocode_cache:
+        return geocode_cache[address]
+    
+    location = geolocator.geocode(address, timeout=10)
+    if not location:
+        # Retry: drop first part (like a store name)
+        parts = address.split(',', 1)
+        if len(parts) > 1:
+            location = geolocator.geocode(parts[1].strip(), timeout=10)
+    if location:
+        latlon = (location.latitude, location.longitude)
+    else:
+        latlon = (None, None)
+    
+    geocode_cache[address] = latlon
+
+    with open(CACHE_FILE, 'w') as f:
+        json.dump(geocode_cache, f)
+
+    return latlon
+    
+def format_address(addr):
     if not addr:
         return ''
+    # Replace newline and parentheses pattern: "X\r\n (Y)" → "X, Y"
+    addr = re.sub(r'\r?\n\s*\((.*?)\)', r', \1', addr)
+    # Also handle "X (Y)" → "X, Y"
+    addr = re.sub(r'\s*\((.*?)\)', r', \1', addr)
+    # return addr.strip()
+
     addr = addr.strip()
 
     # Expand "Cnr" → "Corner of"
@@ -32,40 +73,10 @@ def normalize_address(addr):
 
     return addr
 
-def get_latlon(address):
-    try:
-        location = geolocator.geocode(address, timeout=10)
-        if not location:
-            # Retry: drop first part (like a store name)
-            parts = address.split(',', 1)
-            if len(parts) > 1:
-                location = geolocator.geocode(parts[1].strip(), timeout=10)
-        if location:
-            return location.latitude, location.longitude
-        else:
-            return None, None
-    except Exception as e:
-        print("Error:", e)
-        return None, None
-    
-def clean_address(addr):
-    if not addr:
-        return ''
-    # Replace newline and parentheses pattern: "X\r\n (Y)" → "X, Y"
-    addr = re.sub(r'\r?\n\s*\((.*?)\)', r', \1', addr)
-    # Also handle "X (Y)" → "X, Y"
-    addr = re.sub(r'\s*\((.*?)\)', r', \1', addr)
-    return addr.strip()
-
-file_path = 'salvos_stores.csv'
-write_header = not os.path.exists(file_path)
-
 now = datetime.now()
 formatted_now = now.strftime("%Y-%m-%d %H:%M:%S")
 
-@st.cache_data
-def get_store_data():
-
+def get_salvos_stores():
     ## Selenium for Salvos website 
     driver = webdriver.Chrome()
     driver.get("https://www.salvosstores.com.au/stores")
@@ -79,6 +90,37 @@ def get_store_data():
     print(len(salvos_stores))  # total stores
     driver.quit()
 
+    store_data = []
+    days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    for key, value in salvos_stores.items():
+        store_id = value['StoreID']
+        name = value['Name']
+        address = value['FullAddress']
+        lat = value['Latitude'] if value['Latitude'] else None
+        lon = value['Longitude'] if value['Longitude'] else None
+        if 'OpeningHours' in value.keys():
+            oh = value['OpeningHours']
+
+            hours = {day: f"{oh[day]['Opening']} to {oh[day]['Closing']}" if isinstance(oh[day], dict) else 'Closed' for day in days}
+
+        else:
+            hours = {}
+
+        store_data.append(
+            {
+                'Store': "Salvos",
+                'StoreID': store_id,
+                'Suburb': name,
+                'Address': address,
+                'Latitude': lat,
+                'Longitude': lon,
+                'Hours': ', '.join(f"{k}: {v}" for k, v in hours.items())
+            }
+        )
+
+    return store_data
+
+def get_stc_stores():
     ## Save the Children Op Shops API
     url = "https://www.savethechildren.org.au/api/opshop/getopshoplist"
 
@@ -93,44 +135,12 @@ def get_store_data():
 
     STC_stores = resp.json()['data']['contentData']
 
-    store_data = []
-    days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-    for key, value in salvos_stores.items():
-        store_id = value['StoreID']
-        name = value['Name']
-        address = value['FullAddress']
-        lat = value['Latitude'] if value['Latitude'] else None
-        lon = value['Longitude'] if value['Longitude'] else None
-        if 'OpeningHours' in value.keys():
-            oh = value['OpeningHours']
-
-            hours = []
-            for day in days:
-                if isinstance(oh[day], dict):
-                    hours.append(f"{day}: {oh[day]['Opening']} to {oh[day]['Closing']}")
-                else:
-                    hours.append(f"{day}: Closed")
-        else:
-            hours = []
-
-        store_data.append(
-            {
-                'Store': "Salvos",
-                'StoreID': store_id,
-                'Suburb': name,
-                'Address': address,
-                'Latitude': lat,
-                'Longitude': lon,
-                'Hours': str(hours)
-            }
-        )
-
     STC_stores[4]
 
     STC_data = []
     for item in STC_stores:
         name = item['title']
-        address = normalize_address(clean_address(item['excerpt']))
+        address = format_address(item['excerpt'])
         lat, lon = get_latlon(address)
         hours = item['hours']
 
@@ -146,76 +156,69 @@ def get_store_data():
             }
         )
 
-    len(store_data)
-    len(STC_data)
-    STC_data[7]
-    # get_latlon('Stockland Riverton, Corner of High Road and Willeri Drive, Riverton')
-    # get_latlon('20-21 Bankstown City Plaza, Bankstown')
-    # get_latlon('107-109 Main St, Blacktown')
-    # 3: 'address': 'Stockland Riverton, Cnr High Road and Willeri Drive, Riverton', 'latitude': None, 'longitude': None
-    # 5: 'address': 'Ground Floor, 20-21 Bankstown City Plaza, Bankstown', 'latitude': None, 'longitude': None,
-    # 7: 'address': '1/107-109 Main St, Blacktown', 'latitude': None, 'longitude': None
+    return STC_data
 
-    # len([i['latitude'] for i in STC_data if i['latitude'] is not None])
-    # 61 of 69 addresses worked 
+def check_changes(data):
+    dummy_changes = [
+        {
+        'Store': 'Save The Children',
+        'StoreID': '',
+        'Suburb': 'Annerley',
+        'Address': '518 Ipswich Rd, Annerley, Australia',
+        'Latitude': -27.5116885,
+        'Longitude': 153.0320563,
+        'Hours': 'Mon-Fri: 9am-4.30pm Sat-Sun: 9am-2pm'
+        }
+    ]
+    dummy_df = pd.DataFrame(dummy_changes)
+    merged_df = data.merge(dummy_df, on=['Store', 'StoreID', 'Suburb'], how='left', suffixes=('_new', '_old'))
+
+    check_cols = ['Address', 'Hours']
+
+    def detect_changes(row):
+        if not pd.isna(row['Address_old']):
+            changed_cols = [col for col in check_cols if row[f"{col}_new"] != row[f"{col}_old"]]
+
+            row['data_changed'] = bool(changed_cols)
+            row['Columns Changed'] = ', '.join(f"{col}: from {row[f'{col}_old']} to {row[f'{col}_new']}" for col in changed_cols)
+        else:
+            row['data_changed'] = False
+            row['Columns Changed'] = ''
+
+        return row
+    
+    merged_df = merged_df.apply(detect_changes, axis=1)
+
+    data = merged_df[[
+        'Store',
+        'StoreID',
+        'Suburb',
+        'Address_new',
+        'Latitude_new',
+        'Longitude_new',
+        'Hours_new',
+        'data_changed',
+        'Columns Changed'
+        ]]
+    
+    data = data.rename(columns={'Address_new': 'Address', 'Latitude_new': 'Latitude', 'Longitude_new': 'Longitude', 'Hours_new': 'Hours'})
+
+    return data
+
+@st.cache_data
+def get_store_data():
+
+    store_data = get_salvos_stores()
+
+    STC_data = get_stc_stores()
 
     all_stores = store_data + STC_data
 
     all_df = pd.json_normalize(all_stores)
-    all_df.head(10)
+
+    all_df = check_changes(all_df)
+
     all_df.sort_values('Suburb', ascending=True, inplace=True)
-    all_df.tail()
-    all_df.head()
-
-    # hist_data = pd.read_csv('salvos_stores.csv')
-    # hist_data['runtime'] = pd.to_datetime(hist_data['runtime'], errors='coerce')
-    # recent = hist_data[hist_data['runtime'] >= pd.Timestamp.today() - pd.Timedelta(days=7)]
-    # first_week_snapshot = recent.sort_values('runtime').groupby('StoreID').first().reset_index()
-    # first_week_snapshot = first_week_snapshot.astype(str)
-
-    save_data = all_df
-    save_data['runtime'] = formatted_now
-
-    all_df = all_df.astype(str)
-
-    save_data.to_csv(
-        file_path,
-        mode='a',             # append mode
-        header=write_header,  # only write header if file doesn’t exist
-        index=False
-    )
-
-# merged = store_df.merge(first_week_snapshot, on='StoreID', suffixes=("_new", "_old"))
-# # Compare columns
-# merged['name_changed'] = merged['name_new'] != merged['name_old']
-# merged['address_changed'] = merged['address_new'] != merged['address_old']
-# merged['latitude_changed'] = merged['latitude_new'] != merged['latitude_old']
-# merged['longitude_changed'] = merged['longitude_new'] != merged['longitude_old']
-# merged['hours_changed'] = merged['hours_new'] != merged['hours_old']
-# merged['recent_changes'] = merged[['name_changed', 'address_changed', 'hours_changed', 'latitude_changed', 'longitude_changed']].any(axis=1)
-
-# output = merged[
-#     [
-#         'name_new', 
-#         'address_new', 
-#         'hours_new', 
-#         'latitude_new', 
-#         'longitude_new', 
-#         'name_changed',
-#         'address_changed',
-#         'latitude_changed',
-#         'longitude_changed',
-#         'hours_changed',
-#         'recent_changes'
-#         ]]
-
-# output.rename(columns={
-#     'name_new': 'name ',
-#     'address_new': 'address', 
-#     'hours_new': 'hours', 
-#     'latitude_new': 'latitude',
-#     'longitude_new': 'longitude'
-#     }, inplace=True)
 
     return all_df
 
