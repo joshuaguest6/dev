@@ -31,7 +31,7 @@ headers = {
 
 resp = requests.get(url, headers=headers)
 resp.status_code
-resp.text[:200]
+resp.text[:500]
 stores = resp.json()
 
 chrome_options = Options()

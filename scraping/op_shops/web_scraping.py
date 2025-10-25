@@ -16,6 +16,7 @@ chrome_options.add_argument("--headless")
 driver = webdriver.Chrome(options=chrome_options)
     
 CACHE_FILE = 'geocode_cache.json'
+SALVOS_FILE = 'salvos_stores.json'
 
 if os.path.exists(CACHE_FILE):
     with open(CACHE_FILE, 'r') as f:
@@ -77,18 +78,26 @@ now = datetime.now()
 formatted_now = now.strftime("%Y-%m-%d %H:%M:%S")
 
 def get_salvos_stores():
-    ## Selenium for Salvos website 
-    driver = webdriver.Chrome()
-    driver.get("https://www.salvosstores.com.au/stores")
+    if os.path.exists(SALVOS_FILE):
+        with open(SALVOS_FILE, 'r') as f:
+            salvos_stores = json.load(f)
+    else:
+        ## Selenium for Salvos website 
+        driver = webdriver.Chrome()
+        driver.get("https://www.salvosstores.com.au/stores")
 
-    # Execute JS inside the browser context to fetch the JSON
-    salvos_stores = driver.execute_script("""
-    return fetch('/api/uplister/store-list')
-        .then(response => response.json())
-    """)
+        # Execute JS inside the browser context to fetch the JSON
+        salvos_stores = driver.execute_script("""
+        return fetch('/api/uplister/store-list')
+            .then(response => response.json())
+        """)
 
-    print(len(salvos_stores))  # total stores
-    driver.quit()
+        print(len(salvos_stores))  # total stores
+        driver.quit()
+
+        with open(SALVOS_FILE, 'w') as f:
+            json.dump(salvos_stores, f)
+
 
     store_data = []
     days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
