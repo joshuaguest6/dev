@@ -2,6 +2,8 @@
 
 A Streamlit app that pulls data from a list of charity and op-shop stores and presents it in an interactive table.
 
+[Streamlit Cloud link](https://ldhxrysuujaevbq6mkhqjs.streamlit.app/)
+
 ## Features
 
 - Pulls store data including:
