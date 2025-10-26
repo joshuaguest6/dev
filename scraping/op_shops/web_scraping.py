@@ -216,6 +216,13 @@ def check_changes(data):
 
     return data
 
+def data_cleaning(data):
+    data['Latitude'] = data['Latitude'].astype(str).str.replace(',', '')
+    data['Longitude'] = data['Longitude'].astype(str).str.replace(',', '')
+
+    return data
+
+
 @st.cache_data
 def get_store_data():
 
@@ -226,6 +233,8 @@ def get_store_data():
     all_stores = store_data + STC_data
 
     all_df = pd.json_normalize(all_stores)
+
+    all_df = data_cleaning(all_df)
 
     all_df = check_changes(all_df)
 
