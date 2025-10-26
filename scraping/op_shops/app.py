@@ -7,14 +7,14 @@ store_df = get_store_data()
 suburbs = store_df['Suburb'].dropna().unique()
 stores = store_df['Store'].dropna().unique()
 
-if 'allSuburbs' not in st.session_state:
-    st.session_state.allSuburbs = True
-
 if 'selected_suburbs' not in st.session_state:
     st.session_state.selected_suburbs = sorted(suburbs)
 
 if 'selected_stores' not in st.session_state:
     st.session_state.selected_stores = sorted(stores)
+
+if 'suburb_key' not in st.session_state:
+    st.session_state.suburb_key = 'default'
 
 DF_COLUMNS = [
     'Store', 
@@ -45,18 +45,20 @@ with st.sidebar:
 
     show_changes = st.checkbox("Show only stores with recent changes")
 
-    # --- Add Suburb filter ---
-    if st.checkbox('All Suburbs', key='allSuburbs'):
-        selected_suburbs = st.multiselect("Filter by Suburb", options=sorted(suburbs), default=sorted(suburbs))
-    else:
-        selected_suburbs = st.multiselect("Filter by Suburb", options=sorted(suburbs), default=st.session_state.selected_suburbs)
-
-    if set(selected_suburbs) != set(st.session_state.selected_suburbs):
-            st.session_state.selected_suburbs = selected_suburbs
-
-    if set(st.session_state.selected_suburbs) != set(suburbs):
-        st.session_state.allSuburbs = False
+    # --- All Suburbs button ---
+    if st.button("All Suburbs", key="all_suburbs_btn"):
+        st.session_state.selected_suburbs = sorted(suburbs)
+        st.session_state.suburb_key = str(sorted(suburbs))
         st.rerun()
+
+    # --- Suburb filter ---
+    selected_suburbs = st.multiselect(
+        "Filter by Suburb",
+        options=sorted(suburbs),
+        default=st.session_state.selected_suburbs,
+        key=st.session_state.suburb_key
+    )
+    st.session_state.selected_suburbs = selected_suburbs
 
     
     # --- Add Store filter ---
