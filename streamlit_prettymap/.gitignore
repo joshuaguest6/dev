@@ -11,3 +11,6 @@ __pycache__/
 # Ignore environment variables and OS files
 .env
 .DS_Store
+
+# Ignore streamlit cache
+cache/
