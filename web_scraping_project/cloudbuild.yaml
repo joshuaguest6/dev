@@ -13,4 +13,4 @@ steps:
           --service-account scraper-fn@web-scraper-prod.iam.gserviceaccount.com
 
 options:
-  logging: CLOUD_LOGGING_ONLY
+  logging: "CLOUD_LOGGING_ONLY"
