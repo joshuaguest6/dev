@@ -5,6 +5,7 @@ steps:
       - '-c'
       - |
         gcloud functions deploy scrape-jobs \
+          --source web_scraping_project \
           --runtime python310 \
           --trigger-http \
           --region australia-southeast1 \
