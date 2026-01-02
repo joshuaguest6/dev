@@ -12,7 +12,6 @@ steps:
           --allow-unauthenticated \
           --project web-scraper-prod \
           --service-account scraper-fn@web-scraper-prod.iam.gserviceaccount.com
-          --entry-point main \
           --gen=1
 
 options:
