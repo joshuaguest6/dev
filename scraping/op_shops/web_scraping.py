@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
 import pandas as pd
-from datetime import datetime
+from datetime import datetime, timedelta
 import streamlit as st
 import os
 import requests
@@ -10,9 +10,12 @@ import re
 import json
 
 from geopy.geocoders import Nominatim
-    
-CACHE_FILE = 'scraping/op_shops/geocode_cache.json'
-SALVOS_FILE = 'scraping/op_shops/salvos_stores.json'
+
+now = datetime.now()
+formatted_now = now.strftime("%Y-%m-%d %H:%M:%S")
+
+# for saving latlon, so don't have to generate it every time
+CACHE_FILE = 'geocode_cache.json'
 
 if os.path.exists(CACHE_FILE):
     with open(CACHE_FILE, 'r') as f:
@@ -22,6 +25,8 @@ else:
 
 geolocator = Nominatim(user_agent="opshop_locator")
 
+# function to search for address in geocode cache and return latlon
+# or generate latlon
 def get_latlon(address):
     if address in geocode_cache:
         return geocode_cache[address]
@@ -44,6 +49,7 @@ def get_latlon(address):
 
     return latlon
     
+# Format the raw addresses
 def format_address(addr):
     if not addr:
         return ''
@@ -70,35 +76,25 @@ def format_address(addr):
 
     return addr
 
-now = datetime.now()
-formatted_now = now.strftime("%Y-%m-%d %H:%M:%S")
-
+# Scrape salvos stores
+# cant access the API normally, 
+# So using selenium to simulate a browser instead
 def get_salvos_stores():
-    if os.path.exists(SALVOS_FILE):
-        with open(SALVOS_FILE, 'r') as f:
-            salvos_stores = json.load(f)
-    else:
-        print(f'cant see {SALVOS_FILE}')
-        print("Current working directory:", os.getcwd())
-        print("Files in directory:", os.listdir('.'))
-        ## Selenium for Salvos website 
-        chrome_options = Options()
-        chrome_options.add_argument("--headless")
-        driver = webdriver.Chrome(options=chrome_options)
+    ## Selenium for Salvos website 
+    chrome_options = Options()
+    chrome_options.add_argument("--headless")
+    driver = webdriver.Chrome(options=chrome_options)
 
-        driver.get("https://www.salvosstores.com.au/stores")
+    driver.get("https://www.salvosstores.com.au/stores")
 
-        # Execute JS inside the browser context to fetch the JSON
-        salvos_stores = driver.execute_script("""
-        return fetch('/api/uplister/store-list')
-            .then(response => response.json())
-        """)
+    # Execute JS inside the browser context to fetch the JSON
+    salvos_stores = driver.execute_script("""
+    return fetch('/api/uplister/store-list')
+        .then(response => response.json())
+    """)
 
-        print(len(salvos_stores))  # total stores
-        driver.quit()
-
-        with open(SALVOS_FILE, 'w') as f:
-            json.dump(salvos_stores, f)
+    print(len(salvos_stores))  # total stores
+    driver.quit()
 
 
     store_data = []
@@ -119,6 +115,7 @@ def get_salvos_stores():
 
         store_data.append(
             {
+                'Date': formatted_now,
                 'Store': "Salvos",
                 'StoreID': store_id,
                 'Suburb': name,
@@ -157,8 +154,9 @@ def get_stc_stores():
 
         STC_data.append(
             {
+                'Date': formatted_now,
                 'Store': 'Save The Children',
-                'StoreID': '',
+                'StoreID': 'STC'+'-'+address,
                 'Suburb': name,
                 'Address': address,
                 'Latitude': lat,
@@ -169,38 +167,58 @@ def get_stc_stores():
 
     return STC_data
 
+
+def save_current(data):
+    with open('stores_current.json', 'w') as f:
+        records = data.to_dict(orient='records')
+        json.dump(records, f, indent=2)
+
+
 def check_changes(data):
+    if os.path.exists('stores_current.json'):
+        print("Opening stores_current.json")
+        with open('stores_current.json', 'r') as f:
+            stores_current = json.load(f)
+    else:
+        print('stores_current.json not found')
+        stores_current = []
+
+    print('current store hours:')
+    print(f'Store ID: {stores_current[0]["StoreID"]}')
+    print(f"Store hours: {stores_current[0]['Hours']}")
     dummy_changes = [
         {
-        'Store': 'Save The Children',
-        'StoreID': '',
-        'Suburb': 'Annerley',
-        'Address': '518 Ipswich Rd, Annerley, Australia',
-        'Latitude': -27.5116885,
-        'Longitude': 153.0320563,
-        'Hours': 'Mon-Fri: 9am-4.30pm Sat-Sun: 9am-2pm'
+            "Date": "2026-01-05 13:39:04",
+            'Store': 'Save The Children',
+            'StoreID': '',
+            'Suburb': 'Annerley',
+            'Address': '518 Ipswich Rd, Annerley, Australia',
+            'Latitude': -27.5116885,
+            'Longitude': 153.0320563,
+            'Hours': 'Mon-Fri: 9am-4.30pm Sat-Sun: 9am-2pm'
         }
     ]
-    dummy_df = pd.DataFrame(dummy_changes)
-    merged_df = data.merge(dummy_df, on=['Store', 'StoreID', 'Suburb'], how='left', suffixes=('_new', '_old'))
+    stores_current += dummy_changes
+    stores_current_df = pd.DataFrame(stores_current)
+    merged_df = data.merge(stores_current_df, on=['Store','StoreID', 'Suburb'], how='left', suffixes=('_new', '_old'))
 
     check_cols = ['Address', 'Hours']
 
     def detect_changes(row):
-        if not pd.isna(row['Address_old']):
-            changed_cols = [col for col in check_cols if row[f"{col}_new"] != row[f"{col}_old"]]
+        changed_cols = [col for col in check_cols if row[f"{col}_new"] != row[f"{col}_old"] and not pd.isna(row[f"{col}_old"])]
 
-            row['data_changed'] = bool(changed_cols)
-            row['Columns Changed'] = ', '.join(f"{col}: from {row[f'{col}_old']} to {row[f'{col}_new']}" for col in changed_cols)
-        else:
-            row['data_changed'] = False
-            row['Columns Changed'] = ''
+        row['change_flag'] = bool(changed_cols)
+        row['Columns Changed'] = ', '.join(f"{col} before: {row[f'{col}_old']}\n{col} after: {row[f'{col}_new']}" for col in changed_cols)
 
         return row
     
     merged_df = merged_df.apply(detect_changes, axis=1)
 
+    # replace previous scrape with current scrape
+    save_current(data)
+
     data = merged_df[[
+        'Date_new',
         'Store',
         'StoreID',
         'Suburb',
@@ -208,13 +226,47 @@ def check_changes(data):
         'Latitude_new',
         'Longitude_new',
         'Hours_new',
-        'data_changed',
+        'change_flag',
         'Columns Changed'
         ]]
     
-    data = data.rename(columns={'Address_new': 'Address', 'Latitude_new': 'Latitude', 'Longitude_new': 'Longitude', 'Hours_new': 'Hours'})
+    data = data.rename(columns={'Date_new': 'Date', 'Address_new': 'Address', 'Latitude_new': 'Latitude', 'Longitude_new': 'Longitude', 'Hours_new': 'Hours'})
 
     return data
+
+def check_history_changes(data):
+    if os.path.exists('stores_history.json'):
+        with open('stores_history.json', 'r') as f:
+            hist = json.load(f)
+    else:
+        hist = []
+
+    hist_df = pd.DataFrame(hist)
+    all_data = pd.concat([data, hist_df], axis=0)
+
+    last_changes = all_data[all_data['change_flag'] == True]
+    idx = last_changes.groupby('StoreID')['Date'].idxmax()
+
+    last_changes = last_changes.loc[idx].reset_index(drop=True)
+    last_changes = last_changes[['StoreID', 'Date', 'Columns Changed']]
+    last_changes = last_changes.rename(columns={'Date': 'Last Change Date', 'Columns Changed': 'Last Columns Changed'})
+
+    cutoff_date = (datetime.now() - timedelta(days=7)).date()
+    all_data['Date'] = pd.to_datetime(all_data['Date']).dt.date
+    all_data = all_data[all_data['Date'] >= cutoff_date]
+
+    store_changes = all_data.groupby('StoreID')['change_flag'].any().reset_index()
+    store_changes.rename(columns={'change_flag': 'change_in_last_7_days'}, inplace=True)
+
+    data = pd.merge(data, store_changes, on='StoreID', how='left')
+    data = data.merge(last_changes, on='StoreID', how='left')
+
+    data[['Last Change Date', 'Last Columns Changed']] = data[['Last Change Date', 'Last Columns Changed']].astype(str)
+    data = data.fillna({'Last Change Date': '', 'Last Columns Changed': ''})
+
+
+    return data
+
 
 def data_cleaning(data):
     data['Latitude'] = data['Latitude'].astype(str).str.replace(',', '')
@@ -222,23 +274,62 @@ def data_cleaning(data):
 
     return data
 
+def save_history(data):
+    data = data[[
+        'Date',
+        'Store',
+        'StoreID',
+        'Suburb',
+        'Address',
+        'Latitude',
+        'Longitude',
+        'Hours',
+        'change_flag',
+        'Columns Changed'
+        ]]
+    data = data.to_dict(orient='records')
+    if os.path.exists('stores_history.json'):
+        with open('stores_history.json', 'r') as f:
+            hist = json.load(f)
+        hist += data
+    else:
+        hist = data
+    with open('stores_history.json', 'w') as f:
+        json.dump(hist, f, indent=2)
 
-@st.cache_data
+
+# @st.cache_data
 def get_store_data():
 
+    # Scrape stores and format data
     store_data = get_salvos_stores()
 
+    # Scrape data, format address, generate latlon, format into dictionary
     STC_data = get_stc_stores()
 
+    # Combine stores
     all_stores = store_data + STC_data
 
+    # Convert to df
     all_df = pd.json_normalize(all_stores)
 
+    # Clean latlon
     all_df = data_cleaning(all_df)
 
     all_df = check_changes(all_df)
 
+    # check number of changes in last 7 days
+    all_df = check_history_changes(all_df)
+
+    # save history after check history, because we dont want to compare current records to themselves
+    save_history(all_df)
+
     all_df.sort_values('Suburb', ascending=True, inplace=True)
+
+    records = all_df.to_dict(orient='records')
+    with open('output.json', 'w') as f:
+        json.dump(records, f, indent=2)
 
     return all_df
 
+get_store_data()
