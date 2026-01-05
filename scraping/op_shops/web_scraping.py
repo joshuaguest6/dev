@@ -25,6 +25,8 @@ import requests
 from geopy.geocoders import Nominatim
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from google.cloud import storage
+from google.api_core.exceptions import NotFound
 
 # ---------------------- GLOBAL CONFIG ----------------------
 NOW = datetime.now()
@@ -184,21 +186,47 @@ def get_stc_stores() -> list:
 
 def save_current(data: pd.DataFrame, filename='stores_current.json'):
     """Save current scraped data to JSON."""
-    with open(filename, 'w') as f:
-        json.dump(data.to_dict(orient='records'), f, indent=2)
+    # with open(filename, 'w') as f:
+    #     json.dump(data.to_dict(orient='records'), f, indent=2)
+
+    client = storage.Client()
+    bucket = client.bucket('op-shop-data')
+    blob = bucket.blob('stores_current.json')
+
+    blob.upload_from_string(
+        json.dumps(data.to_dict(orient='records'), indent=2),
+        content_type='application/json'
+    )
 
 
 def save_history(data: pd.DataFrame, filename='stores_history.json'):
     """Append new data to history JSON file."""
     records = data.to_dict(orient='records')
-    if os.path.exists(filename):
-        with open(filename, 'r') as f:
-            hist = json.load(f)
-        hist += records
-    else:
-        hist = records
-    with open(filename, 'w') as f:
-        json.dump(hist, f, indent=2)
+    # if os.path.exists(filename):
+    #     with open(filename, 'r') as f:
+    #         hist = json.load(f)
+    #     hist += records
+    # else:
+    #     hist = records
+    # with open(filename, 'w') as f:
+    #     json.dump(hist, f, indent=2)
+
+    client = storage.Client()
+    bucket = client.bucket('op-shop-data')
+    blob = bucket.blob('stores_history.json')
+
+    try:
+        existing = blob.download_as_string()
+        hist = json.loads(existing)
+    except NotFound:
+        hist = []
+
+    hist += records
+
+    blob.upload_from_string(
+        json.dumps(hist, indent=2),
+        content_type='application/json'
+    )
 
 
 # ---------------------- CHANGE DETECTION ----------------------
