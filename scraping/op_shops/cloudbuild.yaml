@@ -5,7 +5,7 @@ steps:
       - '-c'
       - |
         gcloud functions deploy scrape-op-shops \
-          --source scraping\op_shops \
+          --source scraping/op_shops \
           --runtime python310 \
           --trigger-http \
           --region australia-southeast1 \
