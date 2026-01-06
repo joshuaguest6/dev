@@ -34,10 +34,16 @@ FORMATTED_NOW = NOW.strftime("%Y-%m-%d %H:%M:%S")
 
 # Cache file for geocoding to avoid repeated API calls
 GEOCODE_CACHE_FILE = 'geocode_cache.json'
-if os.path.exists(GEOCODE_CACHE_FILE):
-    with open(GEOCODE_CACHE_FILE, 'r') as f:
-        geocode_cache = json.load(f)
+client = storage.Client()
+bucket = client.bucket("op-shop-data")
+blob = bucket.blob(GEOCODE_CACHE_FILE)
+
+if blob.exists():
+    print(f"Loading {GEOCODE_CACHE_FILE} from GCS")
+    content = blob.download_as_text()
+    geocode_cache = json.loads(content)
 else:
+    print(f"File {GEOCODE_CACHE_FILE} does not exist yet")
     geocode_cache = {}
 
 geolocator = Nominatim(user_agent="opshop_locator")
@@ -202,14 +208,6 @@ def save_current(data: pd.DataFrame, filename='stores_current.json'):
 def save_history(data: pd.DataFrame, filename='stores_history.json'):
     """Append new data to history JSON file."""
     records = data.to_dict(orient='records')
-    # if os.path.exists(filename):
-    #     with open(filename, 'r') as f:
-    #         hist = json.load(f)
-    #     hist += records
-    # else:
-    #     hist = records
-    # with open(filename, 'w') as f:
-    #     json.dump(hist, f, indent=2)
 
     client = storage.Client()
     bucket = client.bucket('op-shop-data')
@@ -236,14 +234,25 @@ def check_changes(data: pd.DataFrame) -> pd.DataFrame:
     Compare current scrape to last scrape to detect changes.
     Flags stores with differences in 'Hours' or 'Address'.
     """
-    if os.path.exists('stores_current.json'):
-        with open('stores_current.json', 'r') as f:
-            stores_current = json.load(f)
+    client = storage.Client()
+    bucket = client.bucket("op-shop-data")
+    blob = bucket.blob("stores_current.json")
+
+    if blob.exists():
+        print(f"Loading stores_current.json from GCS")
+        content = blob.download_as_text()
+        stores_current = json.loads(content)
     else:
+        print(f"File stores_current.json does not exist yet")
         stores_current = []
 
+    # Define the columns you expect
+    expected_cols = ['Date', 'Store', 'StoreID', 'Suburb', 'Address', 'Latitude', 'Longitude', 'Hours']
+
+    # Make DataFrame with expected columns even if empty
+    stores_current_df = pd.DataFrame(stores_current, columns=expected_cols)
+
     # Merge current scrape with previous data
-    stores_current_df = pd.DataFrame(stores_current)
     merged_df = data.merge(
         stores_current_df, 
         on=['Store', 'StoreID', 'Suburb'], 
@@ -293,10 +302,16 @@ def check_history_changes(data: pd.DataFrame) -> pd.DataFrame:
     - Most recent change per store
     """
     # Load historical data
-    if os.path.exists('stores_history.json'):
-        with open('stores_history.json', 'r') as f:
-            hist = json.load(f)
+    client = storage.Client()
+    bucket = client.bucket("op-shop-data")
+    blob= bucket.blob("stores_history.json")
+
+    if blob.exists():
+        print("Loading stores_history.json from GCS")
+        content = blob.download_as_text()
+        hist = json.loads(content)
     else:
+        print("File stores_history.json does not exist yet")
         hist = []
 
     hist_df = pd.DataFrame(hist)
