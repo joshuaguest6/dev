@@ -30,8 +30,9 @@ from google.api_core.exceptions import NotFound
 import psutil
 
 process = psutil.Process(os.getpid())
-print("Memory at start:", process.memory_info().rss / 1024 ** 2, "MB")
-
+def log_memory(msg):
+    print(f"{msg}", process.memory_info().rss / 1024 ** 2, "MB")
+log_memory("Memory at start: ")
 # ---------------------- GLOBAL CONFIG ----------------------
 NOW = datetime.now()
 FORMATTED_NOW = NOW.strftime("%Y-%m-%d %H:%M:%S")
@@ -59,6 +60,7 @@ def get_latlon(address: str):
     Retrieve latitude and longitude for a given address.
     Checks a local cache first to reduce API calls.
     """
+    log_memory("Memory before of latlon: ")
     if address in geocode_cache:
         return geocode_cache[address]
 
@@ -79,6 +81,8 @@ def get_latlon(address: str):
     with open(GEOCODE_CACHE_FILE, 'w') as f:
         json.dump(geocode_cache, f, indent=2)
 
+    log_memory("Memory after of latlon: ")
+
     return latlon
 
 
@@ -89,6 +93,7 @@ def format_address(addr: str) -> str:
     - Moves unit/shop prefixes
     - Ensures country is appended
     """
+    log_memory("Memory before format_address: ")
     if not addr:
         return ''
 
@@ -101,6 +106,8 @@ def format_address(addr: str) -> str:
     if 'Australia' not in addr:
         addr += ', Australia'
 
+    log_memory("Memory after format_address: ")
+
     return addr.strip()
 
 
@@ -111,6 +118,7 @@ def get_salvos_stores() -> list:
     Scrape Salvos stores using Selenium (API blocked).
     Returns a list of dictionaries with store info.
     """
+    log_memory("Memory before salvos_stores: ")
     chrome_options = Options()
     chrome_options.add_argument("--headless")
     driver = webdriver.Chrome(options=chrome_options)
@@ -154,6 +162,8 @@ def get_salvos_stores() -> list:
             'Hours': ', '.join(f"{k}: {v}" for k, v in hours.items())
         })
 
+    log_memory("Memory after salvos_stores: ")
+
     return store_data
 
 
@@ -162,6 +172,8 @@ def get_stc_stores() -> list:
     Scrape Save The Children op shops via API.
     Geocode addresses and format data into consistent dictionary.
     """
+    log_memory("Memory before stc_stores: ")
+
     url = "https://www.savethechildren.org.au/api/opshop/getopshoplist"
     headers = {
         "User-Agent": "Mozilla/5.0",
@@ -189,6 +201,8 @@ def get_stc_stores() -> list:
             'Hours': hours
         })
 
+    log_memory("Memory after stc_stores: ")
+
     return store_data
 
 
@@ -199,6 +213,8 @@ def save_current(data: pd.DataFrame, filename='stores_current.json'):
     # with open(filename, 'w') as f:
     #     json.dump(data.to_dict(orient='records'), f, indent=2)
 
+    log_memory("Memory before save_current: ")
+
     client = storage.Client()
     bucket = client.bucket('op-shop-data')
     blob = bucket.blob('stores_current.json')
@@ -208,9 +224,13 @@ def save_current(data: pd.DataFrame, filename='stores_current.json'):
         content_type='application/json'
     )
 
+    log_memory("Memory after save_current: ")
+
 
 def save_history(data: pd.DataFrame, filename='stores_history.json'):
     """Append new data to history JSON file."""
+    log_memory("Memory before save_history: ")
+
     records = data.to_dict(orient='records')
 
     client = storage.Client()
@@ -230,6 +250,8 @@ def save_history(data: pd.DataFrame, filename='stores_history.json'):
         content_type='application/json'
     )
 
+    log_memory("Memory after save_history: ")
+
 
 # ---------------------- CHANGE DETECTION ----------------------
 
@@ -238,6 +260,8 @@ def check_changes(data: pd.DataFrame) -> pd.DataFrame:
     Compare current scrape to last scrape to detect changes.
     Flags stores with differences in 'Hours' or 'Address'.
     """
+    log_memory("Memory before check_changes: ")
+
     client = storage.Client()
     bucket = client.bucket("op-shop-data")
     blob = bucket.blob("stores_current.json")
@@ -296,6 +320,8 @@ def check_changes(data: pd.DataFrame) -> pd.DataFrame:
         'Hours_new': 'Hours'
     })
 
+    log_memory("Memory after check_changes: ")
+
     return result_df
 
 
@@ -305,6 +331,8 @@ def check_history_changes(data: pd.DataFrame) -> pd.DataFrame:
     - Stores that had any changes in the last 7 days
     - Most recent change per store
     """
+    log_memory("Memory before check_history_changes: ")
+
     # Load historical data
     client = storage.Client()
     bucket = client.bucket("op-shop-data")
@@ -344,6 +372,8 @@ def check_history_changes(data: pd.DataFrame) -> pd.DataFrame:
     # Ensure string types for JSON serialization
     data[['Last Change Date', 'Last Columns Changed']] = data[['Last Change Date', 'Last Columns Changed']].fillna('').astype(str)
 
+    log_memory("Memory after check_history_changes: ")
+
     return data
 
 
@@ -354,8 +384,13 @@ def data_cleaning(data: pd.DataFrame) -> pd.DataFrame:
     Clean latitude and longitude columns.
     - Remove commas and convert to string
     """
+    log_memory("Memory before data_cleaning: ")
+
     data['Latitude'] = data['Latitude'].astype(str).str.replace(',', '')
     data['Longitude'] = data['Longitude'].astype(str).str.replace(',', '')
+
+    log_memory("Memory after data_cleaning: ")
+
     return data
 
 
