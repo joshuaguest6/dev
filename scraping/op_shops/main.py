@@ -342,7 +342,7 @@ def data_cleaning(data: pd.DataFrame) -> pd.DataFrame:
 
 # ---------------------- MAIN FUNCTION ----------------------
 
-def get_store_data() -> pd.DataFrame:
+def get_store_data(request) -> pd.DataFrame:
     """
     Master function to:
     - Scrape all op shop chains
@@ -374,13 +374,9 @@ def get_store_data() -> pd.DataFrame:
     # Sort alphabetically by suburb
     df.sort_values('Suburb', inplace=True)
 
-    # Save output to JSON
-    with open('output.json', 'w') as f:
-        json.dump(df.to_dict(orient='records'), f, indent=2)
-
     return df
 
 
 # ---------------------- RUN SCRIPT ----------------------
 if __name__ == "__main__":
-    all_df = get_store_data()
+    all_df = get_store_data(None)

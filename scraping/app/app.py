@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from web_scraping import get_store_data
+from main import get_store_data
 
 
 store_df = get_store_data()
