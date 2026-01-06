@@ -1,0 +1,18 @@
+steps:
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:slim'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        gcloud functions deploy scrape-op-shops \
+          --source scraping\op_shops \
+          --runtime python310 \
+          --trigger-http \
+          --region australia-southeast1 \
+          --allow-unauthenticated \
+          --project web-scraper-prod \
+          --service-account scraper-fn@web-scraper-prod.iam.gserviceaccount.com \
+          --entry-point get_store_data
+
+options:
+  logging: "CLOUD_LOGGING_ONLY"
