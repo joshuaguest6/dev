@@ -371,8 +371,7 @@ def main(request):
     # Save historical data
     save_history(df)
 
-    # Sort alphabetically by suburb
-    df.sort_values('Suburb', inplace=True)
+    return "Scraper run completed successfully", 200
 
 
 # ---------------------- RUN SCRIPT ----------------------
