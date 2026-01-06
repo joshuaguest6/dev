@@ -9,11 +9,18 @@ from google.oauth2.service_account import Credentials
 from google.auth import default
 from google.cloud import storage
 import io
+import os
+from sendgrid import SendGridAPIClient
+from sendgrid.helpers.mail import Mail
 
+gsheet = 'Web Scraper Output'
+sheet_name = "data2"
 
 # Scope
 scope = ["https://spreadsheets.google.com/feeds",
          "https://www.googleapis.com/auth/drive"]
+sg = SendGridAPIClient(os.environ["SENDGRID_API_KEY"])
+
 
 
 def main(request):
@@ -38,8 +45,6 @@ def main(request):
     )
 
     data = r.json()
-
-    str(data)[:2000]
 
     i = 1
     cutoff_date = (datetime.now() - timedelta(days=1)).date()
@@ -69,12 +74,12 @@ def main(request):
     creds, project = default(scopes=scope)
     client = gspread.authorize(creds)
 
-    spreadsheet = client.open('Web Scraper Output')
+    spreadsheet = client.open(gsheet)
     try:
-        sheet = spreadsheet.worksheet("data2")
+        sheet = spreadsheet.worksheet(sheet_name)
     except gspread.WorksheetNotFound:
         sheet = spreadsheet.add_worksheet(
-            'data2', 
+            sheet_name, 
             cols=20, 
             rows=1000
             )
@@ -94,6 +99,16 @@ def main(request):
 
     blob.upload_from_string(csv_data, content_type="text/csv")
     print(f"Scraped {len(df)} rows and uploaded to GCS")
+
+    message = Mail(
+        from_email="joshuaguest6@gmail.com",
+        to_emails="joshyguest@gmail.com",
+        subject="Successful Run",
+        plain_text_content=f"{len(df)} records were uploaded to {sheet_name} tab in {gsheet} google sheet at {timestamp}"
+    )
+    
+    response = sg.send(message)
+    print(response.status_code)
 
     print("Main function finished!")
 

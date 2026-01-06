@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup
+import os
 
 with open('home.html', 'r') as f:
     content = f.read()
@@ -12,3 +13,5 @@ with open('home.html', 'r') as f:
         course_price = course.a.text.split()[-1]
 
         print(f"{course_name} costs {course_price}")
+
+print(os.environ["SENDGRID_API_KEY"])
