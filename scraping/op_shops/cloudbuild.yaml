@@ -12,8 +12,7 @@ steps:
           --allow-unauthenticated \
           --project web-scraper-prod \
           --service-account scraper-fn@web-scraper-prod.iam.gserviceaccount.com \
-          --entry-point get_store_data \
-          --gen1
+          --entry-point get_store_data 
 
 options:
   logging: "CLOUD_LOGGING_ONLY"
