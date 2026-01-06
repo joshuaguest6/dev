@@ -13,7 +13,7 @@ steps:
           --project web-scraper-prod \
           --service-account scraper-fn@web-scraper-prod.iam.gserviceaccount.com \
           --entry-point main \
-          --memory=512MB
+          --memory=1GB
 
 options:
   logging: "CLOUD_LOGGING_ONLY"

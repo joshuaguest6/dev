@@ -27,6 +27,10 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from google.cloud import storage
 from google.api_core.exceptions import NotFound
+import psutil
+
+process = psutil.Process(os.getpid())
+print("Memory at start:", process.memory_info().rss / 1024 ** 2, "MB")
 
 # ---------------------- GLOBAL CONFIG ----------------------
 NOW = datetime.now()
@@ -366,6 +370,9 @@ def main(request):
     - Save current and historical data
     - Return combined DataFrame
     """
+
+    
+
     # Scrape stores
     salvos_data = get_salvos_stores()
     stc_data = get_stc_stores()
@@ -385,6 +392,8 @@ def main(request):
 
     # Save historical data
     save_history(df)
+
+    print("Memory at end:", process.memory_info().rss / 1024 ** 2, "MB")
 
     return "Scraper run completed successfully", 200
 
