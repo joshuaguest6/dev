@@ -9,9 +9,6 @@ from google.oauth2.service_account import Credentials
 from google.auth import default
 from google.cloud import storage
 import io
-import os
-from sendgrid import SendGridAPIClient
-from sendgrid.helpers.mail import Mail
 
 gsheet = 'Web Scraper Output'
 sheet_name = "data2"
@@ -19,7 +16,6 @@ sheet_name = "data2"
 # Scope
 scope = ["https://spreadsheets.google.com/feeds",
          "https://www.googleapis.com/auth/drive"]
-sg = SendGridAPIClient(os.environ["SENDGRID_API_KEY"])
 
 
 
@@ -99,16 +95,6 @@ def main(request):
 
     blob.upload_from_string(csv_data, content_type="text/csv")
     print(f"Scraped {len(df)} rows and uploaded to GCS")
-
-    message = Mail(
-        from_email="joshuaguest6@gmail.com",
-        to_emails="joshyguest@gmail.com",
-        subject="Successful Run",
-        plain_text_content=f"{len(df)} records were uploaded to {sheet_name} tab in {gsheet} google sheet at {timestamp}"
-    )
-    
-    response = sg.send(message)
-    print(response.status_code)
 
     print("Main function finished!")
 
