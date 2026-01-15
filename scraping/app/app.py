@@ -1,9 +1,27 @@
 import streamlit as st
 import pandas as pd
-from main import get_store_data
+from google.cloud import storage
+import json
 
+st.set_page_config(page_title="Op Shop Monitor")
+
+@st.cache_data(ttl=3600*6)
+def get_store_data():
+    client = storage.Client()
+    bucket = client.bucket('op-shop-data')
+    blob = bucket.blob('stores_current.json')
+
+    if blob.exists():
+        records = json.loads(blob.download_as_text())
+    else:
+        records = []
+    
+    df = pd.DataFrame(records, columns=["Date", "Store", "StoreID", "Suburb", "Address", "Latitude", "Longitude", "Hours", "change_flag", "columns_changed"])
+
+    return df
 
 store_df = get_store_data()
+
 suburbs = store_df['Suburb'].dropna().unique()
 stores = store_df['Store'].dropna().unique()
 
@@ -23,12 +41,15 @@ DF_COLUMNS = [
     'Latitude', 
     'Longitude', 
     'Hours',
-    'Columns Changed'
+    'change_flag',
+    'columns_changed'
 ]
+
+
 
 def highlight_changes(row):
     color = ''
-    if row['data_changed']:
+    if row['change_flag']:
         color = 'background-color: yellow'
     return [color] * len(row)
 
@@ -37,9 +58,11 @@ st.title("Op-Shop and Charity Stores Australia")
 st.markdown("### List of Stores")
 
 
-
-st.markdown(f"**Total stores:** {len(store_df)}")
-st.markdown(f"**Stores with recent changes:** {store_df['data_changed'].sum()}")
+cols = st.columns(2)
+with cols[0]:
+    st.metric("**Total stores:**",len(store_df))
+    st.metric("**Stores with changes (7d):**", store_df['change_flag'].sum())
+    st.metric("**% of stores changed (7d): **", f"{round(store_df['change_flag'].sum()/len(store_df)*100, 1)}%")    
 
 with st.sidebar:
 
@@ -72,9 +95,10 @@ with st.sidebar:
 
 filtered_df = store_df[store_df['Suburb'].isin(st.session_state.selected_suburbs) & store_df['Store'].isin(st.session_state.selected_stores)]
 if show_changes:
-    filtered_df = filtered_df[filtered_df["data_changed"] == True]
+    filtered_df = filtered_df[filtered_df["change_flag"] == True]
 
-st.dataframe(filtered_df.style.apply(highlight_changes, axis=1))
+with cols[1]:
+    st.dataframe(filtered_df.style.apply(highlight_changes, axis=1))
 
 st.markdown("### Map of Stores")
 
