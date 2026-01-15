@@ -219,6 +219,9 @@ def save_current(data: pd.DataFrame, filename='stores_current.json'):
     bucket = client.bucket('op-shop-data')
     blob = bucket.blob('stores_current.json')
 
+    print(f'df columns: {data.columns}')
+    print(f'df shape: {data.shape}')
+
     blob.upload_from_string(
         json.dumps(data.to_dict(orient='records'), indent=2),
         content_type='application/json'
@@ -296,7 +299,7 @@ def check_changes(data: pd.DataFrame) -> pd.DataFrame:
                         if row[f"{col}_new"] != row[f"{col}_old"] 
                         and not pd.isna(row[f"{col}_old"])]
         row['change_flag'] = bool(changed_cols)
-        row['Columns Changed'] = ', '.join(
+        row['columns_changed'] = ', '.join(
             f"{col} before: {row[f'{col}_old']}\n{col} after: {row[f'{col}_new']}"
             for col in changed_cols
         )
@@ -304,20 +307,19 @@ def check_changes(data: pd.DataFrame) -> pd.DataFrame:
 
     merged_df = merged_df.apply(detect_changes, axis=1)
 
-    # Save current scrape for next comparison
-    save_current(data)
-
     # Keep only relevant columns and rename to original names
     result_df = merged_df[[
         'Date_new', 'Store', 'StoreID', 'Suburb', 
         'Address_new', 'Latitude_new', 'Longitude_new', 
-        'Hours_new', 'change_flag', 'Columns Changed'
+        'Hours_new', 'change_flag', 'columns_changed'
     ]].rename(columns={
         'Date_new': 'Date', 
         'Address_new': 'Address',
         'Latitude_new': 'Latitude',
         'Longitude_new': 'Longitude',
-        'Hours_new': 'Hours'
+        'Hours_new': 'Hours',
+        'change_flag_new': 'change_flag',
+        'columns_changed_new': 'columns_changed'
     })
 
     log_memory("Memory after check_changes: ")
@@ -352,10 +354,10 @@ def check_history_changes(data: pd.DataFrame) -> pd.DataFrame:
     # Most recent change per store
     last_changes = all_data[all_data['change_flag'] == True]
     idx = last_changes.groupby('StoreID')['Date'].idxmax()
-    last_changes = last_changes.loc[idx, ['StoreID', 'Date', 'Columns Changed']]
+    last_changes = last_changes.loc[idx, ['StoreID', 'Date', 'columns_changed']]
     last_changes = last_changes.rename(columns={
         'Date': 'Last Change Date',
-        'Columns Changed': 'Last Columns Changed'
+        'columns_changed': 'Last Columns Changed'
     })
 
     # Flag stores with changes in last 7 days
@@ -427,6 +429,9 @@ def main(request):
 
     # Save historical data
     save_history(df)
+
+    # Save current scrape 
+    save_current(df)
 
     print("Memory at end:", process.memory_info().rss / 1024 ** 2, "MB")
 
