@@ -10,56 +10,12 @@ from google.cloud import storage
 import pandas as pd
 
 gsheet = 'lumens.com Scrape'
-sheet_name = "data"
+sheet_name = 'data'
 
 # Scope
 scope = ["https://spreadsheets.google.com/feeds",
          "https://www.googleapis.com/auth/drive"]
 
-# ---------- STEP 1: MANUAL VERIFICATION (RUN ONCE) ----------
-
-# with sync_playwright() as p:
-#     browser = p.chromium.launch(headless=False)
-#     context = browser.new_context(
-#         viewport={"width": 1280, "height": 800}
-#     )
-#     page = context.new_page()
-#     Stealth().use_sync(page)
-
-#     page.goto("https://www.lumens.com/a-n-d/", timeout=60000)
-#     time.sleep(random.uniform(2, 4))
-#     page.wait_for_selector("span.total-sort-count", state="visible", timeout=60000)
-
-#     # --- HUMAN-LIKE SCROLL ---
-#     page.evaluate("""() => {
-#         window.scrollBy(0, document.body.scrollHeight / 2);
-#     }""")
-#     time.sleep(random.uniform(1,2))
-#     page.evaluate("""() => {
-#         window.scrollBy(0, document.body.scrollHeight);
-#     }""")
-#     time.sleep(random.uniform(1,2))
-
-#     # --- HUMAN-LIKE MOUSE MOVEMENT ---
-#     page.mouse.move(random.randint(100, 400), random.randint(100, 300))
-#     time.sleep(random.uniform(0.5, 1))
-#     page.mouse.move(random.randint(400, 800), random.randint(300, 600))
-#     time.sleep(random.uniform(0.5, 1))
-
-#     el_results = page.query_selector("span.total-sort-count")
-#     results_text = el_results.inner_text()
-#     print(f"Dummy results: {results_text}")
-#     results = int(results_text.split()[0])
-
-#     print("Solve the Cloudfare check in the browser, then press ENTER here...")
-#     input()
-
-#     page.wait_for_timeout(3000)
-#     context.storage_state(path="state.json")
-#     browser.close()
-
-
-# ---------- STEP 2: SCRAPING USING VERIFIED SESSION ----------
 
 BRANDS = {
     'AND': 'a-n-d'
@@ -81,21 +37,21 @@ with sync_playwright() as p:
         time.sleep(random.uniform(2, 4))
         page.wait_for_selector("span.total-sort-count", state="visible", timeout=60000)
 
-        # # --- HUMAN-LIKE SCROLL ---
-        # page.evaluate("""() => {
-        #     window.scrollBy(0, document.body.scrollHeight / 2);
-        # }""")
-        # time.sleep(random.uniform(1,2))
-        # page.evaluate("""() => {
-        #     window.scrollBy(0, document.body.scrollHeight);
-        # }""")
-        # time.sleep(random.uniform(1,2))
+        # --- HUMAN-LIKE SCROLL ---
+        page.evaluate("""() => {
+            window.scrollBy(0, document.body.scrollHeight / 2);
+        }""")
+        time.sleep(random.uniform(1,2))
+        page.evaluate("""() => {
+            window.scrollBy(0, document.body.scrollHeight);
+        }""")
+        time.sleep(random.uniform(1,2))
 
-        # # --- HUMAN-LIKE MOUSE MOVEMENT ---
-        # page.mouse.move(random.randint(100, 400), random.randint(100, 300))
-        # time.sleep(random.uniform(0.5, 1))
-        # page.mouse.move(random.randint(400, 800), random.randint(300, 600))
-        # time.sleep(random.uniform(0.5, 1))
+        # --- HUMAN-LIKE MOUSE MOVEMENT ---
+        page.mouse.move(random.randint(100, 400), random.randint(100, 300))
+        time.sleep(random.uniform(0.5, 1))
+        page.mouse.move(random.randint(400, 800), random.randint(300, 600))
+        time.sleep(random.uniform(0.5, 1))
 
         el_results = page.query_selector("span.total-sort-count")
         results_text = el_results.inner_text()
@@ -108,17 +64,21 @@ with sync_playwright() as p:
             page.goto(f"https://www.lumens.com/{BRANDS[brand]}/?start={start}&sz=24", timeout=60000)
             time.sleep(random.uniform(2, 4))
 
-            # # Human-like scroll before scraping
-            # page.evaluate("""() => { window.scrollBy(0, document.body.scrollHeight / 2); }""")
-            # time.sleep(random.uniform(1,2))
-            # page.evaluate("""() => { window.scrollBy(0, document.body.scrollHeight); }""")
-            # time.sleep(random.uniform(1,2))
+            # --- HUMAN-LIKE SCROLL ---
+            page.evaluate("""() => {
+                window.scrollBy(0, document.body.scrollHeight / 2);
+            }""")
+            time.sleep(random.uniform(1,2))
+            page.evaluate("""() => {
+                window.scrollBy(0, document.body.scrollHeight);
+            }""")
+            time.sleep(random.uniform(1,2))
 
-            # # Human-like mouse
-            # page.mouse.move(random.randint(100, 400), random.randint(100, 300))
-            # time.sleep(random.uniform(0.5, 1))
-            # page.mouse.move(random.randint(400, 800), random.randint(300, 600))
-            # time.sleep(random.uniform(0.5, 1))
+            # --- HUMAN-LIKE MOUSE MOVEMENT ---
+            page.mouse.move(random.randint(100, 400), random.randint(100, 300))
+            time.sleep(random.uniform(0.5, 1))
+            page.mouse.move(random.randint(400, 800), random.randint(300, 600))
+            time.sleep(random.uniform(0.5, 1))
 
             try:
                 page.wait_for_selector("div.product-tile", timeout=60000)
@@ -188,3 +148,5 @@ except gspread.WorksheetNotFound:
         cols=20, 
         rows=1000
         )
+    
+set_with_dataframe(sheet, df)

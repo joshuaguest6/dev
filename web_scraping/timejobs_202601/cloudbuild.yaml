@@ -4,16 +4,15 @@ steps:
     args:
       - '-c'
       - |
-        gcloud functions deploy scrape-op-shops \
-          --source scraping/op_shops \
+        gcloud functions deploy scrape-jobs \
+          --source web_scraping/timejobs_202601 \
           --runtime python310 \
           --trigger-http \
           --region australia-southeast1 \
           --allow-unauthenticated \
           --project web-scraper-prod \
           --service-account scraper-fn@web-scraper-prod.iam.gserviceaccount.com \
-          --entry-point main \
-          --memory=2GB
+          --entry-point main
 
 options:
   logging: "CLOUD_LOGGING_ONLY"
