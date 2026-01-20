@@ -60,29 +60,6 @@ for item in search_data:
             'Matched_keywords': ', '.join(matched_keywords)
         }
 
-        
-        # # Check if post has comments
-        # comments = []
-        # keywords = []
-        # if post.num_comments > 0:
-        #     # Scraping comments for each post
-        #     post.comments.replace_more(limit=5)
-        #     for comment in post.comments.list():
-        #         comment_keywords = [k for k in item['keywords'] if k.lower() in comment.body.lower()]
-        #         comments.append({
-        #             'Author': comment.author.name if comment.author else 'Unknown',
-        #             'Timestamp': pd.to_datetime(comment.created_utc, unit='s'),
-        #             'Text': comment.body,
-        #             'Score': comment.score,
-        #             'Keywords': comment_keywords
-        #         })
-
-        #         keywords += comment_keywords
-
-        # keywords = list(set(keywords))
-        # post_data['Comments'] = comments
-        # post_data['Keywords'] = keywords
-
         data.append(post_data)
 
 df = pd.DataFrame(data)
