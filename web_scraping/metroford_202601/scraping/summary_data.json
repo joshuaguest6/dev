@@ -1,0 +1,152 @@
+[
+  {
+    "Make": "Ford",
+    "Model": "Everest",
+    "Year": 2024,
+    "count": 3,
+    "avg_price": 62656.666666666664,
+    "max_price": 64990.0,
+    "min_price": 57990.0,
+    "median_price": 64990.0
+  },
+  {
+    "Make": "Ford",
+    "Model": "Everest",
+    "Year": 2025,
+    "count": 28,
+    "avg_price": 87904.64285714286,
+    "max_price": 94990.0,
+    "min_price": 57990.0,
+    "median_price": 87990.0
+  },
+  {
+    "Make": "Ford",
+    "Model": "Mustang",
+    "Year": 2024,
+    "count": 1,
+    "avg_price": 70000.0,
+    "max_price": 70000.0,
+    "min_price": 70000.0,
+    "median_price": 70000.0
+  },
+  {
+    "Make": "Ford",
+    "Model": "Mustang",
+    "Year": 2025,
+    "count": 9,
+    "avg_price": 96565.0,
+    "max_price": 98156.0,
+    "min_price": 94165.0,
+    "median_price": 97285.0
+  },
+  {
+    "Make": "Ford",
+    "Model": "Mustang Mach-E",
+    "Year": 2023,
+    "count": 5,
+    "avg_price": 66590.0,
+    "max_price": 71990.0,
+    "min_price": 59990.0,
+    "median_price": 67990.0
+  },
+  {
+    "Make": "Ford",
+    "Model": "Ranger",
+    "Year": 2022,
+    "count": 2,
+    "avg_price": 57490.0,
+    "max_price": 59990.0,
+    "min_price": 54990.0,
+    "median_price": 57490.0
+  },
+  {
+    "Make": "Ford",
+    "Model": "Ranger",
+    "Year": 2023,
+    "count": 1,
+    "avg_price": 44990.0,
+    "max_price": 44990.0,
+    "min_price": 44990.0,
+    "median_price": 44990.0
+  },
+  {
+    "Make": "Ford",
+    "Model": "Ranger",
+    "Year": 2024,
+    "count": 1,
+    "avg_price": 68990.0,
+    "max_price": 68990.0,
+    "min_price": 68990.0,
+    "median_price": 68990.0
+  },
+  {
+    "Make": "Ford",
+    "Model": "Ranger",
+    "Year": 2025,
+    "count": 44,
+    "avg_price": 83231.74069767442,
+    "max_price": 105990.0,
+    "min_price": 48484.0,
+    "median_price": 78990.0
+  },
+  {
+    "Make": "Ford",
+    "Model": "Ranger Super Duty",
+    "Year": 2025,
+    "count": 6,
+    "avg_price": 101066.16666666667,
+    "max_price": 106990.0,
+    "min_price": 98744.0,
+    "median_price": 99208.5
+  },
+  {
+    "Make": "Ford",
+    "Model": "Tourneo",
+    "Year": 2024,
+    "count": 4,
+    "avg_price": 63964.5,
+    "max_price": 70888.0,
+    "min_price": 57990.0,
+    "median_price": 63490.0
+  },
+  {
+    "Make": "Ford",
+    "Model": "Tourneo",
+    "Year": 2025,
+    "count": 2,
+    "avg_price": 72447.0,
+    "max_price": 72447.0,
+    "min_price": 72447.0,
+    "median_price": 72447.0
+  },
+  {
+    "Make": "Ford",
+    "Model": "Transit",
+    "Year": 2024,
+    "count": 1,
+    "avg_price": 55990.0,
+    "max_price": 55990.0,
+    "min_price": 55990.0,
+    "median_price": 55990.0
+  },
+  {
+    "Make": "Ford",
+    "Model": "Transit Custom",
+    "Year": 2024,
+    "count": 2,
+    "avg_price": 62990.0,
+    "max_price": 65990.0,
+    "min_price": 59990.0,
+    "median_price": 62990.0
+  },
+  {
+    "Make": "Nissan",
+    "Model": "X-Trail",
+    "Year": 2024,
+    "count": 1,
+    "avg_price": 47980.0,
+    "max_price": 47980.0,
+    "min_price": 47980.0,
+    "median_price": 47980.0
+  }
+]
