@@ -220,10 +220,16 @@ def change_detection(df):
 
     # Records changed - to be added to history later
     changed_df = merged_df[pd.notna(merged_df['Status'])]
+
+    # do this because 'Removed' records' date comes from date_old, which is yesterday
+    changed_df['Date'] = FORMATTED_NOW
     print(f'changed_df shape: {changed_df.shape}')
 
     # Records removed today
     removed_df = merged_df[merged_df['Status'] == 'Removed']
+    # do this because 'Removed' records' date comes from date_old, which is yesterday
+    removed_df['Date'] = FORMATTED_NOW
+    
     print(f'removed_df shape: {removed_df.shape}')
 
     return df, changed_df, removed_df
@@ -238,7 +244,7 @@ def check_history_changes(df):
 
     if blob.exists():
         content = blob.download_as_text()
-        change_history = json.loadx(content)
+        change_history = json.loads(content)
     else:
         change_history = []
 
@@ -282,6 +288,9 @@ def summarise_data(df):
 def main():
     df = get_payload()
 
+    # Testing
+    # df = df[df['VIN'] != "1FATP8LH6R5147468"]
+
     df, changed_df, removed_df = change_detection(df)
 
     df = check_history_changes(df)
@@ -290,9 +299,9 @@ def main():
 
     save_current(df)
     save_history(df)
-    if removed_df:
+    if not removed_df.empty:
         save_removed(removed_df)
-    if changed_df:
+    if not changed_df.empty:
         save_changes(changed_df)
     save_summary(summary_df)
 
