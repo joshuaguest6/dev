@@ -305,5 +305,7 @@ def main(request):
         save_changes(changed_df)
     save_summary(summary_df)
 
+    return "OK", 200
+
 if __name__ == '__main__':
     main(None)
