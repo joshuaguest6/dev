@@ -285,7 +285,7 @@ def summarise_data(df):
 
     return summary_df
 
-def main():
+def main(request):
     df = get_payload()
 
     # Testing
@@ -306,4 +306,4 @@ def main():
     save_summary(summary_df)
 
 if __name__ == '__main__':
-    main()
+    main(None)

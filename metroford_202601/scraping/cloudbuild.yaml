@@ -1,0 +1,19 @@
+steps:
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:slim'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        gcloud functions deploy scrape-metroford \
+          --source metroford_202601/scraping \
+          --runtime python310 \
+          --trigger-http \
+          --region australia-southeast1 \
+          --allow-unauthenticated \
+          --project web-scraper-prod \
+          --service-account scraper-fn@web-scraper-prod.iam.gserviceaccount.com \
+          --entry-point main \
+          --memory=2GB
+
+options:
+  logging: "CLOUD_LOGGING_ONLY"
