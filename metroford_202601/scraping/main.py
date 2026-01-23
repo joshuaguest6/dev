@@ -24,7 +24,7 @@ def save_current(df):
     bucket = client.bucket('metroford')
     blob = bucket.blob('inventory_current.json')
 
-    blob.upload_from_text(
+    blob.upload_from_string(
         json.dumps(df.replace({np.nan: None}).to_dict(orient='records'), indent=2),
         content_type='application/json'
     )
@@ -36,7 +36,7 @@ def save_removed(removed_df):
     blob = bucket.blob('inventory_removed.json')
 
     if blob.exists():
-        content = blob.download_as_string()
+        content = blob.download_as_text()
         previous_removed = json.loads(content)
     else:
         previous_removed = []
@@ -45,7 +45,7 @@ def save_removed(removed_df):
     removed_dict = removed_df.to_dict(orient='records')
     all_removed = previous_removed + removed_dict
 
-    blob.upload_from_text(
+    blob.upload_from_string(
         json.dumps(all_removed, indent=2),
         content_type='application/json'
     )
@@ -61,14 +61,14 @@ def save_changes(changed_df):
 
     # Append today's changed records to history
     if blob.exists():
-        content = blob.download_as_string()
+        content = blob.download_as_text()
         change_history = json.loads(content)
     else:
         change_history = []
 
     change_history += changed_dict
 
-    blob.upload_from_text(
+    blob.upload_from_string(
         json.dumps(change_history, indent=2),
         content_type='application/json'
     )
@@ -81,7 +81,7 @@ def save_history(df):
     blob = bucket.blob('inventory_history.json')
 
     if blob.exists():
-        content = blob.download_as_string()
+        content = blob.download_as_text()
         history_data = json.loads(content)
     else:
         history_data = []
@@ -94,7 +94,7 @@ def save_history(df):
 
     history_df = pd.concat([df, history_df], axis=0, ignore_index=True)
 
-    blob.upload_from_text(
+    blob.upload_from_string(
         json.dumps(history_df.replace({np.nan: None}).to_dict(orient='records'), indent=2),
         content_type = 'application/json'
     )
@@ -104,7 +104,7 @@ def save_summary(df):
     bucket = client.bucket('metroford')
     blob = bucket.blob('summary_data.json')
 
-    blob.upload_from_text(
+    blob.upload_from_string(
         json.dumps(df.to_dict(orient='records'), indent=2),
         content_type='application/json'
     )
@@ -156,7 +156,7 @@ def change_detection(df):
 
     # import data for the previous run
     if blob.exists():
-        content = blob.download_as_string()
+        content = blob.download_as_text()
         inventory_current = json.loads(content)
     else:
         inventory_current = []
@@ -237,7 +237,7 @@ def check_history_changes(df):
     blob = bucket.blob('change_history.json')
 
     if blob.exists():
-        content = blob.download_as_string()
+        content = blob.download_as_text()
         change_history = json.loadx(content)
     else:
         change_history = []
