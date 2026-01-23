@@ -24,7 +24,7 @@ def save_current(df):
     bucket = client.bucket('metroford')
     blob = bucket.blob('inventory_current.json')
 
-    blob.upload_from_string(
+    blob.upload_from_text(
         json.dumps(df.replace({np.nan: None}).to_dict(orient='records'), indent=2),
         content_type='application/json'
     )
@@ -45,7 +45,7 @@ def save_removed(removed_df):
     removed_dict = removed_df.to_dict(orient='records')
     all_removed = previous_removed + removed_dict
 
-    blob.upload_from_string(
+    blob.upload_from_text(
         json.dumps(all_removed, indent=2),
         content_type='application/json'
     )
@@ -68,7 +68,7 @@ def save_changes(changed_df):
 
     change_history += changed_dict
 
-    blob.upload_from_string(
+    blob.upload_from_text(
         json.dumps(change_history, indent=2),
         content_type='application/json'
     )
@@ -94,7 +94,7 @@ def save_history(df):
 
     history_df = pd.concat([df, history_df], axis=0, ignore_index=True)
 
-    blob.upload_from_string(
+    blob.upload_from_text(
         json.dumps(history_df.replace({np.nan: None}).to_dict(orient='records'), indent=2),
         content_type = 'application/json'
     )
@@ -104,7 +104,7 @@ def save_summary(df):
     bucket = client.bucket('metroford')
     blob = bucket.blob('summary_data.json')
 
-    blob.upload_from_string(
+    blob.upload_from_text(
         json.dumps(df.to_dict(orient='records'), indent=2),
         content_type='application/json'
     )
@@ -150,11 +150,15 @@ def get_payload():
 
 def change_detection(df):
 
+    client = storage.Client()
+    bucket = client.bucket('metroford')
+    blob = bucket.blob('inventory_current.json')
+
     # import data for the previous run
-    try:
-        with open('inventory_current.json', 'r') as f:
-            inventory_current = json.load(f)
-    except:
+    if blob.exists():
+        content = blob.download_as_string()
+        inventory_current = json.loads(content)
+    else:
         inventory_current = []
 
     # Make DataFrame with expected columns even if empty
@@ -228,10 +232,14 @@ def check_history_changes(df):
     print('Running check_history_changes')
     print(f'df shape: {df.shape}')
 
-    try:
-        with open('change_history.json', 'r') as f:
-            change_history = json.load(f)
-    except:
+    client = storage.Client()
+    bucket = client.bucket('metroford')
+    blob = bucket.blob('change_history.json')
+
+    if blob.exists():
+        content = blob.download_as_string()
+        change_history = json.loadx(content)
+    else:
         change_history = []
 
     change_history_df = pd.DataFrame(change_history, columns=['VIN', 'Date', 'Status'])
