@@ -4,7 +4,7 @@ from google.cloud import storage
 import json
 from datetime import datetime, timedelta
 
-st.set_page_config(page_title="Inventory and Change Detection - Metro Ford", layout='wide')
+st.set_page_config(page_title="Inventory Tracking and Change Detection - Metro Ford", layout='wide')
 
 @st.cache_data(ttl=3600*6)
 def get_data():
@@ -69,7 +69,7 @@ def highlight_removed(row):
         color = 'background-color: #615fff33'
     return [color] * len(row)
 
-st.title('Inventory and Change Detection - Metro Ford')
+st.title('Inventory Tracking and Change Detection - Metro Ford')
 
 st.markdown("### Inventory")
 
@@ -119,5 +119,5 @@ summary_df = summary_df.rename(columns={
 })
 
 #sort
-summary_df_sorted = summary_df[['Vehicle', 'count', 'Average Price', 'Max Price', 'Min Price']].sort_values(by='count', ascending=False).reset_index(drop=True)
+summary_df_sorted = summary_df[['Vehicle', 'Count', 'Average Price', 'Max Price', 'Min Price']].sort_values(by='count', ascending=False).reset_index(drop=True)
 st.dataframe(summary_df_sorted)
