@@ -1,15 +1,30 @@
 steps:
-  - name: 'gcr.io/cloud-builders/gcloud' 
-    entrypoint: 'bash'
+  # Build Docker image
+  - name: gcr.io/cloud-builders/docker
+    dir: metroford_202601/app
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/metroford-app:$COMMIT_SHA', '.']
+
+  # Push Docker image
+  - name: gcr.io/cloud-builders/docker
+    args: ['push', 'gcr.io/$PROJECT_ID/metroford-app:$COMMIT_SHA']
+
+  # Deploy to Cloud Run
+  - name: gcr.io/google.com/cloudsdktool/cloud-sdk
+    entrypoint: gcloud
     args:
-      - '-c'
-      - |
-        echo "PWD: $(pwd)"
-        ls -al
-  - name: 'gcr.io/cloud-builders/docker'
-    dir: 'metroford_202601/app'
-    args: ['build', '-t', 'gcr.io/$PROJECT_ID/metroford-app', '.']
+      - run
+      - deploy
+      - metroford-app
+      - --image
+      - gcr.io/$PROJECT_ID/metroford-app:$COMMIT_SHA
+      - --region
+      - australia-southeast1
+      - --platform
+      - managed
+      - --quiet
+
 images:
-  - 'gcr.io/$PROJECT_ID/metroford-app'
+  - gcr.io/$PROJECT_ID/metroford-app:$COMMIT_SHA
+
 options:
   logging: CLOUD_LOGGING_ONLY
