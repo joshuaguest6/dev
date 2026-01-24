@@ -119,5 +119,5 @@ summary_df = summary_df.rename(columns={
 })
 
 #sort
-summary_df_sorted = summary_df[['Vehicle', 'Count', 'Average Price', 'Max Price', 'Min Price']].sort_values(by='count', ascending=False).reset_index(drop=True)
+summary_df_sorted = summary_df[['Vehicle', 'Count', 'Average Price', 'Max Price', 'Min Price']].sort_values(by='Count', ascending=False).reset_index(drop=True)
 st.dataframe(summary_df_sorted)
