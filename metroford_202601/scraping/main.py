@@ -4,8 +4,10 @@ import json
 from datetime import datetime, timedelta
 import numpy as np
 from google.cloud import storage
+import pytz
 
-NOW = datetime.now()
+tz = pytz.timezone('Australia/Sydney')
+NOW = datetime.now(tz)
 FORMATTED_NOW = NOW.strftime("%Y-%m-%d %H:%M:%S")
 
 # Show all columns when printing
