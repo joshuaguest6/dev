@@ -112,6 +112,7 @@ summary_df['max_price'] = summary_df['max_price'].map('${:,.0f}'.format)
 summary_df['min_price'] = summary_df['min_price'].map('${:,.0f}'.format)
 
 summary_df = summary_df.rename(columns={
+    'count': 'Count',
     'avg_price': 'Average Price',
     'max_price': 'Max Price',
     'min_price': 'Min Price'
