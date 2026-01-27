@@ -12,6 +12,34 @@ import gspread
 from gspread_dataframe import set_with_dataframe
 from google.auth import default
 
+# TODO
+# Add multiple searches
+# searches = [
+#     {
+
+#         'what': 'Physiotherapist',
+#         'where': 'Greater Sydney, NSW'
+#     },
+#     {
+
+#         'what': 'Exercise Physiotherapist',
+#         'where': 'Greater Sydney, NSW'
+#     },{
+
+#         'what': 'Physiotherapist',
+#         'where': 'Melbourne, VIC'
+#     },
+# ]
+
+# Then wrap scraper in a function.
+# Run each search, dedupe, return it and append to a list
+# Finish all searches, dedupe, output to google sheets and GCS
+
+# TODO
+# Instead of failing when a page loads, save the page number and keep going to the next one
+# save failed pages in an 'errors_{date}' file in GCS
+
+
 gsheet = 'YellowPages Physiotherapists'
 sheet_name = 'data'
 
