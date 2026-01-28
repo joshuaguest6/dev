@@ -21,16 +21,20 @@ from google.auth import default
 BASE_URL = "https://www.yellowpages.com.au/search/listings"
 
 SEARCHES = [
+    # {
+    #     "what": "Physiotherapist",
+    #     "where": "Greater Sydney, NSW",
+    # },
     {
         "what": "Physiotherapist",
-        "where": "Greater Sydney, NSW",
+        "where": "Sydney, NSW 2000",
     }
 ]
 
-MAX_RETRIES = 3
+MAX_RETRIES = 1
 WAIT_TIMEOUT_MS = 10_000
 PAGE_SLEEP_SECONDS = 2
-MAX_PAGES = 1  # safety limit for now
+MAX_PAGES = 5  # safety limit for now
 
 GCS_BUCKET = "yellowpages_physiotherapists"
 
@@ -209,25 +213,6 @@ def scrape_search(search):
 
         browser.close()
 
-    df = pd.DataFrame(records)
-
-    dup_rows = df[df.duplicated(
-        subset=['business_name', 'phone_number'],
-        keep=False
-    )]
-
-    print('Duplicates:')
-    if not dup_rows.empty:
-        print(dup_rows[['business_name', 'phone_number', 'city']])
-    else:
-        print('No duplicates')
-
-    print(f'{len(df)} rows before dedupe')
-    df = df.drop_duplicates(subset=['business_name', 'phone_number'])
-    print(f'{len(df)} rows after dedupe')
-
-    records = df.to_dict(orient='records')
-
     return records, errors
 
 
@@ -301,6 +286,7 @@ def main():
     upload_to_gcs(df.to_dict(orient="records"), all_errors)
     upload_to_google_sheets(df)
 
+    # can remove this later
     with open('data.json', 'w') as f:
         json.dump(df.to_dict(orient='records'), f, indent=2)
 
