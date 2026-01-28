@@ -21,12 +21,12 @@ from google.auth import default
 BASE_URL = "https://www.yellowpages.com.au/search/listings"
 
 SEARCHES = [
-    # {
-    #     "what": "Physiotherapist",
-    #     "where": "Greater Sydney, NSW",
-    # },
     {
-        "what": "Physiotherapist",
+        "what": "Physiotherapists",
+        "where": "Melbourne, VIC 3000",
+    },
+    {
+        "what": "Physiotherapists",
         "where": "Sydney, NSW 2000",
     }
 ]
@@ -105,7 +105,7 @@ def load_listing_tiles(browser, url, page_number):
 # TILE PARSING
 # ============================================================
 
-def parse_listing_tile(tile):
+def parse_listing_tile(tile, where):
     """
     Extract business fields from a single listing tile.
     """
@@ -140,8 +140,7 @@ def parse_listing_tile(tile):
     return {
         "business_name": name,
         "phone_number": phone,
-        "city": "Sydney",
-        "state": "NSW",
+        "city": where,
         "source": "Yellow Pages",
         "website_link": website,
         "listing_link": listing_url,
@@ -192,7 +191,7 @@ def scrape_search(search):
                 continue
 
             for tile in tiles:
-                record = parse_listing_tile(tile)
+                record = parse_listing_tile(tile, search["where"])
                 if record:
                     records.append(record)
 

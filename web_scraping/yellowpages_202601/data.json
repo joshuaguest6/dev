@@ -1,9 +1,784 @@
 [
   {
+    "business_name": "Collins Street Physiotherapy",
+    "phone_number": "0396294299",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.collinsstreetphysio.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/collins-street-physiotherapy-13234262-listing.html"
+  },
+  {
+    "business_name": "Pure Physio Collins St",
+    "phone_number": "0390907325",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.purephysio.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/pure-physio-collins-st-15074075-listing.html"
+  },
+  {
+    "business_name": "Pure Physio Queen Street",
+    "phone_number": "0390907325",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.purephysio.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/pure-physio-queen-street-13968933-listing.html"
+  },
+  {
+    "business_name": "The Alignment Studio",
+    "phone_number": "0396502220",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.collinsplacephysio.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/the-alignment-studio-12171966-listing.html"
+  },
+  {
+    "business_name": "North Melbourne Physiotherapy Clinic",
+    "phone_number": "0399176538",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/north-melbourne/north-melbourne-physiotherapy-clinic-12750579-listing.html"
+  },
+  {
+    "business_name": "Errol St Spinal & Sports Physiotherapy",
+    "phone_number": "0393299988",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.errolstphysio.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/north-melbourne/errol-st-spinal-sports-physiotherapy-13939578-listing.html"
+  },
+  {
+    "business_name": "Viva Physiotherapy",
+    "phone_number": "0396632043",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://vivaphysiotherapy.com",
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/viva-physiotherapy-15367218-listing.html"
+  },
+  {
+    "business_name": "LifeCare Physiotherapy",
+    "phone_number": "0396140803",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.lifecare.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/lifecare-physiotherapy-14193006-listing.html"
+  },
+  {
+    "business_name": "Elizabeth Street Sports & Spinal Physiotherapy Centre",
+    "phone_number": "0396703996",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.elizabethphysio.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/elizabeth-street-sports-spinal-physiotherapy-centre-12813966-listing.html"
+  },
+  {
+    "business_name": "Backfocus Physiotherapy",
+    "phone_number": "0396140803",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.backfocus.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/backfocus-physiotherapy-12536111-listing.html"
+  },
+  {
+    "business_name": "Accident, Sports & Spinal Physiotherapy",
+    "phone_number": "0396501347",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/accident-sports-spinal-physiotherapy-14249161-listing.html"
+  },
+  {
+    "business_name": "City Baths Spinal & Sports Medicine Clinic",
+    "phone_number": "0396392286",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.citybathssportsmedicine.com",
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/city-baths-spinal-sports-medicine-clinic-12026182-listing.html"
+  },
+  {
+    "business_name": "Active Orthopaedic Centre Physiotherapy",
+    "phone_number": "1300228483",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.activeorthopaedics.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/active-orthopaedic-centre-physiotherapy-15085085-listing.html"
+  },
+  {
+    "business_name": "Back In Motion - Melbourne On Collins",
+    "phone_number": "0396023332",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "https://www.backinmotion.com.au/melbourne-on-collins",
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/back-in-motion-melbourne-on-collins-1000002250900-listing.html"
+  },
+  {
+    "business_name": "Vivir Healthcare Pty Ltd",
+    "phone_number": "1300184847",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.vivir.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/vivir-healthcare-pty-ltd-15656246-listing.html"
+  },
+  {
+    "business_name": "Kearney Kim",
+    "phone_number": "0396703051",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.hna.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/kearney-kim-12364295-listing.html"
+  },
+  {
+    "business_name": "City Sports Physiotherapy",
+    "phone_number": "0396497111",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/city-sports-physiotherapy-12374241-listing.html"
+  },
+  {
+    "business_name": "OurPhysioCo",
+    "phone_number": "1300133743",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.ourphysioco.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/ourphysioco-15596293-listing.html"
+  },
+  {
+    "business_name": "City Physiotherapy",
+    "phone_number": "0399097088",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.cityphysio.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/city-physiotherapy-12073622-listing.html"
+  },
+  {
+    "business_name": "David Zuker Physiotherapist",
+    "phone_number": "0396548918",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/david-zuker-physiotherapist-14595623-listing.html"
+  },
+  {
+    "business_name": "Australian College of Sports Therapy",
+    "phone_number": "0396703735",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/australian-college-of-sports-therapy-14331894-listing.html"
+  },
+  {
+    "business_name": "APS Physiotherapy",
+    "phone_number": "0396504149",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/aps-physiotherapy-13476044-listing.html"
+  },
+  {
+    "business_name": "Mitchell Andrew, Teed Robyn & Zuluaga Maria",
+    "phone_number": "0396703996",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/mitchell-andrew-teed-robyn-zuluaga-maria-13657403-listing.html"
+  },
+  {
+    "business_name": "Moore Roger",
+    "phone_number": "0396509372",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/moore-roger-13342530-listing.html"
+  },
+  {
+    "business_name": "Stokes Christie",
+    "phone_number": "0396509372",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/stokes-christie-14325622-listing.html"
+  },
+  {
+    "business_name": "Giuliano W B",
+    "phone_number": "0396703051",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/giuliano-w-b-12117139-listing.html"
+  },
+  {
+    "business_name": "Elite Sports Physiotherapy",
+    "phone_number": "0396394400",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/elite-sports-physiotherapy-12468373-listing.html"
+  },
+  {
+    "business_name": "Bond Peter & Duckworth Marie",
+    "phone_number": "0396502220",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/bond-peter-duckworth-marie-13389229-listing.html"
+  },
+  {
+    "business_name": "Melli Murcott",
+    "phone_number": "0394381911",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/melli-murcott-14224679-listing.html"
+  },
+  {
+    "business_name": "Lucy Morelli (Manipulative Physiotherapy)",
+    "phone_number": "1300366284",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/lucy-morelli-manipulative-physiotherapy-15533603-listing.html"
+  },
+  {
+    "business_name": "Workwell Physiotherapy",
+    "phone_number": "0396140803",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/workwell-physiotherapy-12306505-listing.html"
+  },
+  {
+    "business_name": "Melbourne Headache Centre",
+    "phone_number": "0386486487",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/melbourne-headache-centre-14824882-listing.html"
+  },
+  {
+    "business_name": "Bond Peter",
+    "phone_number": "0396502220",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/bond-peter-12272281-listing.html"
+  },
+  {
+    "business_name": "Jenkins Darren",
+    "phone_number": "0396294299",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/jenkins-darren-13694593-listing.html"
+  },
+  {
+    "business_name": "Firm N Fold",
+    "phone_number": "0738541657",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.firm-n-fold.com.au",
+    "listing_link": null
+  },
+  {
+    "business_name": "Victoria Parade Physiotherapy Centre",
+    "phone_number": "0394198064",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.vicparadephysio.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/fitzroy/victoria-parade-physiotherapy-centre-12632120-listing.html"
+  },
+  {
+    "business_name": "Errol Street Spinal And Sports Physiotherapy",
+    "phone_number": "0393299988",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.errolstphysio.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/north-melbourne/errol-street-spinal-and-sports-physiotherapy-14161659-listing.html"
+  },
+  {
+    "business_name": "East Melbourne Physiotherapy & Hydrotherapy Services",
+    "phone_number": "0394174800",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.eastmelbournephysio.com",
+    "listing_link": "https://www.yellowpages.com.au//vic/fitzroy/east-melbourne-physiotherapy-hydrotherapy-services-13994198-listing.html"
+  },
+  {
+    "business_name": "Pinnacle Healthgroup",
+    "phone_number": "0390347218",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.pinnaclehealthgroup.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/docklands/pinnacle-healthgroup-14327077-listing.html"
+  },
+  {
+    "business_name": "Panacea Movement Medicine",
+    "phone_number": "0393478939",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/carlton/panacea-movement-medicine-14948092-listing.html"
+  },
+  {
+    "business_name": "PT Fusion",
+    "phone_number": "0456861340",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/docklands/pt-fusion-15650000-listing.html"
+  },
+  {
+    "business_name": "Elite Sports Physiotherapy",
+    "phone_number": "0396902626",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/southbank/elite-sports-physiotherapy-12223041-listing.html"
+  },
+  {
+    "business_name": "Panacea Movement Medicine",
+    "phone_number": "0383444948",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/carlton/panacea-movement-medicine-14951285-listing.html"
+  },
+  {
+    "business_name": "Gertzel Sue",
+    "phone_number": "0393283733",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//sup/gertzel-sue-12097829-listing.html"
+  },
+  {
+    "business_name": "Melbourne Pain Management Clinic",
+    "phone_number": "0393477377",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/carlton/melbourne-pain-management-clinic-13517923-listing.html"
+  },
+  {
+    "business_name": "St Kilda Road Sports & Physiotherapy Centre",
+    "phone_number": "0398692020",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.skrphysio.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/st-kilda-road-sports-physiotherapy-centre-12579787-listing.html"
+  },
+  {
+    "business_name": "Olympic Park Sports Medicine Centre",
+    "phone_number": "13008598",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/olympic-park-sports-medicine-centre-15289830-listing.html"
+  },
+  {
+    "business_name": "St Kilda Rd Sports & Physiotherapy Centre",
+    "phone_number": "0398692030",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/st-kilda-rd-sports-physiotherapy-centre-12251479-listing.html"
+  },
+  {
+    "business_name": "Form Function Physiotherapy",
+    "phone_number": "0399576821",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.ffphysio.com",
+    "listing_link": "https://www.yellowpages.com.au//vic/richmond/form-function-physiotherapy-1000002378163-listing.html"
+  },
+  {
+    "business_name": "Performance Medicine",
+    "phone_number": "0396862373",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.performancemedphysio.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/southbank/performance-medicine-13899988-listing.html"
+  },
+  {
+    "business_name": "Lionheart Physiotherapy Collingwood",
+    "phone_number": "0390847461",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "https://www.lionheart.earth",
+    "listing_link": "https://www.yellowpages.com.au//vic/collingwood/lionheart-physiotherapy-collingwood-1000002378175-listing.html"
+  },
+  {
+    "business_name": "Richmond Physiotherapy Clinic",
+    "phone_number": "0394288862",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.richmondphysiotherapyclinic.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/richmond/richmond-physiotherapy-clinic-12102426-listing.html"
+  },
+  {
+    "business_name": "Albert Park Physiotherapy",
+    "phone_number": "0396905858",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.albertparkphysio.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/albert-park/albert-park-physiotherapy-13695279-listing.html"
+  },
+  {
+    "business_name": "Fit and Well Physiotherapy",
+    "phone_number": "0393299338",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.fitandwellphysio.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/north-melbourne/fit-and-well-physiotherapy-1000001679066-listing.html"
+  },
+  {
+    "business_name": "MOVE Sports & Spinal Physiotherapy & Clinical Pilates",
+    "phone_number": "0390276262",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://movephysioclinic.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/abbotsford/move-sports-spinal-physiotherapy-clinical-pilates-1000002091539-listing.html"
+  },
+  {
+    "business_name": "Clifton Hill Physiotherapy",
+    "phone_number": "0394861918",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "https://www.cliftonhillphysiotherapy.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/clifton-hill/clifton-hill-physiotherapy-12738176-listing.html"
+  },
+  {
+    "business_name": "Evolutio Sports Physiotherapy Richmond",
+    "phone_number": "0394270562",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.evolutio.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/richmond/evolutio-sports-physiotherapy-richmond-15518250-listing.html"
+  },
+  {
+    "business_name": "southport physiotherapy",
+    "phone_number": "0438464014",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/south-melbourne/southport-physiotherapy-15364664-listing.html"
+  },
+  {
+    "business_name": "Symmetry Physiotherapy Port Melbourne",
+    "phone_number": "0396452183",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.symmetry.physio",
+    "listing_link": "https://www.yellowpages.com.au//vic/port-melbourne/symmetry-physiotherapy-port-melbourne-1000002227052-listing.html"
+  },
+  {
+    "business_name": "City South Physiotherapy",
+    "phone_number": "0396962180",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.citysouthphysio.com.au",
+    "listing_link": "https://www.yellowpages.com.au//sup/city-south-physiotherapy-13806383-listing.html"
+  },
+  {
+    "business_name": "BodyGuide",
+    "phone_number": "0426878422",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.bodyguideapp.com",
+    "listing_link": "https://www.yellowpages.com.au//vic/collingwood/bodyguide-1000002746152-listing.html"
+  },
+  {
+    "business_name": "Fitwise East Melbourne",
+    "phone_number": "0394860512",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "https://www.movebeyond.com.au/locations/east-melbourne",
+    "listing_link": "https://www.yellowpages.com.au//vic/east-melbourne/fitwise-east-melbourne-12600449-listing.html"
+  },
+  {
+    "business_name": "Melbourne Hand Rehab",
+    "phone_number": "0394215407",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.melbournehand.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/richmond/melbourne-hand-rehab-12257734-listing.html"
+  },
+  {
+    "business_name": "James de Leijer",
+    "phone_number": "0396457955",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.smpc.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/south-melbourne/james-de-leijer-15084745-listing.html"
+  },
+  {
+    "business_name": "Dascal Adam",
+    "phone_number": "0395538927",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.melbournephysiocentre.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/richmond/dascal-adam-14497481-listing.html"
+  },
+  {
+    "business_name": "Movement Wisdom",
+    "phone_number": "0421843308",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.movementwisdom.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/albert-park/movement-wisdom-15174430-listing.html"
+  },
+  {
+    "business_name": "Richmond Rehab",
+    "phone_number": "1300559600",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.richmondrehab.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/cremorne/richmond-rehab-15599953-listing.html"
+  },
+  {
+    "business_name": "Darren Austin",
+    "phone_number": "0396457955",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.smpc.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/south-melbourne/darren-austin-15084849-listing.html"
+  },
+  {
+    "business_name": "ZEST Physio Pilates Health",
+    "phone_number": "0390772885",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "https://www.zestpph.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/south-melbourne/zest-physio-pilates-health-15218036-listing.html"
+  },
+  {
+    "business_name": "The Physio Co",
+    "phone_number": "1300797793",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.thephysioco.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/south-melbourne/the-physio-co-15036061-listing.html"
+  },
+  {
+    "business_name": "Physio4athletes",
+    "phone_number": "0396904043",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.physio4athletes.com",
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne-st-kilda-rd/physio4athletes-14905299-listing.html"
+  },
+  {
+    "business_name": "Firm N Fold",
+    "phone_number": "0394177391",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.firm-n-fold.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/collingwood/firm-n-fold-15423809-listing.html"
+  },
+  {
+    "business_name": "Dynamic Stability Physiotherapy & Pilates Studio",
+    "phone_number": "0394283330",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.dynamicstability.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/richmond/dynamic-stability-physiotherapy-pilates-studio-12250353-listing.html"
+  },
+  {
+    "business_name": "The Movement Workshop Physiotherapy",
+    "phone_number": "0444591934",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.themovementworkshop.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/south-melbourne/the-movement-workshop-physiotherapy-1000002228117-listing.html"
+  },
+  {
+    "business_name": "SKY Holistic Physiotherapy",
+    "phone_number": "0421248780",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/collingwood/sky-holistic-physiotherapy-1000002634884-listing.html"
+  },
+  {
+    "business_name": "The Cycling Physio",
+    "phone_number": "0390798848",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/carlton-north/the-cycling-physio-15663544-listing.html"
+  },
+  {
+    "business_name": "Physiohealth (Vic) Pty Ltd",
+    "phone_number": "0396463551",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.physiohealth.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/port-melbourne/physiohealth-vic-pty-ltd-13293855-listing.html"
+  },
+  {
+    "business_name": "Fitbody Physio",
+    "phone_number": "0408321166",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/port-melbourne/fitbody-physio-14955758-listing.html"
+  },
+  {
+    "business_name": "Domain Health Physiotherapy and Fitness Studios",
+    "phone_number": "0396961597",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "https://www.domainhealth.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/south-melbourne/domain-health-physiotherapy-and-fitness-studios-12349648-listing.html"
+  },
+  {
+    "business_name": "Bayden Campbell Evolutio Sports Physio",
+    "phone_number": "0394270562",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/richmond/bayden-campbell-evolutio-sports-physio-1000001869417-listing.html"
+  },
+  {
+    "business_name": "Complete Physio Melbourne",
+    "phone_number": "0394956996",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/east-melbourne/complete-physio-melbourne-12250633-listing.html"
+  },
+  {
+    "business_name": "Fiona Samuel Physiotherapy & Pilates",
+    "phone_number": "0402422867",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/south-melbourne/fiona-samuel-physiotherapy-pilates-1000002710625-listing.html"
+  },
+  {
+    "business_name": "Parsotam Rakesh",
+    "phone_number": "0396457955",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/south-melbourne/parsotam-rakesh-14995664-listing.html"
+  },
+  {
+    "business_name": "Richmond Physiotherapy Backs & Necks",
+    "phone_number": "0394294684",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/richmond/richmond-physiotherapy-backs-necks-14087253-listing.html"
+  },
+  {
+    "business_name": "Sports Elite Pty Ltd",
+    "phone_number": "0394288081",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/abbotsford/sports-elite-pty-ltd-14968319-listing.html"
+  },
+  {
+    "business_name": "Marshall Jackie",
+    "phone_number": "0396962180",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/south-melbourne/marshall-jackie-12645269-listing.html"
+  },
+  {
+    "business_name": "Zito Guy",
+    "phone_number": "0393874999",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/carlton-north/zito-guy-12960507-listing.html"
+  },
+  {
+    "business_name": "Evolutio Sports Physio Richmond",
+    "phone_number": "0391003798",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/richmond/evolutio-sports-physio-richmond-1000002987739-listing.html"
+  },
+  {
+    "business_name": "Broome Julia",
+    "phone_number": "0407749404",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/abbotsford/broome-julia-14794792-listing.html"
+  },
+  {
+    "business_name": "A & G Lomas Physiotherapy & Feldenkrais",
+    "phone_number": "0393880348",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/carlton-north/a-g-lomas-physiotherapy-feldenkrais-13178710-listing.html"
+  },
+  {
+    "business_name": "Pinnacle Health Group",
+    "phone_number": "0396003590",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "https://www.pinnaclehealthgroup.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/docklands/pinnacle-health-group-1000002135976-listing.html"
+  },
+  {
+    "business_name": "Masked Melbourne",
+    "phone_number": null,
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/masked-melbourne-1000002381181-listing.html"
+  },
+  {
+    "business_name": "City Integrated Physiotherapy & Massage",
+    "phone_number": "0399097089",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.cityphysio.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/melbourne/city-integrated-physiotherapy-massage-13169377-listing.html"
+  },
+  {
+    "business_name": "OPC Health",
+    "phone_number": "0396819666",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.opchealth.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/port-melbourne/opc-health-12125338-listing.html"
+  },
+  {
+    "business_name": "Richmond Physiotherapy Clinic & Myotherapy",
+    "phone_number": "0394288862",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.richmondphysiotherapyclinic.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/richmond/richmond-physiotherapy-clinic-myotherapy-12543575-listing.html"
+  },
+  {
+    "business_name": "South Melbourne Physiotherapy Clinic",
+    "phone_number": "0396457955",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": "http://www.smpc.com.au",
+    "listing_link": "https://www.yellowpages.com.au//vic/south-melbourne/south-melbourne-physiotherapy-clinic-14202256-listing.html"
+  },
+  {
+    "business_name": "Symmetrix Physiotherapy",
+    "phone_number": "0424323647",
+    "city": "Melbourne, VIC 3000",
+    "source": "Yellow Pages",
+    "website_link": null,
+    "listing_link": "https://www.yellowpages.com.au//vic/south-melbourne/symmetrix-physiotherapy-1000002999825-listing.html"
+  },
+  {
     "business_name": "Macquarie Street Physiotherapy",
     "phone_number": "0292211604",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.macquariestphysio.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/macquarie-street-physiotherapy-15448626-listing.html"
@@ -11,8 +786,7 @@
   {
     "business_name": "Sports Focus Physiotherapy",
     "phone_number": "0292624147",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.sportsfocusphysio.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/sports-focus-physiotherapy-14648356-listing.html"
@@ -20,8 +794,7 @@
   {
     "business_name": "Castlereagh Physiotherapy & Sports Injuries Clinic",
     "phone_number": "0292647974",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.castlereaghphysio.com.au",
     "listing_link": "https://www.yellowpages.com.au//sup/castlereagh-physiotherapy-sports-injuries-clinic-13845168-listing.html"
@@ -29,8 +802,7 @@
   {
     "business_name": "Sydney Physiotherapy",
     "phone_number": "0292322311",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.sydneyphysio.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/sydney-physiotherapy-13147109-listing.html"
@@ -38,8 +810,7 @@
   {
     "business_name": "Sydney Hand Therapy & Rehabilitation Centre",
     "phone_number": "0292212603",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://sydneyhandtherapy.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/sydney-hand-therapy-rehabilitation-centre-12989838-listing.html"
@@ -47,8 +818,7 @@
   {
     "business_name": "Bend and Mend",
     "phone_number": "0292325566",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.bendandmend.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/bend-and-mend-13367691-listing.html"
@@ -56,8 +826,7 @@
   {
     "business_name": "Ergoworks",
     "phone_number": "1300374696",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.ergoworks.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/ergoworks-15140425-listing.html"
@@ -65,8 +834,7 @@
   {
     "business_name": "Sydney Physio Solutions",
     "phone_number": "0292644153",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "https://sydneyphysiosolutions.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/sydney-physio-solutions-14741790-listing.html"
@@ -74,8 +842,7 @@
   {
     "business_name": "Castlereagh Physiotherapy & Sports Injury Clinic",
     "phone_number": "0292647974",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.castlereaghphysio.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/castlereagh-physiotherapy-sports-injury-clinic-13106378-listing.html"
@@ -83,8 +850,7 @@
   {
     "business_name": "Sherin Jarvis Pelvic Floor Physiotherapy",
     "phone_number": "1300722206",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.whria.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/sherin-jarvis-pelvic-floor-physiotherapy-14608850-listing.html"
@@ -92,8 +858,7 @@
   {
     "business_name": "Sydney Physio Clinic",
     "phone_number": "0292525770",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "https://sydneyphysiosolutions.com.au/macquarie-street-physiotherapy/?utm_source=google&utm_medium=organic&utm_campaign=gmb&utm_content=macquarie",
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/sydney-physio-clinic-15396929-listing.html"
@@ -101,8 +866,7 @@
   {
     "business_name": "The Sarah Key Physiotherapy Centre",
     "phone_number": "0292478627",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.sarahkey.com",
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/the-sarah-key-physiotherapy-centre-12341233-listing.html"
@@ -110,8 +874,7 @@
   {
     "business_name": "Hayden Latimer Physiotherapist",
     "phone_number": "0292232502",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.sydneyphysioclinic.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/hayden-latimer-physiotherapist-15140497-listing.html"
@@ -119,8 +882,7 @@
   {
     "business_name": "Your Health Domain",
     "phone_number": "0292515111",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.yourhealthdomain.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/your-health-domain-13920466-listing.html"
@@ -128,8 +890,7 @@
   {
     "business_name": "Infinite Health Sydney CBD Physiotherapy",
     "phone_number": "0294122222",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": null,
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/infinite-health-sydney-cbd-physiotherapy-1000002998025-listing.html"
@@ -137,8 +898,7 @@
   {
     "business_name": "Wynyard Sports & Injury Clinic",
     "phone_number": "0292624147",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": null,
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/wynyard-sports-injury-clinic-12628628-listing.html"
@@ -146,8 +906,7 @@
   {
     "business_name": "Joint Health",
     "phone_number": "0292902731",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.jointhealth.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/joint-health-12342907-listing.html"
@@ -155,8 +914,7 @@
   {
     "business_name": "CBD Physiotherapy Sports & Manipulative Clinic",
     "phone_number": "0292233122",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://cbdphysio.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/cbd-physiotherapy-sports-manipulative-clinic-13900203-listing.html"
@@ -164,8 +922,7 @@
   {
     "business_name": "OptiSports Physio Barangaroo",
     "phone_number": "0291888360",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "https://www.optisportsphysio.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/optisports-physio-barangaroo-1000002830034-listing.html"
@@ -173,8 +930,7 @@
   {
     "business_name": "Thomas Wyer",
     "phone_number": "0292831234",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.hydeparkmc.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/thomas-wyer-14928552-listing.html"
@@ -182,8 +938,7 @@
   {
     "business_name": "Chirosports",
     "phone_number": "0292312708",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": null,
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/chirosports-12990600-listing.html"
@@ -191,8 +946,7 @@
   {
     "business_name": "Chirosports Chiropractic",
     "phone_number": "0292312707",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": null,
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/chirosports-chiropractic-12756812-listing.html"
@@ -200,8 +954,7 @@
   {
     "business_name": "Superhuman Physiotherapy",
     "phone_number": "0282225995",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": null,
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/superhuman-physiotherapy-15134309-listing.html"
@@ -209,8 +962,7 @@
   {
     "business_name": "City Physio",
     "phone_number": "0292231575",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": null,
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/city-physio-13256605-listing.html"
@@ -218,8 +970,7 @@
   {
     "business_name": "City Physio & Pilates",
     "phone_number": "0292231575",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": null,
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/city-physio-pilates-1000002982075-listing.html"
@@ -227,8 +978,7 @@
   {
     "business_name": "Gillingham Emma",
     "phone_number": "0292515111",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": null,
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/gillingham-emma-12899709-listing.html"
@@ -236,8 +986,7 @@
   {
     "business_name": "Momentum Physiotherapy & Health Services",
     "phone_number": "1300330331",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": null,
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/momentum-physiotherapy-health-services-12040780-listing.html"
@@ -245,8 +994,7 @@
   {
     "business_name": "Bryden-Brown James",
     "phone_number": "0292624147",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": null,
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/bryden-brown-james-12662286-listing.html"
@@ -254,8 +1002,7 @@
   {
     "business_name": "Dynamic Physiotherapy",
     "phone_number": "0292998065",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": null,
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/dynamic-physiotherapy-12199118-listing.html"
@@ -263,8 +1010,7 @@
   {
     "business_name": "St George Francine",
     "phone_number": "0293518118",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": null,
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/st-george-francine-13301143-listing.html"
@@ -272,8 +1018,7 @@
   {
     "business_name": "Michael Ryan",
     "phone_number": "0292990700",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": null,
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/michael-ryan-13437203-listing.html"
@@ -281,8 +1026,7 @@
   {
     "business_name": "Quay Health Sydney Pty Ltd",
     "phone_number": "0292522825",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "https://quayhealth.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/quay-health-sydney-pty-ltd-1000002104701-listing.html"
@@ -290,8 +1034,7 @@
   {
     "business_name": "Therapy Max",
     "phone_number": "0293563877",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": null,
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/therapy-max-12419349-listing.html"
@@ -299,26 +1042,15 @@
   {
     "business_name": "Barangaroo Orthopaedic & Sports injury Clinic",
     "phone_number": "0285999811",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.bosic.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/barangaroo/barangaroo-orthopaedic-sports-injury-clinic-1000002008286-listing.html"
   },
   {
-    "business_name": "Firm N Fold",
-    "phone_number": "0738541657",
-    "city": "Sydney",
-    "state": "NSW",
-    "source": "Yellow Pages",
-    "website_link": "http://www.firm-n-fold.com.au",
-    "listing_link": null
-  },
-  {
     "business_name": "Chinatown Physiotherapy Centre",
     "phone_number": "0292812743",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": null,
     "listing_link": "https://www.yellowpages.com.au//nsw/haymarket/chinatown-physiotherapy-centre-12459082-listing.html"
@@ -326,8 +1058,7 @@
   {
     "business_name": "Hyde Park Medical Centre",
     "phone_number": "0292831234",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "https://www.hydeparkmc.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/hyde-park-medical-centre-14144313-listing.html"
@@ -335,8 +1066,7 @@
   {
     "business_name": "Shore Physiotherapy",
     "phone_number": "0294606788",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.shorephysio.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/north-sydney/shore-physiotherapy-12823263-listing.html"
@@ -344,8 +1074,7 @@
   {
     "business_name": "Pilates Sydney CBD",
     "phone_number": "0285999811",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": null,
     "listing_link": "https://www.yellowpages.com.au//nsw/barangaroo/pilates-sydney-cbd-1000002853978-listing.html"
@@ -353,8 +1082,7 @@
   {
     "business_name": "Darlinghurst Physiotherapy",
     "phone_number": "0293260314",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.darlophysio.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/darlinghurst/darlinghurst-physiotherapy-12964368-listing.html"
@@ -362,8 +1090,7 @@
   {
     "business_name": "Ultimate Performance Physiotherapy",
     "phone_number": "0291942010",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.upphysio.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/surry-hills/ultimate-performance-physiotherapy-1000002077722-listing.html"
@@ -371,8 +1098,7 @@
   {
     "business_name": "PhysioFit Health",
     "phone_number": "0288800229",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.physiofithealth.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/pyrmont/physiofit-health-1000002076935-listing.html"
@@ -380,8 +1106,7 @@
   {
     "business_name": "Doyle's Physiotherapy",
     "phone_number": "0296929399",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.doylesphysio.com",
     "listing_link": "https://www.yellowpages.com.au//nsw/pyrmont/doyles-physiotherapy-13023386-listing.html"
@@ -389,8 +1114,7 @@
   {
     "business_name": "Sung Jee",
     "phone_number": "0293317822",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": null,
     "listing_link": "https://www.yellowpages.com.au//nsw/darlinghurst/sung-jee-13935094-listing.html"
@@ -398,8 +1122,7 @@
   {
     "business_name": "RTP Physio",
     "phone_number": "0296606788",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.rtpphysio.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/glebe/rtp-physio-1000002382116-listing.html"
@@ -407,8 +1130,7 @@
   {
     "business_name": "Glebe Physio",
     "phone_number": "0291685992",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "https://glebephysiotherapy.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/glebe/glebe-physio-1000002283887-listing.html"
@@ -416,8 +1138,7 @@
   {
     "business_name": "Bay Active Physiotherapy",
     "phone_number": "0293630490",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.bayactivephysio.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/double-bay/bay-active-physiotherapy-14251326-listing.html"
@@ -425,8 +1146,7 @@
   {
     "business_name": "The Oval Physiotherapy & Sports Injuries Centre",
     "phone_number": "0299558766",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.ovalphysio.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/north-sydney/the-oval-physiotherapy-sports-injuries-centre-11967422-listing.html"
@@ -434,8 +1154,7 @@
   {
     "business_name": "Recover Physiotherapy",
     "phone_number": "0296605566",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.recoverphysio.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/glebe/recover-physiotherapy-13823924-listing.html"
@@ -443,8 +1162,7 @@
   {
     "business_name": "Back in Business Physiotherapy",
     "phone_number": "0299226806",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.back-in-business-physiotherapy.com",
     "listing_link": "https://www.yellowpages.com.au//nsw/north-sydney/back-in-business-physiotherapy-14858284-listing.html"
@@ -452,8 +1170,7 @@
   {
     "business_name": "RedoHealth",
     "phone_number": "0457600114",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.redohealth.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/balmain/redohealth-1000001922173-listing.html"
@@ -461,8 +1178,7 @@
   {
     "business_name": "Moore Health Physiotherapy & Sports Injury Clinic",
     "phone_number": "0293193808",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.moorehealth.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/redfern/moore-health-physiotherapy-sports-injury-clinic-13968481-listing.html"
@@ -470,8 +1186,7 @@
   {
     "business_name": "Balmain Sports Medicine",
     "phone_number": "0298181004",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.balmainsportsmed.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/rozelle/balmain-sports-medicine-14316683-listing.html"
@@ -479,8 +1194,7 @@
   {
     "business_name": "Edgecliff Physiotherapy Sports & Spinal Centre",
     "phone_number": "0293261168",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.edgecliffphysio.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/edgecliff/edgecliff-physiotherapy-sports-spinal-centre-13050291-listing.html"
@@ -488,8 +1202,7 @@
   {
     "business_name": "Peak Health Services",
     "phone_number": "0296983333",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.peakhealthservices.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/surry-hills/peak-health-services-13185454-listing.html"
@@ -497,8 +1210,7 @@
   {
     "business_name": "Urban Physiotherapy",
     "phone_number": "0294230511",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.urbanphysiotherapy.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/north-sydney/urban-physiotherapy-1000002608239-listing.html"
@@ -506,8 +1218,7 @@
   {
     "business_name": "Sports Lab",
     "phone_number": "0293281200",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.sportslab.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/double-bay/sports-lab-13108064-listing.html"
@@ -515,8 +1226,7 @@
   {
     "business_name": "On Path Physio",
     "phone_number": "0291891337",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "https://onpathphysio.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/mcmahons-point/on-path-physio-1000002971914-listing.html"
@@ -524,8 +1234,7 @@
   {
     "business_name": "ActivFit Physiotherapy",
     "phone_number": "0299222310",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": null,
     "listing_link": "https://www.yellowpages.com.au//nsw/milsons-point/activfit-physiotherapy-12266530-listing.html"
@@ -533,8 +1242,7 @@
   {
     "business_name": "Precision Physio",
     "phone_number": "0292802322",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.precisionphysio.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/surry-hills/precision-physio-12905527-listing.html"
@@ -542,8 +1250,7 @@
   {
     "business_name": "Perfect Form Physiotherapy",
     "phone_number": "0299227721",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://perfectformphysio.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/surry-hills/perfect-form-physiotherapy-12624586-listing.html"
@@ -551,8 +1258,7 @@
   {
     "business_name": "Dunsborough Physiotherapy Centre",
     "phone_number": "0897553600",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.dunsboroughphysio.com.au",
     "listing_link": "https://www.yellowpages.com.au//wa/dunsborough/dunsborough-physiotherapy-centre-15386376-listing.html"
@@ -560,8 +1266,7 @@
   {
     "business_name": "Allsports & Spinal Physiotherapy",
     "phone_number": "1300749746",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.allsportsphysio.com",
     "listing_link": "https://www.yellowpages.com.au//nsw/north-sydney/allsports-spinal-physiotherapy-12954677-listing.html"
@@ -569,8 +1274,7 @@
   {
     "business_name": "Adrian de Vrij Physiotherapist",
     "phone_number": "0412281950",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.northsydneyphysiotherapycentre.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/north-sydney/adrian-de-vrij-physiotherapist-12324683-listing.html"
@@ -578,8 +1282,7 @@
   {
     "business_name": "Waverton Physio",
     "phone_number": "0280844176",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "https://www.sydneyphysiogroup.com",
     "listing_link": "https://www.yellowpages.com.au//nsw/waverton/waverton-physio-15733053-listing.html"
@@ -587,8 +1290,7 @@
   {
     "business_name": "Woollahra Physiotherapy",
     "phone_number": "0293629765",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "https://www.woollahraphysiotherapy.com",
     "listing_link": "https://www.yellowpages.com.au//nsw/paddington/woollahra-physiotherapy-1000002352291-listing.html"
@@ -596,8 +1298,7 @@
   {
     "business_name": "Bounce Rehab",
     "phone_number": "0295717606",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.bouncerehab.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/balmain/bounce-rehab-15596207-listing.html"
@@ -605,8 +1306,7 @@
   {
     "business_name": "Physiocise",
     "phone_number": "0283569666",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.physiocise.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/moore-park/physiocise-12211640-listing.html"
@@ -614,8 +1314,7 @@
   {
     "business_name": "Camperdown Physiotherapy",
     "phone_number": "0295171787",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.camperdownphysiotherapy.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/newtown/camperdown-physiotherapy-12632154-listing.html"
@@ -623,8 +1322,7 @@
   {
     "business_name": "The Physiotherapy and Sports Injury Clinic: North Sydney",
     "phone_number": "0294603500",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.nsosmc.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/wollstonecraft/the-physiotherapy-and-sports-injury-clinic-north-sydney-15167047-listing.html"
@@ -632,8 +1330,7 @@
   {
     "business_name": "Erko Physio",
     "phone_number": "0295579272",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.erkophysio.com",
     "listing_link": "https://www.yellowpages.com.au//nsw/alexandria/erko-physio-15141625-listing.html"
@@ -641,8 +1338,7 @@
   {
     "business_name": "Redfern Station Medical Centre",
     "phone_number": "0283132999",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "https://www.redfernstationmc.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/redfern/redfern-station-medical-centre-15404629-listing.html"
@@ -650,8 +1346,7 @@
   {
     "business_name": "Firm N Fold",
     "phone_number": "1800640524",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.firm-n-fold.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/chippendale/firm-n-fold-15632993-listing.html"
@@ -659,8 +1354,7 @@
   {
     "business_name": "Sydney Stadium Sports Physiotherapy",
     "phone_number": "0283237777",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.stadiumsportsphysio.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/moore-park/sydney-stadium-sports-physiotherapy-15191117-listing.html"
@@ -668,8 +1362,7 @@
   {
     "business_name": "North Sydney Sports Physiotherapy",
     "phone_number": "0299297774",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.northsydneyphysiotherapycentre.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/north-sydney/north-sydney-sports-physiotherapy-14520704-listing.html"
@@ -677,8 +1370,7 @@
   {
     "business_name": "Sydney Allied Health Group",
     "phone_number": "1300161688",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.sydneyalliedhealth.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/balmain/sydney-allied-health-group-1000000777073-listing.html"
@@ -686,8 +1378,7 @@
   {
     "business_name": "Moore Health",
     "phone_number": "0293193808",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": null,
     "listing_link": "https://www.yellowpages.com.au//nsw/redfern/moore-health-1000002999450-listing.html"
@@ -695,8 +1386,7 @@
   {
     "business_name": "Function and Form Physiotherapy and Exercise",
     "phone_number": "0299226163",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "https://functionandform.com.au",
     "listing_link": "https://www.yellowpages.com.au//sup/function-and-form-physiotherapy-and-exercise-14223626-listing.html"
@@ -704,8 +1394,7 @@
   {
     "business_name": "Back In Business",
     "phone_number": null,
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.back-in-business-physiotherapy.com",
     "listing_link": "https://www.yellowpages.com.au//nsw/north-sydney/back-in-business-13383995-listing.html"
@@ -713,8 +1402,7 @@
   {
     "business_name": "Corporatephysio",
     "phone_number": "0415430278",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": null,
     "listing_link": "https://www.yellowpages.com.au//nsw/surry-hills/corporatephysio-14214308-listing.html"
@@ -722,8 +1410,7 @@
   {
     "business_name": "The Body Mechanic",
     "phone_number": "0299555842",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": null,
     "listing_link": "https://www.yellowpages.com.au//nsw/milsons-point/the-body-mechanic-14173619-listing.html"
@@ -731,8 +1418,7 @@
   {
     "business_name": "Precision Physiotherapy",
     "phone_number": "0296232220",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": null,
     "listing_link": "https://www.yellowpages.com.au//nsw/surry-hills/precision-physiotherapy-12537645-listing.html"
@@ -740,8 +1426,7 @@
   {
     "business_name": "Central Performance",
     "phone_number": "0292802322",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": null,
     "listing_link": "https://www.yellowpages.com.au//nsw/surry-hills/central-performance-1000002334162-listing.html"
@@ -749,8 +1434,7 @@
   {
     "business_name": "Performance Medicine",
     "phone_number": "0280367844",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": null,
     "listing_link": "https://www.yellowpages.com.au//nsw/ultimo/performance-medicine-1000002979348-listing.html"
@@ -758,8 +1442,7 @@
   {
     "business_name": "Healthfix Physiotherapy",
     "phone_number": "0280650446",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": null,
     "listing_link": "https://www.yellowpages.com.au//nsw/mcmahons-point/healthfix-physiotherapy-14253737-listing.html"
@@ -767,8 +1450,7 @@
   {
     "business_name": "Summit Physiotherapy",
     "phone_number": "0299661347",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": null,
     "listing_link": "https://www.yellowpages.com.au//nsw/north-sydney/summit-physiotherapy-13452547-listing.html"
@@ -776,8 +1458,7 @@
   {
     "business_name": "Rebecca Micich",
     "phone_number": "0299226163",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": null,
     "listing_link": "https://www.yellowpages.com.au//nsw/north-sydney/rebecca-micich-1000002609997-listing.html"
@@ -785,8 +1466,7 @@
   {
     "business_name": "Physio 4 All",
     "phone_number": "0299222212",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": null,
     "listing_link": "https://www.yellowpages.com.au//nsw/north-sydney/physio-4-all-12272894-listing.html"
@@ -794,8 +1474,7 @@
   {
     "business_name": "Superhuman Physiotherapy (Double Bay)",
     "phone_number": "0280964562",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": null,
     "listing_link": "https://www.yellowpages.com.au//nsw/double-bay/superhuman-physiotherapy-double-bay-15134884-listing.html"
@@ -803,8 +1482,7 @@
   {
     "business_name": "Sports lab",
     "phone_number": "0293281200",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": null,
     "listing_link": "https://www.yellowpages.com.au//nsw/double-bay/sports-lab-1000002347885-listing.html"
@@ -812,8 +1490,7 @@
   {
     "business_name": "Movement 101",
     "phone_number": "0295679452",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": null,
     "listing_link": "https://www.yellowpages.com.au//nsw/waterloo/movement-101-1000002902415-listing.html"
@@ -821,8 +1498,7 @@
   {
     "business_name": "Association Of Massage Therapists (NSW) Limited",
     "phone_number": "0293315764",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": null,
     "listing_link": "https://www.yellowpages.com.au//nsw/paddington/association-of-massage-therapists-nsw-limited-1000001751045-listing.html"
@@ -830,8 +1506,7 @@
   {
     "business_name": "Sydney Sportsmed Clinic",
     "phone_number": "0292510822",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": null,
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/sydney-sportsmed-clinic-13366946-listing.html"
@@ -839,8 +1514,7 @@
   {
     "business_name": "City Physiotherapy & Sports Injury Centre",
     "phone_number": "0292231575",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.cityphysio.net.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/city-physiotherapy-sports-injury-centre-13499433-listing.html"
@@ -848,8 +1522,7 @@
   {
     "business_name": "Ergoworks Physiotherapy & Consulting Pty Ltd",
     "phone_number": "0292510822",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.ergoworks.com.au",
     "listing_link": "https://www.yellowpages.com.au//sup/ergoworks-physiotherapy-consulting-pty-ltd-12903058-listing.html"
@@ -857,8 +1530,7 @@
   {
     "business_name": "Fix Physio",
     "phone_number": "0292310420",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": "http://www.fixphysio.com.au",
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/fix-physio-15568962-listing.html"
@@ -866,8 +1538,7 @@
   {
     "business_name": "City Physio & Sports Therapy Centre",
     "phone_number": "0292231575",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": null,
     "listing_link": "https://www.yellowpages.com.au//nsw/sydney/city-physio-sports-therapy-centre-14343739-listing.html"
@@ -875,8 +1546,7 @@
   {
     "business_name": "Potts Point Physio - Functional Exercise & Pilates",
     "phone_number": "0430454227",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": null,
     "listing_link": "https://www.yellowpages.com.au//nsw/potts-point/potts-point-physio-functional-exercise-pilates-15145416-listing.html"
@@ -884,8 +1554,7 @@
   {
     "business_name": "The Summit Physiotherapy",
     "phone_number": "0299661347",
-    "city": "Sydney",
-    "state": "NSW",
+    "city": "Sydney, NSW 2000",
     "source": "Yellow Pages",
     "website_link": null,
     "listing_link": "https://www.yellowpages.com.au//nsw/north-sydney/the-summit-physiotherapy-13373394-listing.html"
