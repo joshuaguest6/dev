@@ -14,22 +14,14 @@ from google.auth import default
 
 # TODO
 # Add multiple searches
-# searches = [
-#     {
+base_url = "https://www.yellowpages.com.au/search/listings"
 
-#         'what': 'Physiotherapist',
-#         'where': 'Greater Sydney, NSW'
-#     },
-#     {
-
-#         'what': 'Exercise Physiotherapist',
-#         'where': 'Greater Sydney, NSW'
-#     },{
-
-#         'what': 'Physiotherapist',
-#         'where': 'Melbourne, VIC'
-#     },
-# ]
+searches = [
+    {
+        'what': 'Physiotherapist',
+        'where': 'Greater Sydney, NSW'
+    }
+]
 
 # Then wrap scraper in a function.
 # Run each search, dedupe, return it and append to a list
@@ -54,8 +46,9 @@ FORMATTED_NOW = NOW.strftime("%Y%m%d_%H%M%S")
 MAX_RETRIES = 3
 WAIT_TIMEOUT = 10000
 
-def load_page_with_retries(url):
+def load_page_with_retries(browser, url, page_number):
     tiles = []
+    errors = []
     for attempt in range(1, MAX_RETRIES+1):
         context = browser.new_context()
         page = context.new_page()
@@ -66,7 +59,7 @@ def load_page_with_retries(url):
 
             tiles = page.query_selector_all('div.MuiPaper-root')
             if tiles:
-                return tiles, context
+                return tiles, context, errors
             else:
                 print(f'No tiles found on attempt {attempt}. Retrying...')
         except PlaywrightTimeoutError:
@@ -77,114 +70,182 @@ def load_page_with_retries(url):
         context.close()
         time.sleep(2)
     
-    raise RuntimeError(f'Failed to load page correctly after {MAX_RETRIES} attempts')
+    print(f'Failed to load page correctly after {MAX_RETRIES} attempts')
+    errors.append({
+        'url': url,
+        'page': page_number,
+        'attempts': MAX_RETRIES,
+        'date': FORMATTED_NOW
+    })
+    
+    return tiles, context, errors
 
-base_url = "https://www.yellowpages.com.au/search/listings"
 
-params = {
-    'clue': 'Physiotherapist',
-    'locationClue': 'Greater Sydney, NSW'
-}
 
-page_number = 1
-data = []
+def scraper(search):
 
-seen_names_before = set()
-seen_names_after = set()
+    params = {
+        'clue': search['what'],
+        'locationClue': search['where']
+    }
 
-with sync_playwright() as p:
-    browser = p.chromium.launch(
-        headless=False
-    )
+    page_number = 1
+    data = []
+    data_errors = []
 
-    while True:
-        seen_names_before = seen_names_after
-        params['pageNumber'] = page_number
-        url = f'{base_url}?{urllib.parse.urlencode(params)}'
+    seen_names_before = set()
+    seen_names_after = set()
 
-        print(f'Going to {url}')
-        tiles, context = load_page_with_retries(url)
+    with sync_playwright() as p:
+        browser = p.chromium.launch(
+            headless=False
+        )
 
-        if not tiles:
-            print(f'No tiles found - End')
-            print(f'{len(seen_names_after)} unique business were found overall')
-            break
+        while True:
+            seen_names_before = seen_names_after.copy()
+            params['pageNumber'] = page_number
+            url = f'{base_url}?{urllib.parse.urlencode(params)}'
+            context = None
 
-        print(f'{len(tiles)} tiles found')
+            print(f'Going to {url}')
+            tiles, context, errors = load_page_with_retries(browser, url, page_number)
+            data_errors += errors
 
-        for tile in tiles:
-            name_tag = tile.query_selector('h3.MuiTypography-root')
-            name = name_tag.inner_text().strip() if name_tag else None
-            print(f'Business name: {name}')
+            if not tiles:
+                # print(f'No tiles found - End')
+                # print(f'{len(seen_names_after)} unique business were found overall')
+                # break
 
-            phone_tag = tile.query_selector('a[href^="tel:"]')
-            phone = phone_tag.get_attribute('href') if phone_tag else None
-            phone = phone.replace('tel:', '').strip() if phone else None
-            print(f'Business phone: {phone}')
-
-            website_tag = tile.query_selector('a[href^="http:"]')
-            website_link = website_tag.get_attribute('href') if website_tag else None
-
-            listing_tag = tile.query_selector('a.MuiTypography-root.MuiLink-root.MuiLink-underlineNone.MuiTypography-colorPrimary')
-            listing_link = 'https://www.yellowpages.com.au/' + listing_tag.get_attribute('href') if listing_tag else None 
-
-            if name is None and phone is None:
-                print('No data - continue')
+                # Prefer to skip to next page if nothing was found
+                # In case page 2/3 fails - still goes to page 3 instead of ending
+                print(f'No tiles found on page {page_number} - continue')
+                page_number += 1
+                if context:
+                    context.close()
+                time.sleep(2)
+                
                 continue
 
-            data.append({
-                'business_name': name,
-                'phone_number': phone,
-                'city': 'Sydney',
-                'state': 'NSW',
-                'source': 'Yellow Pages',
-                'website_link' : website_link,
-                'listing_link': listing_link
+            print(f'{len(tiles)} tiles found')
 
-            })
+            for tile in tiles:
+                name_tag = tile.query_selector('h3.MuiTypography-root')
+                name = name_tag.inner_text().strip() if name_tag else None
+                print(f'Business name: {name}')
 
-        seen_names_after = set([i['business_name'] for i in data])
+                phone_tag = tile.query_selector('a[href^="tel:"]')
+                phone = phone_tag.get_attribute('href') if phone_tag else None
+                phone = phone.replace('tel:', '').strip() if phone else None
+                print(f'Business phone: {phone}')
 
-        # Stopping on page 5 to test big runs
-        if seen_names_after == seen_names_before or page_number > 5:
-            print(f'No new businesses found on page {page_number}. End')
-            print(f'{len(seen_names_after)} unique business were found overall')
-            break
+                website_tag = tile.query_selector('a[href^="https://"], a[href^=http://]')
+                website_link = website_tag.get_attribute('href') if website_tag else None
 
-        page_number += 1
-        context.close()
-        time.sleep(2)
+                listing_tag = tile.query_selector('a.MuiTypography-root.MuiLink-root.MuiLink-underlineNone.MuiTypography-colorPrimary')
+                listing_link = 'https://www.yellowpages.com.au/' + listing_tag.get_attribute('href') if listing_tag else None 
+
+                if name is None and phone is None:
+                    print('No data - continue')
+                    continue
+
+                data.append({
+                    'business_name': name,
+                    'phone_number': phone,
+                    'city': 'Sydney',
+                    'state': 'NSW',
+                    'source': 'Yellow Pages',
+                    'website_link' : website_link,
+                    'listing_link': listing_link
+
+                })
+
+            seen_names_after = set([i['business_name'] for i in data])
+
+            # Stopping on page 5 to test big runs
+            if seen_names_after == seen_names_before or page_number > 5:
+                print(f'No new businesses found on page {page_number}. End')
+                print(f'{len(seen_names_after)} unique business were found overall')
+                break
+
+            page_number += 1
+            if context:
+                context.close()
+            time.sleep(2)
+        
+        browser.close()
+
+    df = pd.DataFrame(data)
+    dup_rows = df[df.duplicated(
+        subset=['business_name', 'phone_number'],
+        keep=False
+    )]
+
+    print('Duplicates:')
+    if not dup_rows.empty:
+        print(dup_rows[['business_name', 'phone_number', 'city']]) 
+    else: 
+        print('No duplicates')
+
+    print(f'{len(df)} rows before dedupe')
+    df = df.drop_duplicates(subset=['business_name', 'phone_number'])
+    print(f'{len(df)} rows after dedupe')
+
+    data = df.to_dict(orient='records')
+
+    return data, data_errors
+
     
-    browser.close()
 
-df = pd.DataFrame(data)
-df = df.drop_duplicates(subset=['business_name', 'phone_number'])
-data = df.to_dict(orient='records')
+def main():
+    data = []
+    data_errors = []
+    for search in searches:
+        scrape, errors = scraper(search)
+        data += scrape
+        data_errors += errors
 
-with open('data.json', 'w') as f:
-    json.dump(data, f, indent=2)
+    df = pd.DataFrame(data)
+    df = df.drop_duplicates(subset=['business_name', 'phone_number'])
+    data = df.to_dict(orient='records')
 
-### SAVE RUN TO GCS ###
+    with open('data.json', 'w') as f:
+        json.dump(data, f, indent=2)
 
-client = storage.Client()
-bucket = client.bucket('yellowpages_physiotherapists')
-blob = bucket.blob(f'data_{FORMATTED_NOW}')
+    with open('data_errors.json', 'w') as f:
+        json.dump(data_errors, f, indent=2)
 
-blob.upload_from_string(json.dumps(data, indent=2), content_type='application/json')
+    ### SAVE RUN TO GCS ###
 
-### SEND TO GOOGLE SHEETS ###
+    client = storage.Client()
+    bucket = client.bucket('yellowpages_physiotherapists')
+    blob = bucket.blob(f'data_{FORMATTED_NOW}')
 
-creds, project = default(scope)
-client = gspread.authorize(creds)
+    blob.upload_from_string(json.dumps(data, indent=2), content_type='application/json')
 
-spreadsheet = client.open(gsheet)
-try:
-    sheet = spreadsheet.worksheet(sheet_name)
-except:
-    sheet = spreadsheet.add_worksheet(
-        sheet_name,
-        cols=20,
-        rows=1000
-    )
+    blob2 = bucket.blob(f'errors_{FORMATTED_NOW}')
+    blob2.upload_from_string(json.dumps(data_errors, indent=2), content_type='application/json')
 
-set_with_dataframe(sheet, df)
+    ### SEND TO GOOGLE SHEETS ###
+
+    creds, project = default(scope)
+    client = gspread.authorize(creds)
+
+    spreadsheet = client.open(gsheet)
+    try:
+        sheet = spreadsheet.worksheet(sheet_name)
+    except:
+        sheet = spreadsheet.add_worksheet(
+            sheet_name,
+            cols=20,
+            rows=1000
+        )
+
+    sheet.clear()
+    set_with_dataframe(sheet, df)
+
+    return 'OK', 200
+
+if '__name__' == '__main__':
+    main()
+
+    
