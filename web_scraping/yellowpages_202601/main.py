@@ -97,11 +97,17 @@ def scraper(search):
     seen_names_after = set()
 
     with sync_playwright() as p:
+        
+
         browser = p.chromium.launch(
             headless=False
         )
 
         while True:
+            if page_number > 1:
+                print('Finish after page 1')
+                break
+
             seen_names_before = seen_names_after.copy()
             params['pageNumber'] = page_number
             url = f'{base_url}?{urllib.parse.urlencode(params)}'
@@ -138,8 +144,9 @@ def scraper(search):
                 phone = phone.replace('tel:', '').strip() if phone else None
                 print(f'Business phone: {phone}')
 
-                website_tag = tile.query_selector('a[href^="https://"], a[href^=http://]')
+                website_tag = tile.query_selector('a.MuiButtonBase-root[href^="https://"], a.MuiButtonBase-root[href^="http://"]')
                 website_link = website_tag.get_attribute('href') if website_tag else None
+                print(f'Business website: {website_link}')
 
                 listing_tag = tile.query_selector('a.MuiTypography-root.MuiLink-root.MuiLink-underlineNone.MuiTypography-colorPrimary')
                 listing_link = 'https://www.yellowpages.com.au/' + listing_tag.get_attribute('href') if listing_tag else None 
@@ -162,7 +169,7 @@ def scraper(search):
             seen_names_after = set([i['business_name'] for i in data])
 
             # Stopping on page 5 to test big runs
-            if seen_names_after == seen_names_before or page_number > 5:
+            if seen_names_after == seen_names_before:
                 print(f'No new businesses found on page {page_number}. End')
                 print(f'{len(seen_names_after)} unique business were found overall')
                 break
@@ -245,7 +252,7 @@ def main():
 
     return 'OK', 200
 
-if '__name__' == '__main__':
+if __name__ == '__main__':
     main()
 
     
