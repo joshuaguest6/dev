@@ -1,0 +1,30 @@
+import requests
+
+# generate this in developer portal > user tokens > get oauth application token
+ACCESS_TOKEN = "v^1.1#i^1#r^0#p^1#I^3#f^0#t^H4sIAAAAAAAA/+VYe2wURRi/6wNSechDnhJyLBiNze3N3vvW3sWjBdral727BipS5nZn6bZ7u8vObsspwUuDNRCNYPQv/rAYDBjjP5DQIIQIIUqwRkAUSBQQTWhINCkRSmIUZ7elXCsC0iNe4v1zmW+++eb3/eZ7zA7ITCh5truye3CKfWJBTwZkCux2ZhIomVBcOrWwYH6xDWQp2HsySzJFXYX9ZRimJJVtRFhVZIwcG1KSjFlLGKYMTWYViEXMyjCFMKtzbCxaW8O6acCqmqIrnCJRjqqKMOXmOM4fDCIBuUPI7/YTqXzbZlwJUx6PN+Dlfd4QI/AMDwNkHmMDVclYh7JO1gO33wkYpzsUB14W+FjgphlPqJlyNCENi4pMVGhARSy4rLVWy8J6b6gQY6TpxAgVqYouj9VHqyqW1cXLXFm2IsM8xHSoG3j0qFzhkaMJSga69zbY0mZjBschjClXZGiH0UbZ6G0wDwHfojrg8wLkFUK8RwA8488Jk8sVLQX1e8MwJSLvFCxVFsm6qKfvRyghI9mGOH14VEdMVFU4zL8XDSiJgoi0MLVsaXRVtKGBilQruNWAKwwn5jSoIs3Z0FjhBEmvj09CH3QGQhyADAoO7zNkbJjkMRuVKzIvmpRhR52iL0UENBpNjYf1ZVFDlOrlei0q6CagbD3/CIWeZvNIh87Q0Ftl81RRivDgsIb3P4CR1bquiUlDRyMWxk5YDIUpqKoiT42dtCJxOHg24DDVqusq63J1dnbSnR5a0da53AAwrpW1NTGuFaUgZemauW7qi/df4BQtVzhEVmKR1dMqwbKBRCoBIK+jIj6fNxgKDfM+GlZkrPRvgiyfXaPzIVf54XXzkEdCwA0CHB/0wlwkSGQ4Rl0mDpSEaWcKau1IVyXIISdH4sxIIU3kWY9PcHuCAnLy/pDg9IYEwZn08X4nIyAEEEomuVDwf5QnDxrpMcRpSM9RqOcozLH/haagkq6pccVrA/V6GxMDcSXwCjTiHctUbb2keKQVgYS4ankpCD9oMtzV+XJJJMzEyf75l+uVCtYRPy73YpyiogZFErl0fh2wR+MboKanY0iSiGBcTkZVtSpXpTpH7v27KvFwbueyQ/0n3emuXmEzYvPLK3M9JgagKtJm/6E5JeVSoKGbud5qilss1I5/VMxSchEZaVccoklXItHAtdMagrwiS+lx8SaSW29esUb8HCJB5Ifuq7TFBI07OOIxVgzCAabrzftbXGlHMmmHuqZIEtKamHGXg1TK0GFSQvlWF3KQICLMs17NBPwhvy/kA+5x+cVZnbgl30ra7Upe1GVf/SireSOCUiq/XFc1hTc484b6CL43XKPfPiI268d02Y+CLvvhArsdlIGnmMVg0YTCRFHh5PlY1BEtQoHG4jqZfNJriG5HaRWKWsFM24lvz9ctPFi9Z8vPczKvL3G9Y5ua9fTS8zKYO/L4UlLITMp6iQEL7swUM4/PmeL2A8YdAl5AwrkZLL4zW8TMLnpib8mup4/MqKyoCb/Wkdh3elav7UYfmDKiZLcX20ic2OKvyoevBvqrf8KZvt6VB8P1zCGbff3G8iNr9m+de61tRteeWwd+699cNjD7+KXd/RcuL/po8Ean69ST3eebzoU/24hdzV9lGge/8ZQnfln7RvfExJfwsa1vnSz/9eLgvuN94VsnDjbPqt27+oMricB7V/v2lSw+t/PMpZ0dzYHrH359tKR63uQ1p0Tf96XqyQLx9PQB78effvJ8YEvX1m3f9aUjbZd6n8Po91N/Lthx/YcTiQs1uzZf+WNTy/6ihYlrYvkzxy73TLua2bH27bIz77cpK86+xG3bs+nzeUvY7S2lReqbP75703P40PltZwcObD42uHTVQE14uq9k98XtX+g3Z/Y2xqaVnqvs6ygbOsu/AHHq5XAUEwAA"
+
+url = "https://api.ebay.com/buy/browse/v1/item_summary/search"
+
+headers = {
+    "Authorization": f"Bearer {ACCESS_TOKEN}"
+}
+
+params = {
+    'q': "Mega Starmie ex",
+    'limit': 50
+    ,"filter": "condition:Graded"
+}
+
+resp = requests.get(url, headers=headers, params=params)
+print(resp.status_code)
+print(resp.json())
+
+data = resp.json()
+
+data['itemSummaries'][0]
+
+items = data['itemSummaries']
+
+items_sold = [i for i in items if 'quantitySold' in list(i.keys())]
+
+items_sold
