@@ -2,41 +2,57 @@
   {
     "name": "torhaus - Your Dentists in Berlin",
     "details_link": "https://www.google.com/maps/place/torhaus+-+Your+Dentists+in+Berlin/data=!4m7!3m6!1s0x47a85194c796e7fb:0x88f861aa25b00e77!8m2!3d52.5284086!4d13.3784512!16s%2Fg%2F113jfd1w9!19sChIJ--eWx5RRqEcRdw6wJaph-Ig?authuser=0&hl=en&rclk=1",
-    "website_link": "https://www.zahnarzt-torhaus.de/"
+    "website_link": "https://www.zahnarzt-torhaus.de/",
+    "phone": "+49 30 959999400",
+    "website_phone": "+4930959999400"
   },
   {
     "name": "Haus Dentist",
     "details_link": "https://www.google.com/maps/place/Haus+Dentist/data=!4m7!3m6!1s0x47a851005c6f6e7f:0xef1cdb56f385316c!8m2!3d52.4921494!4d13.3868281!16s%2Fg%2F11wbsmx73p!19sChIJf25vXABRqEcRbDGF81bbHO8?authuser=0&hl=en&rclk=1",
-    "website_link": "http://hausdentist.de/"
+    "website_link": "http://hausdentist.de/",
+    "phone": "+49 1514 3364906",
+    "website_phone": "03063226544"
   },
   {
     "name": "AllDent Zahnzentrum Berlin",
     "details_link": "https://www.google.com/maps/place/AllDent+Zahnzentrum+Berlin/data=!4m7!3m6!1s0x47a851b834c6d001:0x6eccc1d982f7ff!8m2!3d52.5190628!4d13.388854!16s%2Fg%2F11w232lr5m!19sChIJAdDGNLhRqEcR__eC2cHMbgA?authuser=0&hl=en&rclk=1",
-    "website_link": "https://www.alldent-zahnzentrum-berlin.de/"
+    "website_link": "https://www.alldent-zahnzentrum-berlin.de/",
+    "phone": "+49 30 587691110",
+    "website_phone": "030587691110"
   },
   {
     "name": "Kottident - Dentist in Berlin Kreuzberg",
     "details_link": "https://www.google.com/maps/place/Kottident+-+Dentist+in+Berlin+Kreuzberg/data=!4m7!3m6!1s0x47a84e339e1b3e6f:0xa3449be1eb562cf5!8m2!3d52.5007495!4d13.4187246!16s%2Fg%2F1v_sm8bx!19sChIJbz4bnjNOqEcR9SxW6-GbRKM?authuser=0&hl=en&rclk=1",
-    "website_link": "http://www.kottident.de/"
-  },
-  {
-    "name": "The Urban Dentist",
-    "details_link": "https://www.google.com/maps/place/The+Urban+Dentist/data=!4m7!3m6!1s0x47a84f0c5260d2e3:0x3d213429675349c3!8m2!3d52.508031!4d13.4501689!16s%2Fg%2F11ghf7scl9!19sChIJ49JgUgxPqEcRw0lTZyk0IT0?authuser=0&hl=en&rclk=1",
-    "website_link": "https://theurbandentist.de/?utm_source=gmb&utm_medium=organic&utm_campaign=Google%20My%20Business"
+    "website_link": "http://www.kottident.de/",
+    "phone": "+49 30 3911155",
+    "website_phone": null
   },
   {
     "name": "Privatpraxis Zaritzki Fine Dentistry \u2022 Private Zahnarztpraxis (Berlin Gendarmenmarkt)",
     "details_link": "https://www.google.com/maps/place/Privatpraxis+Zaritzki+Fine+Dentistry+%E2%80%A2+Private+Zahnarztpraxis+%28Berlin+Gendarmenmarkt%29/data=!4m7!3m6!1s0x47a851d9714b5cff:0x9b7535fbe85bcda4!8m2!3d52.5145741!4d13.3972125!16s%2Fg%2F1tcwd_yk!19sChIJ_1xLcdlRqEcRpM1b6Ps1dZs?authuser=0&hl=en&rclk=1",
-    "website_link": "https://www.zaritzki.com/"
+    "website_link": "https://www.zaritzki.com/",
+    "phone": "+49 30 85403000",
+    "website_phone": null
+  },
+  {
+    "name": "The Urban Dentist",
+    "details_link": "https://www.google.com/maps/place/The+Urban+Dentist/data=!4m7!3m6!1s0x47a84f0c5260d2e3:0x3d213429675349c3!8m2!3d52.508031!4d13.4501689!16s%2Fg%2F11ghf7scl9!19sChIJ49JgUgxPqEcRw0lTZyk0IT0?authuser=0&hl=en&rclk=1",
+    "website_link": "https://theurbandentist.de/?utm_source=gmb&utm_medium=organic&utm_campaign=Google%20My%20Business",
+    "phone": "+49 30 29770250",
+    "website_phone": "03029770250"
   },
   {
     "name": "Dentists | Cinderella Kolarikal | Zahn\u00e4rzte in der Rochstra\u00dfe",
     "details_link": "https://www.google.com/maps/place/Dentists+%7C+Cinderella+Kolarikal+%7C+Zahn%C3%A4rzte+in+der+Rochstra%C3%9Fe/data=!4m7!3m6!1s0x47a851f6eec5723d:0x460e9d22fa1a8222!8m2!3d52.5243745!4d13.4074774!16s%2Fg%2F11r4m1g9_g!19sChIJPXLF7vZRqEcRIoIa-iKdDkY?authuser=0&hl=en&rclk=1",
-    "website_link": "https://www.dentists-zahnarzt-berlin.de/"
+    "website_link": "https://www.dentists-zahnarzt-berlin.de/",
+    "phone": "+49 30 2821385",
+    "website_phone": "+49302821385"
   },
   {
     "name": "Die Praxis Mitte - Zahnarztpraxis Dr. Christina Erdmann & Dr. Anna Trojan",
     "details_link": "https://www.google.com/maps/place/Die+Praxis+Mitte+-+Zahnarztpraxis+Dr.+Christina+Erdmann+%26+Dr.+Anna+Trojan/data=!4m7!3m6!1s0x47a84fed83b8b99b:0xfbe897eebf9bacf6!8m2!3d52.5238646!4d13.4086018!16s%2Fg%2F11h42nzzh4!19sChIJm7m4g-1PqEcR9qybv-6X6Ps?authuser=0&hl=en&rclk=1",
-    "website_link": "https://www.die-praxis.berlin/"
+    "website_link": "https://www.die-praxis.berlin/",
+    "phone": "+49 30 40367600",
+    "website_phone": "03040367600"
   }
 ]

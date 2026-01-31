@@ -69,9 +69,7 @@ def generate_list():
 
     return data
 
-def main():
-    records = generate_list()
-
+def extract_details(records):
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False)
 
@@ -98,7 +96,45 @@ def main():
 
         browser.close()
     
+    return records
+
+def enrich_data(records):
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=False)
+
+        for record in records:
+            context = browser.new_context()
+            page = context.new_page()
+            Stealth().use_sync(page)
+
+            page.goto(record['website_link'], timeout=60000)
+            
+            try:
+                page.wait_for_selector('a[href^="tel:"]', timeout=10000)
+            except:
+                record['website_phone'] = None
+                context.close()
+                continue
+
+            phone_tag = page.query_selector('a[href^="tel:"]')
+            phone = phone_tag.get_attribute('href') if phone_tag else None
+            phone = phone.replace('tel:', '').strip() if phone else None
+
+            record['website_phone'] = phone
+
+            context.close()
+        
+        browser.close()
+
     with open('data.json', 'w', encoding='utf-8') as f:
         json.dump(records, f, indent=2)
+
+def main():
+    records = generate_list()
+
+    records = extract_details(records)
+
+    enrich_data(records)
+
 
 main()
