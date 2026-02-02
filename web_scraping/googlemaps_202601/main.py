@@ -2,6 +2,8 @@ from playwright.sync_api import sync_playwright
 from playwright_stealth import Stealth
 import time
 import json
+import os
+from google.cloud import storage
 
 data = []
 
@@ -44,14 +46,18 @@ def parse_results(articles):
     return data
 
 
-def generate_list():
+def generate_list(search):
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)
+        browser = p.chromium.launch(
+            headless=False,
+            args=["--disable-blink-features=AutomationControlled"]
+        )
         context = browser.new_context()
         page = context.new_page()
         Stealth().use_sync(page)
 
-        page.goto('https://www.google.com/maps/search/dentist+berlin/')
+
+        page.goto(f'https://www.google.com/maps/search/{search.replace(" ", "+")}/')
         page.wait_for_selector('div[role="feed"]', timeout=60000)
 
         # load_results(page)
@@ -107,7 +113,7 @@ def enrich_data(records):
             page = context.new_page()
             Stealth().use_sync(page)
 
-            page.goto(record['website_link'], timeout=60000)
+            page.goto(record['website_link'])
             
             try:
                 page.wait_for_selector('a[href^="tel:"]', timeout=10000)
@@ -126,15 +132,28 @@ def enrich_data(records):
         
         browser.close()
 
-    with open('data.json', 'w', encoding='utf-8') as f:
-        json.dump(records, f, indent=2)
+    return records
 
-def main():
-    records = generate_list()
+def save_records(records, search):
+    client = storage.Client()
+    bucket = client.bucket('maps-crawler')
+    blob = bucket.blob(f'germany/{search.replace(" ", "_").lower()}.json')
+
+    blob.upload_from_string(json.dumps(records, indent=2), content_type='application/json')
+
+def main(search):
+    records = generate_list(search)
 
     records = extract_details(records)
 
-    enrich_data(records)
+    records = enrich_data(records)
 
+    save_records(records, search)
 
-main()
+if __name__ == '__main__':
+    SEARCH = os.environ.get('SEARCH')
+    if not SEARCH:
+        raise ValueError("SEARCH environment variable is required")
+
+    main(SEARCH)
+    
