@@ -21,6 +21,7 @@ steps:
       - --memory=4Gi
       - --cpu=2
       - --quiet
+      - --ignore-existing
 
 images:
   - gcr.io/$PROJECT_ID/maps-crawler:$COMMIT_SHA
