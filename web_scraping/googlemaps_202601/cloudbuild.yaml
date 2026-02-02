@@ -14,16 +14,13 @@ steps:
     args:
       - run
       - jobs
-      - create
+      - replace
       - maps-crawler
-      - --image
-      - gcr.io/$PROJECT_ID/maps-crawler:$COMMIT_SHA
-      - --region
-      - australia-southeast1
-      - --platform
-      - managed
+      - --image gcr.io/$PROJECT_ID/maps-crawler:$COMMIT_SHA
+      - --region australia-southeast1
+      - --memory 4Gi
+      - --cpu 2
       - --quiet
-      - --allow-unauthenticated
 
 images:
   - gcr.io/$PROJECT_ID/maps-crawler:$COMMIT_SHA
