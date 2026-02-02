@@ -14,7 +14,7 @@ steps:
     args:
       - run
       - jobs
-      - replace
+      - create
       - maps-crawler
       - --image gcr.io/$PROJECT_ID/maps-crawler:$COMMIT_SHA
       - --region australia-southeast1
