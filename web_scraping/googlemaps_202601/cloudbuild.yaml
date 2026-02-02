@@ -13,7 +13,8 @@ steps:
     entrypoint: gcloud
     args:
       - run
-      - deploy
+      - jobs
+      - create
       - maps-crawler
       - --image
       - gcr.io/$PROJECT_ID/maps-crawler:$COMMIT_SHA
