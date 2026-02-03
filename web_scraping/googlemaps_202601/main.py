@@ -77,7 +77,7 @@ def generate_list(search):
 
 def extract_details(records):
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)
+        browser = p.chromium.launch(headless=True)
 
         for record in records:
             context = browser.new_context()
@@ -106,7 +106,7 @@ def extract_details(records):
 
 def enrich_data(records):
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)
+        browser = p.chromium.launch(headless=True)
 
         for record in records:
             context = browser.new_context()
