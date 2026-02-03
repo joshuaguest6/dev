@@ -1,4 +1,14 @@
 steps:
+  # Delete job if it exists (ignore failure)
+  - name: gcr.io/google.com/cloudsdktool/cloud-sdk
+    entrypoint: bash
+    args:
+      - -c
+      - |
+        gcloud run jobs delete maps-crawler \
+          --region=australia-southeast1 \
+          --quiet || true
+          
   # Build Docker image
   - name: gcr.io/cloud-builders/docker
     dir: web_scraping/googlemaps_202601
