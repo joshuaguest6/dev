@@ -1,5 +1,9 @@
 [
   {
+    "name": "BLEIBTREU ZAHN\u00c4RZTE",
+    "details_link": "https://www.google.com/maps/place/BLEIBTREU+ZAHN%C3%84RZTE/data=!4m7!3m6!1s0x47a8517c04cc6da9:0x1f747818d469c891!8m2!3d52.502331!4d13.319822!16s%2Fg%2F11h6nvrwtq!19sChIJqW3MBHxRqEcRkchp1Bh4dB8?authuser=0&hl=en&rclk=1"
+  },
+  {
     "name": "torhaus - Your Dentists in Berlin",
     "details_link": "https://www.google.com/maps/place/torhaus+-+Your+Dentists+in+Berlin/data=!4m7!3m6!1s0x47a85194c796e7fb:0x88f861aa25b00e77!8m2!3d52.5284086!4d13.3784512!16s%2Fg%2F113jfd1w9!19sChIJ--eWx5RRqEcRdw6wJaph-Ig?authuser=0&hl=en&rclk=1"
   },
@@ -8,19 +12,31 @@
     "details_link": "https://www.google.com/maps/place/Haus+Dentist/data=!4m7!3m6!1s0x47a851005c6f6e7f:0xef1cdb56f385316c!8m2!3d52.4921494!4d13.3868281!16s%2Fg%2F11wbsmx73p!19sChIJf25vXABRqEcRbDGF81bbHO8?authuser=0&hl=en&rclk=1"
   },
   {
-    "name": "The Urban Dentist",
-    "details_link": "https://www.google.com/maps/place/The+Urban+Dentist/data=!4m7!3m6!1s0x47a84f0c5260d2e3:0x3d213429675349c3!8m2!3d52.508031!4d13.4501689!16s%2Fg%2F11ghf7scl9!19sChIJ49JgUgxPqEcRw0lTZyk0IT0?authuser=0&hl=en&rclk=1"
-  },
-  {
-    "name": "Privatpraxis Zaritzki Fine Dentistry \u2022 Private Zahnarztpraxis (Berlin Gendarmenmarkt)",
-    "details_link": "https://www.google.com/maps/place/Privatpraxis+Zaritzki+Fine+Dentistry+%E2%80%A2+Private+Zahnarztpraxis+%28Berlin+Gendarmenmarkt%29/data=!4m7!3m6!1s0x47a851d9714b5cff:0x9b7535fbe85bcda4!8m2!3d52.5145741!4d13.3972125!16s%2Fg%2F1tcwd_yk!19sChIJ_1xLcdlRqEcRpM1b6Ps1dZs?authuser=0&hl=en&rclk=1"
+    "name": "AllDent Zahnzentrum Berlin",
+    "details_link": "https://www.google.com/maps/place/AllDent+Zahnzentrum+Berlin/data=!4m7!3m6!1s0x47a851b834c6d001:0x6eccc1d982f7ff!8m2!3d52.5190628!4d13.388854!16s%2Fg%2F11w232lr5m!19sChIJAdDGNLhRqEcR__eC2cHMbgA?authuser=0&hl=en&rclk=1"
   },
   {
     "name": "Kottident - Dentist in Berlin Kreuzberg",
     "details_link": "https://www.google.com/maps/place/Kottident+-+Dentist+in+Berlin+Kreuzberg/data=!4m7!3m6!1s0x47a84e339e1b3e6f:0xa3449be1eb562cf5!8m2!3d52.5007495!4d13.4187246!16s%2Fg%2F1v_sm8bx!19sChIJbz4bnjNOqEcR9SxW6-GbRKM?authuser=0&hl=en&rclk=1"
   },
   {
-    "name": "AllDent Zahnzentrum Berlin",
-    "details_link": "https://www.google.com/maps/place/AllDent+Zahnzentrum+Berlin/data=!4m7!3m6!1s0x47a851b834c6d001:0x6eccc1d982f7ff!8m2!3d52.5190628!4d13.388854!16s%2Fg%2F11w232lr5m!19sChIJAdDGNLhRqEcR__eC2cHMbgA?authuser=0&hl=en&rclk=1"
+    "name": "Die Praxis Mitte - Zahnarztpraxis Dr. Christina Erdmann & Dr. Anna Trojan",
+    "details_link": "https://www.google.com/maps/place/Die+Praxis+Mitte+-+Zahnarztpraxis+Dr.+Christina+Erdmann+%26+Dr.+Anna+Trojan/data=!4m7!3m6!1s0x47a84fed83b8b99b:0xfbe897eebf9bacf6!8m2!3d52.5238646!4d13.4086018!16s%2Fg%2F11h42nzzh4!19sChIJm7m4g-1PqEcR9qybv-6X6Ps?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Privatpraxis Zaritzki Fine Dentistry \u2022 Private Zahnarztpraxis (Berlin Gendarmenmarkt)",
+    "details_link": "https://www.google.com/maps/place/Privatpraxis+Zaritzki+Fine+Dentistry+%E2%80%A2+Private+Zahnarztpraxis+%28Berlin+Gendarmenmarkt%29/data=!4m7!3m6!1s0x47a851d9714b5cff:0x9b7535fbe85bcda4!8m2!3d52.5145741!4d13.3972125!16s%2Fg%2F1tcwd_yk!19sChIJ_1xLcdlRqEcRpM1b6Ps1dZs?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "The Urban Dentist",
+    "details_link": "https://www.google.com/maps/place/The+Urban+Dentist/data=!4m7!3m6!1s0x47a84f0c5260d2e3:0x3d213429675349c3!8m2!3d52.508031!4d13.4501689!16s%2Fg%2F11ghf7scl9!19sChIJ49JgUgxPqEcRw0lTZyk0IT0?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarzt Charlottenburg - Dental21",
+    "details_link": "https://www.google.com/maps/place/Zahnarzt+Charlottenburg+-+Dental21/data=!4m7!3m6!1s0x47a8510e49f3739d:0x7e09492d6c2cfe1c!8m2!3d52.506948!4d13.3068721!16s%2Fg%2F11h_48jn_9!19sChIJnXPzSQ5RqEcRHP4sbC1JCX4?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Vegan Dentist - Berlin",
+    "details_link": "https://www.google.com/maps/place/Vegan+Dentist+-+Berlin/data=!4m7!3m6!1s0x47a85190c16b251b:0xf744bec0a2d4af32!8m2!3d52.5409743!4d13.4136565!16s%2Fg%2F11r_dmsgb1!19sChIJGyVrwZBRqEcRMq_UosC-RPc?authuser=0&hl=en&rclk=1"
   }
 ]

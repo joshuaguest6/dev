@@ -57,14 +57,16 @@ def generate_list(search):
         Stealth().use_sync(page)
 
 
+        print('Loading google maps...')
         page.goto(f'https://www.google.com/maps/search/{search.replace(" ", "+")}/')
-        page.wait_for_selector('div[role="feed"]', timeout=60000)
+        page.wait_for_selector('div[role="feed"]', timeout=10000)
 
-        load_results(page)
+        # load_results(page)
 
         feed = page.query_selector('div[role="feed"]')
 
         articles = feed.query_selector_all('div[role="article"]')
+        print(f'{len(articles)} businesses found')
 
         data = parse_results(articles)
 
@@ -79,6 +81,7 @@ def extract_details(records):
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
 
+        print('Extracting business website links...')
         for record in records:
             context = browser.new_context()
             page = context.new_page()
@@ -111,17 +114,25 @@ def enrich_data(records):
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
 
+        print('Visiting business websites...')
         for record in records:
             context = browser.new_context()
             page = context.new_page()
             Stealth().use_sync(page)
 
-            page.goto(record['website_link'])
-            
+            try:
+                page.goto(record['website_link'], timeout=60000)
+            except:
+                record['website_phone'] = None
+                record['error'] = 'Website not found'
+                context.close()
+                continue
+
             try:
                 page.wait_for_selector('a[href^="tel:"]', timeout=10000)
             except:
                 record['website_phone'] = None
+                record['error'] = 'Phone not found'
                 context.close()
                 continue
 
@@ -130,6 +141,9 @@ def enrich_data(records):
             phone = phone.replace('tel:', '').strip() if phone else None
 
             record['website_phone'] = phone
+            record['error'] = None
+
+            print('Finished visiting business websites...')
 
             context.close()
         
@@ -145,6 +159,7 @@ def save_records(records, search):
     blob.upload_from_string(json.dumps(records, indent=2), content_type='application/json')
 
 def main(search):
+    print(f'Searching google maps for: {search}')
     records = generate_list(search)
 
     records = extract_details(records)
