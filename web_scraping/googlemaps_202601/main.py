@@ -61,7 +61,7 @@ def generate_list(search):
         page.goto(f'https://www.google.com/maps/search/{search.replace(" ", "+")}/')
         page.wait_for_selector('div[role="feed"]', timeout=10000)
 
-        # load_results(page)
+        load_results(page)
 
         feed = page.query_selector('div[role="feed"]')
 
