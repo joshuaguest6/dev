@@ -4,6 +4,9 @@ import time
 import json
 import os
 from google.cloud import storage
+import logging
+
+logging.basicConfig(level=logging.INFO)
 
 data = []
 
@@ -22,7 +25,7 @@ def load_results(page):
         listings = page.locator('div[role="article"]')
         current_count = listings.count()
 
-        print(f'Listings loaded: {current_count}')
+        logging.info(f'Listings loaded: {current_count}')
 
         if current_count == previous_count:
             break
@@ -57,7 +60,7 @@ def generate_list(search):
         Stealth().use_sync(page)
 
 
-        print('Loading google maps...')
+        logging.info('Loading google maps...')
         page.goto(f'https://www.google.com/maps/search/{search.replace(" ", "+")}/')
         page.wait_for_selector('div[role="feed"]', timeout=10000)
 
@@ -66,7 +69,7 @@ def generate_list(search):
         feed = page.query_selector('div[role="feed"]')
 
         articles = feed.query_selector_all('div[role="article"]')
-        print(f'{len(articles)} businesses found')
+        logging.info(f'{len(articles)} businesses found')
 
         data = parse_results(articles)
 
@@ -81,7 +84,7 @@ def extract_details(records):
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
 
-        print('Extracting business website links...')
+        logging.info('Extracting business website links...')
         for record in records:
             context = browser.new_context()
             page = context.new_page()
@@ -114,7 +117,7 @@ def enrich_data(records):
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
 
-        print('Visiting business websites...')
+        logging.info('Visiting business websites...')
         for record in records:
             context = browser.new_context()
             page = context.new_page()
@@ -143,7 +146,7 @@ def enrich_data(records):
             record['website_phone'] = phone
             record['error'] = None
 
-            print('Finished visiting business websites...')
+            logging.info('Finished visiting business websites...')
 
             context.close()
         
@@ -159,7 +162,7 @@ def save_records(records, search):
     blob.upload_from_string(json.dumps(records, indent=2), content_type='application/json')
 
 def main(search):
-    print(f'Searching google maps for: {search}')
+    logging.info(f'Searching google maps for: {search}')
     records = generate_list(search)
 
     records = extract_details(records)
