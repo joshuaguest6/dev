@@ -1,27 +1,11 @@
 [
   {
-    "name": "BLEIBTREU ZAHN\u00c4RZTE",
-    "details_link": "https://www.google.com/maps/place/BLEIBTREU+ZAHN%C3%84RZTE/data=!4m7!3m6!1s0x47a8517c04cc6da9:0x1f747818d469c891!8m2!3d52.502331!4d13.319822!16s%2Fg%2F11h6nvrwtq!19sChIJqW3MBHxRqEcRkchp1Bh4dB8?authuser=0&hl=en&rclk=1"
-  },
-  {
     "name": "torhaus - Your Dentists in Berlin",
     "details_link": "https://www.google.com/maps/place/torhaus+-+Your+Dentists+in+Berlin/data=!4m7!3m6!1s0x47a85194c796e7fb:0x88f861aa25b00e77!8m2!3d52.5284086!4d13.3784512!16s%2Fg%2F113jfd1w9!19sChIJ--eWx5RRqEcRdw6wJaph-Ig?authuser=0&hl=en&rclk=1"
   },
   {
     "name": "Haus Dentist",
     "details_link": "https://www.google.com/maps/place/Haus+Dentist/data=!4m7!3m6!1s0x47a851005c6f6e7f:0xef1cdb56f385316c!8m2!3d52.4921494!4d13.3868281!16s%2Fg%2F11wbsmx73p!19sChIJf25vXABRqEcRbDGF81bbHO8?authuser=0&hl=en&rclk=1"
-  },
-  {
-    "name": "AllDent Zahnzentrum Berlin",
-    "details_link": "https://www.google.com/maps/place/AllDent+Zahnzentrum+Berlin/data=!4m7!3m6!1s0x47a851b834c6d001:0x6eccc1d982f7ff!8m2!3d52.5190628!4d13.388854!16s%2Fg%2F11w232lr5m!19sChIJAdDGNLhRqEcR__eC2cHMbgA?authuser=0&hl=en&rclk=1"
-  },
-  {
-    "name": "Kottident - Dentist in Berlin Kreuzberg",
-    "details_link": "https://www.google.com/maps/place/Kottident+-+Dentist+in+Berlin+Kreuzberg/data=!4m7!3m6!1s0x47a84e339e1b3e6f:0xa3449be1eb562cf5!8m2!3d52.5007495!4d13.4187246!16s%2Fg%2F1v_sm8bx!19sChIJbz4bnjNOqEcR9SxW6-GbRKM?authuser=0&hl=en&rclk=1"
-  },
-  {
-    "name": "Die Praxis Mitte - Zahnarztpraxis Dr. Christina Erdmann & Dr. Anna Trojan",
-    "details_link": "https://www.google.com/maps/place/Die+Praxis+Mitte+-+Zahnarztpraxis+Dr.+Christina+Erdmann+%26+Dr.+Anna+Trojan/data=!4m7!3m6!1s0x47a84fed83b8b99b:0xfbe897eebf9bacf6!8m2!3d52.5238646!4d13.4086018!16s%2Fg%2F11h42nzzh4!19sChIJm7m4g-1PqEcR9qybv-6X6Ps?authuser=0&hl=en&rclk=1"
   },
   {
     "name": "Privatpraxis Zaritzki Fine Dentistry \u2022 Private Zahnarztpraxis (Berlin Gendarmenmarkt)",
@@ -32,11 +16,27 @@
     "details_link": "https://www.google.com/maps/place/The+Urban+Dentist/data=!4m7!3m6!1s0x47a84f0c5260d2e3:0x3d213429675349c3!8m2!3d52.508031!4d13.4501689!16s%2Fg%2F11ghf7scl9!19sChIJ49JgUgxPqEcRw0lTZyk0IT0?authuser=0&hl=en&rclk=1"
   },
   {
-    "name": "Zahnarzt Charlottenburg - Dental21",
-    "details_link": "https://www.google.com/maps/place/Zahnarzt+Charlottenburg+-+Dental21/data=!4m7!3m6!1s0x47a8510e49f3739d:0x7e09492d6c2cfe1c!8m2!3d52.506948!4d13.3068721!16s%2Fg%2F11h_48jn_9!19sChIJnXPzSQ5RqEcRHP4sbC1JCX4?authuser=0&hl=en&rclk=1"
+    "name": "Kottident - Dentist in Berlin Kreuzberg",
+    "details_link": "https://www.google.com/maps/place/Kottident+-+Dentist+in+Berlin+Kreuzberg/data=!4m7!3m6!1s0x47a84e339e1b3e6f:0xa3449be1eb562cf5!8m2!3d52.5007495!4d13.4187246!16s%2Fg%2F1v_sm8bx!19sChIJbz4bnjNOqEcR9SxW6-GbRKM?authuser=0&hl=en&rclk=1"
   },
   {
-    "name": "Vegan Dentist - Berlin",
-    "details_link": "https://www.google.com/maps/place/Vegan+Dentist+-+Berlin/data=!4m7!3m6!1s0x47a85190c16b251b:0xf744bec0a2d4af32!8m2!3d52.5409743!4d13.4136565!16s%2Fg%2F11r_dmsgb1!19sChIJGyVrwZBRqEcRMq_UosC-RPc?authuser=0&hl=en&rclk=1"
+    "name": "Die Praxis Mitte - Zahnarztpraxis Dr. Christina Erdmann & Dr. Anna Trojan",
+    "details_link": "https://www.google.com/maps/place/Die+Praxis+Mitte+-+Zahnarztpraxis+Dr.+Christina+Erdmann+%26+Dr.+Anna+Trojan/data=!4m7!3m6!1s0x47a84fed83b8b99b:0xfbe897eebf9bacf6!8m2!3d52.5238646!4d13.4086018!16s%2Fg%2F11h42nzzh4!19sChIJm7m4g-1PqEcR9qybv-6X6Ps?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarztpraxis \u00d6zlem Seyfi - Bedent Berlin",
+    "details_link": "https://www.google.com/maps/place/Zahnarztpraxis+%C3%96zlem+Seyfi+-+Bedent+Berlin/data=!4m7!3m6!1s0x47a84f8dfcc2db19:0x461ce6bb672e200!8m2!3d52.4872114!4d13.3947281!16s%2Fg%2F11rc3vjs5r!19sChIJGdvC_I1PqEcRAOJytmvOYQQ?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarzt Berlin Mitte | FAMDENTAL",
+    "details_link": "https://www.google.com/maps/place/Zahnarzt+Berlin+Mitte+%7C+FAMDENTAL/data=!4m7!3m6!1s0x47a84f7de4eb9ba1:0x7ea797c9e9f35257!8m2!3d52.5267765!4d13.4140879!16s%2Fg%2F11mq2tqmcc!19sChIJoZvr5H1PqEcRV1Lz6cmXp34?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Dentists | Cinderella Kolarikal | Zahn\u00e4rzte in der Rochstra\u00dfe",
+    "details_link": "https://www.google.com/maps/place/Dentists+%7C+Cinderella+Kolarikal+%7C+Zahn%C3%A4rzte+in+der+Rochstra%C3%9Fe/data=!4m7!3m6!1s0x47a851f6eec5723d:0x460e9d22fa1a8222!8m2!3d52.5243745!4d13.4074774!16s%2Fg%2F11r4m1g9_g!19sChIJPXLF7vZRqEcRIoIa-iKdDkY?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "MVZ Volksdent GmbH",
+    "details_link": "https://www.google.com/maps/place/MVZ+Volksdent+GmbH/data=!4m7!3m6!1s0x47a84d6d8fdc42c9:0xdb5152af792d3690!8m2!3d52.5455475!4d13.4272749!16s%2Fg%2F11kx6c4nz_!19sChIJyULcj21NqEcRkDYtea9SUds?authuser=0&hl=en&rclk=1"
   }
 ]

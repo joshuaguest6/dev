@@ -5,6 +5,7 @@ import json
 import os
 from google.cloud import storage
 import logging
+import requests
 
 logging.basicConfig(level=logging.INFO)
 
@@ -64,7 +65,7 @@ def generate_list(search):
         page.goto(f'https://www.google.com/maps/search/{search.replace(" ", "+")}/')
         page.wait_for_selector('div[role="feed"]', timeout=10000)
 
-        load_results(page)
+        # load_results(page)
 
         feed = page.query_selector('div[role="feed"]')
 
@@ -162,6 +163,9 @@ def save_records(records, search):
     blob.upload_from_string(json.dumps(records, indent=2), content_type='application/json')
 
 def main(search):
+    public_ip = requests.get("https://api.ipify.org").text
+    logging.info(f"Public IP: {public_ip}")
+
     logging.info(f'Searching google maps for: {search}')
     records = generate_list(search)
 
@@ -172,7 +176,8 @@ def main(search):
     save_records(records, search)
 
 if __name__ == '__main__':
-    SEARCH = os.environ.get('SEARCH')
+    # SEARCH = os.environ.get('SEARCH')
+    SEARCH = 'dentist berlin'
     if not SEARCH:
         raise ValueError("SEARCH environment variable is required")
 
