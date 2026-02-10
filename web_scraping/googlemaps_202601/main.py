@@ -92,28 +92,27 @@ def parse_results(articles):
     
     return data
 
+def random_fingerprint():
+    ua = random.choice(USER_AGENTS)
+    width = random.choice([1280, 1366, 1440, 1920])
+    height = random.choice([720, 800, 900, 1080])
+    locale = random.choice(['en-US', 'en-GB', 'de-DE'])
+    timezone = random.choice(['Europe/Berlin', 'Europe/London', 'America/New_York'])
+
+    return {
+        'user_agent': ua,
+        'viewport': {'width': width, 'height': height},
+        'locale': locale,
+        'timezone_id': timezone
+    }
 
 def generate_list(search):
     with sync_playwright() as p:
-        ua = random.choice(USER_AGENTS)
-        width = random.choice([1280, 1366, 1440, 1920])
-        height = random.choice([720, 800, 900, 1080])
-        locale = random.choice(['en-US', 'en-GB', 'de-DE'])
-        timezone = random.choice(['Europe/Berlin', 'Europe/London', 'America/New_York'])
-
-        # Stagger the cloud run job workers
-        time.sleep(random.uniform(2, 5))
-
         browser = p.chromium.launch(
             headless=True,
             args=["--disable-blink-features=AutomationControlled"]
         )
-        context = browser.new_context(
-            user_agent=ua,
-            viewport={'width': width, 'height': height},
-            locale=locale,
-            timezone_id=timezone
-        )
+        context = browser.new_context(**random_fingerprint())
         page = context.new_page()
         Stealth().use_sync(page)
 
@@ -220,6 +219,9 @@ def save_records(records, search):
     blob.upload_from_string(json.dumps(records, indent=2), content_type='application/json')
 
 def main(search):
+    # Stagger the cloud run job workers
+    time.sleep(random.uniform(2, 5))
+
     public_ip = requests.get("https://api.ipify.org").text
     logging.info(f"Public IP: {public_ip}")
 
