@@ -6,6 +6,27 @@ import os
 from google.cloud import storage
 import logging
 import requests
+import random 
+
+USER_AGENTS = [
+    # Windows Chrome
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.5993.90 Safari/537.36",
+
+    # Mac Chrome
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.5993.90 Safari/537.36",
+
+    # Linux Chrome
+    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.5993.90 Safari/537.36",
+
+    # Windows Firefox
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:117.0) Gecko/20100101 Firefox/117.0",
+
+    # Mac Firefox
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:117.0) Gecko/20100101 Firefox/117.0",
+
+    # Mobile Chrome (Android)
+    "Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.5993.90 Mobile Safari/537.36",
+]
 
 logging.basicConfig(level=logging.INFO)
 
@@ -74,11 +95,12 @@ def parse_results(articles):
 
 def generate_list(search):
     with sync_playwright() as p:
+        ua = random.choice(USER_AGENTS)
         browser = p.chromium.launch(
             headless=True,
             args=["--disable-blink-features=AutomationControlled"]
         )
-        context = browser.new_context()
+        context = browser.new_context(user_agent=ua)
         page = context.new_page()
         Stealth().use_sync(page)
 
