@@ -95,7 +95,8 @@ def parse_results(articles):
 
 def generate_list(search):
     with sync_playwright() as p:
-        ua = random.choice(USER_AGENTS)
+        # ua = random.choice(USER_AGENTS)
+        ua = USER_AGENTS[os.environ.get('CLOUD_RUN_TASK_INDEX', None)]
         browser = p.chromium.launch(
             headless=True,
             args=["--disable-blink-features=AutomationControlled"]
