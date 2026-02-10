@@ -11,6 +11,28 @@ logging.basicConfig(level=logging.INFO)
 
 data = []
 
+def load_search(idx=None):
+    with open('searches.json', 'r') as f:
+        searches = json.load(f)
+
+    if idx is None:
+        # for when in cloud, get idx
+        idx = os.environ.get('CLOUD_RUN_TASK_INDEX', None)
+
+    if idx is not None:
+        idx = int(idx)
+
+    try:
+        search = searches[idx]['search']
+        logging.info(f'Search index: {idx}')
+        logging.info(f'Search: {search}')
+    except:
+        logging.info('No search returned')
+        logging.info(f'Index passed: {idx}')
+        search = None
+
+    return search
+
 def load_results(page):
     scrollable_div = page.locator('div[role="feed"]')
 
@@ -147,9 +169,9 @@ def enrich_data(records):
             record['website_phone'] = phone
             record['error'] = None
 
-            logging.info('Finished visiting business websites...')
-
             context.close()
+
+        logging.info('Finished visiting business websites...')
         
         browser.close()
 
@@ -176,10 +198,14 @@ def main(search):
     save_records(records, search)
 
 if __name__ == '__main__':
-    # SEARCH = os.environ.get('SEARCH')
-    SEARCH = 'dentist berlin'
+    # for when local, get the idx
+    idx = os.environ.get('idx', None)
+    if idx is not None:
+        idx = int(idx)
+
+    SEARCH = load_search(idx)
     if not SEARCH:
-        raise ValueError("SEARCH environment variable is required")
+        raise ValueError("SEARCH variable is required")
 
     main(SEARCH)
     
