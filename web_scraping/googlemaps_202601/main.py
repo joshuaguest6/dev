@@ -95,13 +95,25 @@ def parse_results(articles):
 
 def generate_list(search):
     with sync_playwright() as p:
-        # ua = random.choice(USER_AGENTS)
-        ua = USER_AGENTS[int(os.environ.get('CLOUD_RUN_TASK_INDEX', None))]
+        ua = random.choice(USER_AGENTS)
+        width = random.choice([1280, 1366, 1440, 1920])
+        height = random.choice([720, 800, 900, 1080])
+        locale = random.choice(['en-US', 'en-GB', 'de-DE'])
+        timezone = random.choice(['Europe/Berlin', 'Europe/London', 'America/New_York'])
+
+        # Stagger the cloud run job workers
+        time.sleep(random.uniform(2, 5))
+
         browser = p.chromium.launch(
             headless=True,
             args=["--disable-blink-features=AutomationControlled"]
         )
-        context = browser.new_context(user_agent=ua)
+        context = browser.new_context(
+            user_agent=ua,
+            viewport={'width': width, 'height': height},
+            locale=locale,
+            timezone_id=timezone
+        )
         page = context.new_page()
         Stealth().use_sync(page)
 
