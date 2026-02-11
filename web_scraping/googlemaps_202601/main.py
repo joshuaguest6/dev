@@ -118,8 +118,8 @@ def generate_list(search):
 
 
         logging.info('Loading google maps...')
-        page.goto(f'https://www.google.com/maps/search/{search.replace(" ", "+")}/')
-        page.wait_for_selector('div[role="feed"]', timeout=10000)
+        page.goto(f'https://www.google.com/maps/search/{search.replace(" ", "+")}/', timeout=60000)
+        page.wait_for_selector('div[role="feed"]', timeout=60000)
 
         # load_results(page)
 
