@@ -148,8 +148,8 @@ def extract_details(records):
             Stealth().use_sync(page)
 
             try:
-                page.goto(record['details_link'])
-                page.wait_for_selector('a[aria-label^="Website:"]', timeout=10000)
+                page.goto(record['details_link'], timeout=60000)
+                page.wait_for_selector('a[aria-label^="Website:"]', timeout=30000)
                 website_tag = page.query_selector('a[aria-label^="Website:"]')
             except:
                 website_tag = None

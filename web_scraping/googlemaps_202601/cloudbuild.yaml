@@ -32,6 +32,7 @@ steps:
       - --cpu=2
       - --tasks=2
       - --parallelism=2
+      - --task-timeout=3600
       - --quiet
 
 images:
