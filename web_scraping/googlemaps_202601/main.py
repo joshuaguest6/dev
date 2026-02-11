@@ -121,7 +121,7 @@ def generate_list(search):
         page.goto(f'https://www.google.com/maps/search/{search.replace(" ", "+")}/', timeout=60000)
         page.wait_for_selector('div[role="feed"]', timeout=60000)
 
-        # load_results(page)
+        load_results(page)
 
         feed = page.query_selector('div[role="feed"]')
 
@@ -164,7 +164,7 @@ def extract_details(records):
             record['phone'] = phone
 
             context.close()
-            time.sleep(3)
+            time.sleep(random.uniform(2, 5))
 
         browser.close()
     
