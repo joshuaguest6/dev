@@ -32,16 +32,17 @@ logging.basicConfig(level=logging.INFO)
 
 data = []
 
-def load_search(idx=None):
+def load_search(idx=None, retry_idx=None):
     with open('searches.json', 'r') as f:
         searches = json.load(f)
 
-    if idx is None:
-        # for when in cloud, get idx
-        idx = os.environ.get('CLOUD_RUN_TASK_INDEX', None)
-
     if idx is not None:
         idx = int(idx)
+    
+    if retry_idx is not None:
+        retry_idx = [int(x) for x in retry_idx.split(',')]
+
+        idx = retry_idx[idx]
 
     try:
         search = searches[idx]['search']
@@ -224,9 +225,20 @@ def save_records(records, search):
 
     blob.upload_from_string(json.dumps(records, indent=2), content_type='application/json')
 
-def main(search):
+def main():
     # Stagger the cloud run job workers
     time.sleep(random.uniform(2, 5))
+
+    # cloud run environment variable 
+    # to run locally, can set the CLOUD_RUN_TASK_INDEX env variable
+    idx = os.environ.get('CLOUD_RUN_TASK_INDEX', None)
+
+    # To rerun specific tasks
+    retry_idx = os.environ.get('RETRY_INDEX', None)
+
+    search = load_search(idx, retry_idx)
+    if not search:
+        raise ValueError("SEARCH variable is required")
 
     public_ip = requests.get("https://api.ipify.org").text
     logging.info(f"Public IP: {public_ip}")
@@ -241,14 +253,5 @@ def main(search):
     save_records(records, search)
 
 if __name__ == '__main__':
-    # for when local, get the idx
-    idx = os.environ.get('idx', None)
-    if idx is not None:
-        idx = int(idx)
-
-    SEARCH = load_search(idx)
-    if not SEARCH:
-        raise ValueError("SEARCH variable is required")
-
-    main(SEARCH)
+    main()
     

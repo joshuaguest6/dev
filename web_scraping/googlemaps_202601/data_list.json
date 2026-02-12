@@ -1,42 +1,466 @@
 [
   {
-    "name": "torhaus - Your Dentists in Berlin",
-    "details_link": "https://www.google.com/maps/place/torhaus+-+Your+Dentists+in+Berlin/data=!4m7!3m6!1s0x47a85194c796e7fb:0x88f861aa25b00e77!8m2!3d52.5284086!4d13.3784512!16s%2Fg%2F113jfd1w9!19sChIJ--eWx5RRqEcRdw6wJaph-Ig?authuser=0&hl=en&rclk=1"
+    "name": "Alldent Zahnzentrum Frankfurt",
+    "details_link": "https://www.google.com/maps/place/Alldent+Zahnzentrum+Frankfurt/data=!4m7!3m6!1s0x47bd0ea92cd94ded:0xc17a00c47641cadc!8m2!3d50.1117005!4d8.6770041!16s%2Fg%2F11b6b23ly4!19sChIJ7U3ZLKkOvUcR3MpBdsQAesE?authuser=0&hl=en&rclk=1"
   },
   {
-    "name": "Haus Dentist",
-    "details_link": "https://www.google.com/maps/place/Haus+Dentist/data=!4m7!3m6!1s0x47a851005c6f6e7f:0xef1cdb56f385316c!8m2!3d52.4921494!4d13.3868281!16s%2Fg%2F11wbsmx73p!19sChIJf25vXABRqEcRbDGF81bbHO8?authuser=0&hl=en&rclk=1"
+    "name": "Zahnarzt Frankfurt Hauptwache - Dental21",
+    "details_link": "https://www.google.com/maps/place/Zahnarzt+Frankfurt+Hauptwache+-+Dental21/data=!4m7!3m6!1s0x47bd0fdf9837d591:0xe292bb77bbf46405!8m2!3d50.1138723!4d8.6781109!16s%2Fg%2F11flvw0h7x!19sChIJkdU3mN8PvUcRBWT0u3e7kuI?authuser=0&hl=en&rclk=1"
   },
   {
-    "name": "Privatpraxis Zaritzki Fine Dentistry \u2022 Private Zahnarztpraxis (Berlin Gendarmenmarkt)",
-    "details_link": "https://www.google.com/maps/place/Privatpraxis+Zaritzki+Fine+Dentistry+%E2%80%A2+Private+Zahnarztpraxis+%28Berlin+Gendarmenmarkt%29/data=!4m7!3m6!1s0x47a851d9714b5cff:0x9b7535fbe85bcda4!8m2!3d52.5145741!4d13.3972125!16s%2Fg%2F1tcwd_yk!19sChIJ_1xLcdlRqEcRpM1b6Ps1dZs?authuser=0&hl=en&rclk=1"
+    "name": "Dental21",
+    "details_link": "https://www.google.com/maps/place/Dental21/data=!4m7!3m6!1s0x47bd094ee7950315:0x642acd23b3bfbbc7!8m2!3d50.1219133!4d8.6617823!16s%2Fg%2F11bzs282k1!19sChIJFQOV504JvUcRx7u_syPNKmQ?authuser=0&hl=en&rclk=1"
   },
   {
-    "name": "The Urban Dentist",
-    "details_link": "https://www.google.com/maps/place/The+Urban+Dentist/data=!4m7!3m6!1s0x47a84f0c5260d2e3:0x3d213429675349c3!8m2!3d52.508031!4d13.4501689!16s%2Fg%2F11ghf7scl9!19sChIJ49JgUgxPqEcRw0lTZyk0IT0?authuser=0&hl=en&rclk=1"
+    "name": "Zahnarzt Frankfurt Sachsenhausen - Dental21",
+    "details_link": "https://www.google.com/maps/place/Zahnarzt+Frankfurt+Sachsenhausen+-+Dental21/data=!4m7!3m6!1s0x47bd0d1c7324b6cb:0xf9c2b49567b7f785!8m2!3d50.1029652!4d8.6910509!16s%2Fg%2F11rcpbdq5v!19sChIJy7YkcxwNvUcRhfe3Z5W0wvk?authuser=0&hl=en&rclk=1"
   },
   {
-    "name": "Kottident - Dentist in Berlin Kreuzberg",
-    "details_link": "https://www.google.com/maps/place/Kottident+-+Dentist+in+Berlin+Kreuzberg/data=!4m7!3m6!1s0x47a84e339e1b3e6f:0xa3449be1eb562cf5!8m2!3d52.5007495!4d13.4187246!16s%2Fg%2F1v_sm8bx!19sChIJbz4bnjNOqEcR9SxW6-GbRKM?authuser=0&hl=en&rclk=1"
+    "name": "Zahnarztpraxis Alfonso Padilla - AP Dental Team Goethestra\u00dfe",
+    "details_link": "https://www.google.com/maps/place/Zahnarztpraxis+Alfonso+Padilla+-+AP+Dental+Team+Goethestra%C3%9Fe/data=!4m7!3m6!1s0x47bd0eaf7894253b:0x1705114e61c9fc80!8m2!3d50.1138488!4d8.673696!16s%2Fg%2F1tl1g_q0!19sChIJOyWUeK8OvUcRgPzJYU4RBRc?authuser=0&hl=en&rclk=1"
   },
   {
-    "name": "Die Praxis Mitte - Zahnarztpraxis Dr. Christina Erdmann & Dr. Anna Trojan",
-    "details_link": "https://www.google.com/maps/place/Die+Praxis+Mitte+-+Zahnarztpraxis+Dr.+Christina+Erdmann+%26+Dr.+Anna+Trojan/data=!4m7!3m6!1s0x47a84fed83b8b99b:0xfbe897eebf9bacf6!8m2!3d52.5238646!4d13.4086018!16s%2Fg%2F11h42nzzh4!19sChIJm7m4g-1PqEcR9qybv-6X6Ps?authuser=0&hl=en&rclk=1"
+    "name": "Dentaloft | Dental office in Frankfurt",
+    "details_link": "https://www.google.com/maps/place/Dentaloft+%7C+Dental+office+in+Frankfurt/data=!4m7!3m6!1s0x47bd0ea9440f4421:0x499a90ed327c5b4c!8m2!3d50.1108738!4d8.6754631!16s%2Fg%2F1tdb3d1z!19sChIJIUQPRKkOvUcRTFt8Mu2Qmkk?authuser=0&hl=en&rclk=1"
   },
   {
-    "name": "Zahnarztpraxis \u00d6zlem Seyfi - Bedent Berlin",
-    "details_link": "https://www.google.com/maps/place/Zahnarztpraxis+%C3%96zlem+Seyfi+-+Bedent+Berlin/data=!4m7!3m6!1s0x47a84f8dfcc2db19:0x461ce6bb672e200!8m2!3d52.4872114!4d13.3947281!16s%2Fg%2F11rc3vjs5r!19sChIJGdvC_I1PqEcRAOJytmvOYQQ?authuser=0&hl=en&rclk=1"
+    "name": "DENTAL CORNER dentist office Frankfurt Dr. Susanne Magin",
+    "details_link": "https://www.google.com/maps/place/DENTAL+CORNER+dentist+office+Frankfurt+Dr.+Susanne+Magin/data=!4m7!3m6!1s0x47bd0ead8414519b:0xa32518b468784f25!8m2!3d50.1168932!4d8.6731519!16s%2Fg%2F1tj9sg9x!19sChIJm1EUhK0OvUcRJU94aLQYJaM?authuser=0&hl=en&rclk=1"
   },
   {
-    "name": "Zahnarzt Berlin Mitte | FAMDENTAL",
-    "details_link": "https://www.google.com/maps/place/Zahnarzt+Berlin+Mitte+%7C+FAMDENTAL/data=!4m7!3m6!1s0x47a84f7de4eb9ba1:0x7ea797c9e9f35257!8m2!3d52.5267765!4d13.4140879!16s%2Fg%2F11mq2tqmcc!19sChIJoZvr5H1PqEcRV1Lz6cmXp34?authuser=0&hl=en&rclk=1"
+    "name": "ZAHNARZT IM WESTEND | ZAHNARZT PRAXIS FABIO RIMOLDI & KOLLEGEN | DENTIST",
+    "details_link": "https://www.google.com/maps/place/ZAHNARZT+IM+WESTEND+%7C+ZAHNARZT+PRAXIS+FABIO+RIMOLDI+%26+KOLLEGEN+%7C+DENTIST/data=!4m7!3m6!1s0x47bd09517ccdee93:0x33c6105a58b6ae69!8m2!3d50.1150244!4d8.662009!16s%2Fg%2F1tghc7ty!19sChIJk-7NfFEJvUcRaa62WFoQxjM?authuser=0&hl=en&rclk=1"
   },
   {
-    "name": "Dentists | Cinderella Kolarikal | Zahn\u00e4rzte in der Rochstra\u00dfe",
-    "details_link": "https://www.google.com/maps/place/Dentists+%7C+Cinderella+Kolarikal+%7C+Zahn%C3%A4rzte+in+der+Rochstra%C3%9Fe/data=!4m7!3m6!1s0x47a851f6eec5723d:0x460e9d22fa1a8222!8m2!3d52.5243745!4d13.4074774!16s%2Fg%2F11r4m1g9_g!19sChIJPXLF7vZRqEcRIoIa-iKdDkY?authuser=0&hl=en&rclk=1"
+    "name": "Dr. med. dent. Hamed Hakimi und Kollegen, Implantologie",
+    "details_link": "https://www.google.com/maps/place/Dr.+med.+dent.+Hamed+Hakimi+und+Kollegen,+Implantologie/data=!4m7!3m6!1s0x47bd0eb129bd87fb:0x9ed7e7ff517ad7a1!8m2!3d50.1214894!4d8.6807956!16s%2Fg%2F11gblf9p1f!19sChIJ-4e9KbEOvUcRodd6Uf_n154?authuser=0&hl=en&rclk=1"
   },
   {
-    "name": "MVZ Volksdent GmbH",
-    "details_link": "https://www.google.com/maps/place/MVZ+Volksdent+GmbH/data=!4m7!3m6!1s0x47a84d6d8fdc42c9:0xdb5152af792d3690!8m2!3d52.5455475!4d13.4272749!16s%2Fg%2F11kx6c4nz_!19sChIJyULcj21NqEcRkDYtea9SUds?authuser=0&hl=en&rclk=1"
+    "name": "Dr. Derin, Boulaaouin Dentists",
+    "details_link": "https://www.google.com/maps/place/Dr.+Derin,+Boulaaouin+Dentists/data=!4m7!3m6!1s0x47bd0ea4e5244fb9:0x3af1e5db3029ad4c!8m2!3d50.1144447!4d8.6859741!16s%2Fg%2F1v42dxv4!19sChIJuU8k5aQOvUcRTK0pMNvl8To?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarzt P. Tomovic - \u00e4sthetische Zahnarztpraxis Frankfurt-Westend",
+    "details_link": "https://www.google.com/maps/place/Zahnarzt+P.+Tomovic+-+%C3%A4sthetische+Zahnarztpraxis+Frankfurt-Westend/data=!4m7!3m6!1s0x47bd099a1fe14b95:0x373c9419cf0e629b!8m2!3d50.1118569!4d8.6593789!16s%2Fg%2F11k3h17q43!19sChIJlUvhH5oJvUcRm2IOzxmUPDc?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarztpraxis Dr. Tschackert & Kollegen",
+    "details_link": "https://www.google.com/maps/place/Zahnarztpraxis+Dr.+Tschackert+%26+Kollegen/data=!4m7!3m6!1s0x47bd0eac3a1fb011:0x9d55150032a55a58!8m2!3d50.113862!4d8.673939!16s%2Fg%2F1tc_q3ng!19sChIJEbAfOqwOvUcRWFqlMgAVVZ0?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Pawlenka practice of Dentistry - Your dentist Frankfurt",
+    "details_link": "https://www.google.com/maps/place/Pawlenka+practice+of+Dentistry+-+Your+dentist+Frankfurt/data=!4m7!3m6!1s0x47bd09532297479b:0x61113be8fb5a171e!8m2!3d50.1211968!4d8.6723707!16s%2Fg%2F1tznlgmv!19sChIJm0eXIlMJvUcRHhda--g7EWE?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarztpraxis DENTAL excellence, Frankfurt am Main",
+    "details_link": "https://www.google.com/maps/place/Zahnarztpraxis+DENTAL+excellence,+Frankfurt+am+Main/data=!4m7!3m6!1s0x47bd0eaefe6ff0e7:0xb5b955cb59b6a8ff!8m2!3d50.1159128!4d8.6763426!16s%2Fg%2F113j_k2wy!19sChIJ5_Bv_q4OvUcR_6i2WctVubU?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "PK2 Zahnarztpraxis Frankfurt - Dr. Soo Jeong Portscher-Kim & Dr. Soo Ji Kim",
+    "details_link": "https://www.google.com/maps/place/PK2+Zahnarztpraxis+Frankfurt+-+Dr.+Soo+Jeong+Portscher-Kim+%26+Dr.+Soo+Ji+Kim/data=!4m7!3m6!1s0x47bd0f7e1b78c241:0x8b210b692a4bb805!8m2!3d50.1145769!4d8.6738109!16s%2Fg%2F11v6j9hhqd!19sChIJQcJ4G34PvUcRBbhLKmkLIYs?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahn\u00e4rzte Krell & Kollegen",
+    "details_link": "https://www.google.com/maps/place/Zahn%C3%A4rzte+Krell+%26+Kollegen/data=!4m7!3m6!1s0x47bd0ea932278fa5:0x7fe03241083480c9!8m2!3d50.111453!4d8.6766458!16s%2Fg%2F1tcw7900!19sChIJpY8nMqkOvUcRyYA0CEEy4H8?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "dent up \u2013 Zahnarzt Frankfurt Ostend",
+    "details_link": "https://www.google.com/maps/place/dent+up+%E2%80%93+Zahnarzt+Frankfurt+Ostend/data=!4m7!3m6!1s0x47bd0e84f736ff61:0xa5f2693b780a982b!8m2!3d50.1111617!4d8.7104916!16s%2Fg%2F11f1lj1cw5!19sChIJYf8294QOvUcRK5gKeDtp8qU?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "ZAHNARZTPRAXIS TATJANA SCHOFER | ZAHNARZT FRANKFURT AM MAIN",
+    "details_link": "https://www.google.com/maps/place/ZAHNARZTPRAXIS+TATJANA+SCHOFER+%7C+ZAHNARZT+FRANKFURT+AM+MAIN/data=!4m7!3m6!1s0x47bd0eac2a1d7a17:0xb06df12db34d4f0c!8m2!3d50.1141787!4d8.675176!16s%2Fg%2F1tft_nmm!19sChIJF3odKqwOvUcRDE9Nsy3xbbA?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarzt Praxis Dr. Calin Marian",
+    "details_link": "https://www.google.com/maps/place/Zahnarzt+Praxis+Dr.+Calin+Marian/data=!4m7!3m6!1s0x47bd0ea964c7c6b5:0x4ed26a4c35de05d5!8m2!3d50.1101955!4d8.6746001!16s%2Fg%2F113f3zgf1!19sChIJtcbHZKkOvUcR1QXeNUxq0k4?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarzt Frankfurt Sachsenhausen - Dr. Edriss Habibi",
+    "details_link": "https://www.google.com/maps/place/Zahnarzt+Frankfurt+Sachsenhausen+-+Dr.+Edriss+Habibi/data=!4m7!3m6!1s0x47bd0c1c9ad4f9e3:0x4a59a83a98eabcdb!8m2!3d50.1015596!4d8.6800173!16s%2Fg%2F1vfp79r2!19sChIJ4_nUmhwMvUcR27zqmDqoWUo?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Dental Palais | Dr. Sophie Schmidt",
+    "details_link": "https://www.google.com/maps/place/Dental+Palais+%7C+Dr.+Sophie+Schmidt/data=!4m7!3m6!1s0x47bd0f8053fb5869:0xac65f676f4f78c15!8m2!3d50.1152311!4d8.6799646!16s%2Fg%2F11mdhjjs5r!19sChIJaVj7U4APvUcRFYz39Hb2Zaw?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarztpraxis Dr. Olga Kaiser & Kollegen",
+    "details_link": "https://www.google.com/maps/place/Zahnarztpraxis+Dr.+Olga+Kaiser+%26+Kollegen/data=!4m7!3m6!1s0x47bd0eae0a21e4a7:0xd0346900ab0a3191!8m2!3d50.1160209!4d8.6758111!16s%2Fg%2F1ptw834t6!19sChIJp-QhCq4OvUcRkTEKqwBpNNA?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarzt Frankfurt Zeil - Dr.med.dent. Filiz Yavuz",
+    "details_link": "https://www.google.com/maps/place/Zahnarzt+Frankfurt+Zeil+-+Dr.med.dent.+Filiz+Yavuz/data=!4m7!3m6!1s0x47bd0f4b8b58e27f:0x839a3a1df9ac3b16!8m2!3d50.1117071!4d8.6795374!16s%2Fg%2F1hc4b4hnd!19sChIJf-JYi0sPvUcRFjus-R06moM?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "SAYKIN\u00b2 Zahnmedizin - Ihr Zahnarzt Frankfurt",
+    "details_link": "https://www.google.com/maps/place/SAYKIN%C2%B2+Zahnmedizin+-+Ihr+Zahnarzt+Frankfurt/data=!4m7!3m6!1s0x47bd0fcebfcade61:0x14b1910be6e7c09e!8m2!3d50.1159398!4d8.6788695!16s%2Fg%2F11kpg0gpr0!19sChIJYd7Kv84PvUcRnsDn5guRsRQ?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "DentiWhite The Dental Lounge",
+    "details_link": "https://www.google.com/maps/place/DentiWhite+The+Dental+Lounge/data=!4m7!3m6!1s0x47bd0d8b349230f9:0x782184be57e5f6bc!8m2!3d50.1107497!4d8.5376837!16s%2Fg%2F11g8tzh0wp!19sChIJ-TCSNIsNvUcRvPblV76EIXg?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Laurin Porsch Dental Aesthetic - Zahnarzt Frankfurt Westend",
+    "details_link": "https://www.google.com/maps/place/Laurin+Porsch+Dental+Aesthetic+-+Zahnarzt+Frankfurt+Westend/data=!4m7!3m6!1s0x47bd0eac34c65d3f:0x2d04b3deafebfb32!8m2!3d50.1229843!4d8.6588198!16s%2Fg%2F11rs0tqm08!19sChIJP13GNKwOvUcRMvvrr96zBC0?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarzt Frankfurt Dr. Christoph Hegerl",
+    "details_link": "https://www.google.com/maps/place/Zahnarzt+Frankfurt+Dr.+Christoph+Hegerl/data=!4m7!3m6!1s0x47bd0c02b87ad5bd:0x907832d40b2e7924!8m2!3d50.1051375!4d8.6783367!16s%2Fg%2F1tnl0j6j!19sChIJvdV6uAIMvUcRJHkuC9QyeJA?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Dental Practice Dr. Guld & Associates",
+    "details_link": "https://www.google.com/maps/place/Dental+Practice+Dr.+Guld+%26+Associates/data=!4m7!3m6!1s0x47bd09645a30347d:0xdc6b4ceda575e8cf!8m2!3d50.1168513!4d8.6334919!16s%2Fg%2F1ttp9dxj!19sChIJfTQwWmQJvUcRz-h1pe1Ma9w?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Mydent Zahn\u00e4rzte",
+    "details_link": "https://www.google.com/maps/place/Mydent+Zahn%C3%A4rzte/data=!4m7!3m6!1s0x47bd0bab3ea1ceaf:0xa7e1da15352119e8!8m2!3d50.1030148!4d8.6420084!16s%2Fg%2F11pyc6dyf_!19sChIJr86hPqsLvUcR6BkhNRXa4ac?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarztpraxis Dr. Sarah Herrmann",
+    "details_link": "https://www.google.com/maps/place/Zahnarztpraxis+Dr.+Sarah+Herrmann/data=!4m7!3m6!1s0x47bd0eaeb54bff61:0x30ffb4bb088a57f4!8m2!3d50.111866!4d8.6760969!16s%2Fg%2F11fxz37q0d!19sChIJYf9Lta4OvUcR9FeKCLu0_zA?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "DR. WEINBACH/STRYCZEK Zahn\u00e4rzte",
+    "details_link": "https://www.google.com/maps/place/DR.+WEINBACH%2FSTRYCZEK+Zahn%C3%A4rzte/data=!4m7!3m6!1s0x47bd0eb39ff9f7af:0xbc6fd52d8a652666!8m2!3d50.1211439!4d8.6741506!16s%2Fg%2F1td9pn7l!19sChIJr_f5n7MOvUcRZiZlii3Vb7w?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Art of Dental Care - Zahn\u00e4rztin Dr. Johanna Klockenk\u00e4mper",
+    "details_link": "https://www.google.com/maps/place/Art+of+Dental+Care+-+Zahn%C3%A4rztin+Dr.+Johanna+Klockenk%C3%A4mper/data=!4m7!3m6!1s0x47bd0eadda71bbc1:0xc0d098bf89e796ae!8m2!3d50.1151417!4d8.6749854!16s%2Fg%2F1tdc4bgj!19sChIJwbtx2q0OvUcRrpbnib-Y0MA?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnmedizin Frankfurt am Main",
+    "details_link": "https://www.google.com/maps/place/Zahnmedizin+Frankfurt+am+Main/data=!4m7!3m6!1s0x47bd0d4ba513985d:0xd2b6bf2c790220f6!8m2!3d50.0990119!4d8.6770271!16s%2Fg%2F11q7z_1hjh!19sChIJXZgTpUsNvUcR9iACeSy_ttI?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "MILKYWAY - Zahnarzt- und Kinderzahnarztpraxis Frankfurt-Westend",
+    "details_link": "https://www.google.com/maps/place/MILKYWAY+-+Zahnarzt-+und+Kinderzahnarztpraxis+Frankfurt-Westend/data=!4m7!3m6!1s0x47bd098611aff46f:0xa134da91c82a99a0!8m2!3d50.1175623!4d8.6586721!16s%2Fg%2F11xsfm_mwc!19sChIJb_SvEYYJvUcRoJkqyJHaNKE?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Herr Dr. med. dent. (RO) Dan Florin Belu",
+    "details_link": "https://www.google.com/maps/place/Herr+Dr.+med.+dent.+%28RO%29+Dan+Florin+Belu/data=!4m7!3m6!1s0x47bd0953a662cf53:0x6d2fca45a018bf2d!8m2!3d50.1145865!4d8.6660882!16s%2Fg%2F1tf7018_!19sChIJU89iplMJvUcRLb8YoEXKL20?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Dentist Dr. Frank Meckbach",
+    "details_link": "https://www.google.com/maps/place/Dentist+Dr.+Frank+Meckbach/data=!4m7!3m6!1s0x47bd0c02b87ad5bd:0x4077a5f3398dbd25!8m2!3d50.1051375!4d8.6783367!16s%2Fg%2F1jkxz32m4!19sChIJvdV6uAIMvUcRJb2NOfOld0A?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarztpraxis Taylan Can & Kollegen",
+    "details_link": "https://www.google.com/maps/place/Zahnarztpraxis+Taylan+Can+%26+Kollegen/data=!4m7!3m6!1s0x47bd0dbb08daa7ab:0x27dc3285ae515e8a!8m2!3d50.1054941!4d8.6702721!16s%2Fg%2F11h4s2pzb5!19sChIJq6faCLsNvUcRil5RroUy3Cc?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarztpraxis Dr. Platon Portmann",
+    "details_link": "https://www.google.com/maps/place/Zahnarztpraxis+Dr.+Platon+Portmann/data=!4m7!3m6!1s0x47bd0c04d4e2f7b5:0x37d9e7ce749eb9dc!8m2!3d50.099!4d8.67701!16s%2Fg%2F11dfwz77gj!19sChIJtffi1AQMvUcR3LmedM7n2Tc?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarzt Frankfurt SP64 | Contemporary Dentistry",
+    "details_link": "https://www.google.com/maps/place/Zahnarzt+Frankfurt+SP64+%7C+Contemporary+Dentistry/data=!4m7!3m6!1s0x47bd098bc4008bbf:0x35c43921e94f9094!8m2!3d50.1186093!4d8.6624836!16s%2Fg%2F11ysg_4j87!19sChIJv4sAxIsJvUcRlJBP6SE5xDU?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zentrum f\u00fcr Zahnmedizin",
+    "details_link": "https://www.google.com/maps/place/Zentrum+f%C3%BCr+Zahnmedizin/data=!4m7!3m6!1s0x47bd0eaf585cc4db:0x3a9ac043758948b2!8m2!3d50.1120798!4d8.6812241!16s%2Fg%2F1td7b8c8!19sChIJ28RcWK8OvUcRskiJdUPAmjo?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Frau Dr. med. dent. Michaela Hettrich",
+    "details_link": "https://www.google.com/maps/place/Frau+Dr.+med.+dent.+Michaela+Hettrich/data=!4m7!3m6!1s0x47bd0eadc4e82583:0x471bb87a90a4c04c!8m2!3d50.1108651!4d8.6754292!16s%2Fg%2F1tk8b72p!19sChIJgyXoxK0OvUcRTMCkkHq4G0c?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Dr. Marcus Moghadam MSc.",
+    "details_link": "https://www.google.com/maps/place/Dr.+Marcus+Moghadam+MSc./data=!4m7!3m6!1s0x47bd0943684d0943:0x5b1bf0a523dffaeb!8m2!3d50.1156704!4d8.6743221!16s%2Fg%2F1vk6yb97!19sChIJQwlNaEMJvUcR6_rfI6XwG1s?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarztpraxis Huang & Kollegen",
+    "details_link": "https://www.google.com/maps/place/Zahnarztpraxis+Huang+%26+Kollegen/data=!4m7!3m6!1s0x47bd0fe8e83b6809:0x6914f13f7acfd2d8!8m2!3d50.1162599!4d8.6953602!16s%2Fg%2F11rt21nryk!19sChIJCWg76OgPvUcR2NLPej_xFGk?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahn\u00e4rzte in der Sandhofpassage Frankfurt - Neukranz, B\u00fcrklin und Kollegen",
+    "details_link": "https://www.google.com/maps/place/Zahn%C3%A4rzte+in+der+Sandhofpassage+Frankfurt+-+Neukranz,+B%C3%BCrklin+und+Kollegen/data=!4m7!3m6!1s0x47bd0eaf59668b47:0xc0691fc0de38ce19!8m2!3d50.1123592!4d8.6809204!16s%2Fg%2F11bzyp9f7p!19sChIJR4tmWa8OvUcRGc443sAfacA?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Dr Abdu Halloum - Zahnarztpraxis",
+    "details_link": "https://www.google.com/maps/place/Dr+Abdu+Halloum+-+Zahnarztpraxis/data=!4m7!3m6!1s0x47bd0f836a8dd759:0x28a496aa157d2498!8m2!3d50.1122318!4d8.6812056!16s%2Fg%2F11s9c7gm37!19sChIJWdeNaoMPvUcRmCR9FaqWpCg?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Practice for modern dentistry Dr. Paul P. Polarz",
+    "details_link": "https://www.google.com/maps/place/Practice+for+modern+dentistry+Dr.+Paul+P.+Polarz/data=!4m7!3m6!1s0x47bd0eaaed201c9f:0x760cdbc11094886c!8m2!3d50.1087432!4d8.668928!16s%2Fg%2F1thsqhmj!19sChIJnxwg7aoOvUcRbIiUEMHbDHY?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarztpraxis und Prophylaxecenter Dr. Georgalis und Kollegen",
+    "details_link": "https://www.google.com/maps/place/Zahnarztpraxis+und+Prophylaxecenter+Dr.+Georgalis+und+Kollegen/data=!4m7!3m6!1s0x47bd0ea52adb786d:0xc8df4794bedc7401!8m2!3d50.1162185!4d8.6859359!16s%2Fg%2F1261x0j_p!19sChIJbXjbKqUOvUcRAXTcvpRH38g?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "a1 Zahnarztpraxis am Opernplatz | Dr. Weinreich / Dr. Aldiri | a1 lounge",
+    "details_link": "https://www.google.com/maps/place/a1+Zahnarztpraxis+am+Opernplatz+%7C+Dr.+Weinreich+%2F+Dr.+Aldiri+%7C+a1+lounge/data=!4m7!3m6!1s0x47bd0eac524984cf:0xdf0ac7f3d6a98ed1!8m2!3d50.1151663!4d8.6727489!16s%2Fg%2F1tdzq7ct!19sChIJz4RJUqwOvUcR0Y6p1vPHCt8?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahn\u00e4rzte Wenz und Kolleg*innen",
+    "details_link": "https://www.google.com/maps/place/Zahn%C3%A4rzte+Wenz+und+Kolleg*innen/data=!4m7!3m6!1s0x47bd0ea5245b778d:0xddfe45258f50f65e!8m2!3d50.115476!4d8.684969!16s%2Fg%2F1tht0kxj!19sChIJjXdbJKUOvUcRXvZQjyVF_t0?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarztpraxis am Goetheplatz Dr. Sarkar",
+    "details_link": "https://www.google.com/maps/place/Zahnarztpraxis+am+Goetheplatz+Dr.+Sarkar/data=!4m7!3m6!1s0x47bd0eaed7fc99bb:0x44e9239e095d1ed!8m2!3d50.112347!4d8.6781822!16s%2Fg%2F11fxb965xs!19sChIJu5n8164OvUcR7dGV4DmSTgQ?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarzt Frankfurt \u2013 Zahnarztpraxis Rubin Enciso Arias",
+    "details_link": "https://www.google.com/maps/place/Zahnarzt+Frankfurt+%E2%80%93+Zahnarztpraxis+Rubin+Enciso+Arias/data=!4m7!3m6!1s0x47bd0eb1b2fe8e5f:0xd3744ddd786bed79!8m2!3d50.1183998!4d8.6800542!16s%2Fg%2F1tdy_1xy!19sChIJX47-srEOvUcRee1reN1NdNM?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Fay Dental implants CMD teeth cleaning",
+    "details_link": "https://www.google.com/maps/place/Fay+Dental+implants+CMD+teeth+cleaning/data=!4m7!3m6!1s0x47bd0eaee321687b:0xbe0ccf3fde8612e4!8m2!3d50.1134796!4d8.6781024!16s%2Fg%2F1tgf2bd3!19sChIJe2gh464OvUcR5BKG3j_PDL4?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Joanna K.Vorhauser",
+    "details_link": "https://www.google.com/maps/place/Joanna+K.Vorhauser/data=!4m7!3m6!1s0x47bd0e9487d235e9:0x7a5e228906bbcfdb!8m2!3d50.1159588!4d8.6960878!16s%2Fg%2F1v9gj33t!19sChIJ6TXSh5QOvUcR28-7BokiXno?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Hospitadent Frankfurt am Main",
+    "details_link": "https://www.google.com/maps/place/Hospitadent+Frankfurt+am+Main/data=!4m7!3m6!1s0x47bd0decd21fd9e9:0x180983f238095c07!8m2!3d50.1057973!4d8.6706351!16s%2Fg%2F11k5tx9zlk!19sChIJ6dkf0uwNvUcRB1wJOPKDCRg?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahn\u00e4rzte Goethestra\u00dfe - Dr. Hubertus Platt",
+    "details_link": "https://www.google.com/maps/place/Zahn%C3%A4rzte+Goethestra%C3%9Fe+-+Dr.+Hubertus+Platt/data=!4m7!3m6!1s0x47bd0eac3a73e7cb:0x30137bfb1e7522a8!8m2!3d50.1138901!4d8.6740554!16s%2Fg%2F1tdykb0z!19sChIJy-dzOqwOvUcRqCJ1Hvt7EzA?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarztpraxis PourDent Pourmaafi & Pourmaafi",
+    "details_link": "https://www.google.com/maps/place/Zahnarztpraxis+PourDent+Pourmaafi+%26+Pourmaafi/data=!4m7!3m6!1s0x47bd0ec7f8e83d41:0xef6aaf2feb7f4e98!8m2!3d50.1122118!4d8.664539!16s%2Fg%2F1w8w93tp!19sChIJQT3o-McOvUcRmE5_6y-vau8?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Dental practice dental Island",
+    "details_link": "https://www.google.com/maps/place/Dental+practice+dental+Island/data=!4m7!3m6!1s0x47bd0eae33ed360f:0x35b05de5f3d21ee3!8m2!3d50.1160206!4d8.6789746!16s%2Fg%2F11b6v0z7vd!19sChIJDzbtM64OvUcR4x7S8-VdsDU?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarztpraxis",
+    "details_link": "https://www.google.com/maps/place/Zahnarztpraxis/data=!4m7!3m6!1s0x47bd092f7c6db8d5:0x41bb5988b6d89aed!8m2!3d50.1417006!4d8.6642178!16s%2Fg%2F1tgcldrd!19sChIJ1bhtfC8JvUcR7ZrYtohZu0E?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Dr. Steffen G. Tschackert",
+    "details_link": "https://www.google.com/maps/place/Dr.+Steffen+G.+Tschackert/data=!4m7!3m6!1s0x47079846ed86c27b:0x55b195ede6a6f3e4!8m2!3d50.1138917!4d8.673918!16s%2Fg%2F11b5z5v3yt!19sChIJe8KG7UaYB0cR5POm5u2VsVU?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarztpraxis G3, Dr. Klein & Kollegen",
+    "details_link": "https://www.google.com/maps/place/Zahnarztpraxis+G3,+Dr.+Klein+%26+Kollegen/data=!4m7!3m6!1s0x47bd0eae9a0b4af3:0xc1c34941153413ca!8m2!3d50.1135429!4d8.6758237!16s%2Fg%2F11c0ps63kg!19sChIJ80oLmq4OvUcRyhM0FUFJw8E?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Dr. Anca Marian Zahnarztpraxis",
+    "details_link": "https://www.google.com/maps/place/Dr.+Anca+Marian+Zahnarztpraxis/data=!4m7!3m6!1s0x47bd094cda9247f3:0xf77d42b3241808a9!8m2!3d50.1205261!4d8.6699042!16s%2Fg%2F1tfxft30!19sChIJ80eS2kwJvUcRqQgYJLNCffc?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarztpraxis Dr. Croissant",
+    "details_link": "https://www.google.com/maps/place/Zahnarztpraxis+Dr.+Croissant/data=!4m7!3m6!1s0x47bd0c02c5c64361:0xeffb1e6d3a604e3b!8m2!3d50.104838!4d8.6779874!16s%2Fg%2F1thk7w1d!19sChIJYUPGxQIMvUcRO05gOm0e--8?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "DENTAL CLINIC GERMANY",
+    "details_link": "https://www.google.com/maps/place/DENTAL+CLINIC+GERMANY/data=!4m7!3m6!1s0x47bd0ea9441c0157:0x7586337a18c99534!8m2!3d50.1109827!4d8.6754623!16s%2Fg%2F11c1nf3kcf!19sChIJVwEcRKkOvUcRNJXJGHozhnU?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Dr. Dana L. Marian",
+    "details_link": "https://www.google.com/maps/place/Dr.+Dana+L.+Marian/data=!4m7!3m6!1s0x47bd0ebde870e517:0xe080cc6aa6539410!8m2!3d50.12001!4d8.69561!16s%2Fg%2F1td0r_f4!19sChIJF-Vw6L0OvUcREJRTpmrMgOA?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahn\u00e4rzte im Max-Beckmann-Haus",
+    "details_link": "https://www.google.com/maps/place/Zahn%C3%A4rzte+im+Max-Beckmann-Haus/data=!4m7!3m6!1s0x47bd0c02c83e3957:0x685e258aeba5dcb2!8m2!3d50.1051677!4d8.6782895!16s%2Fg%2F11bych7b7d!19sChIJVzk-yAIMvUcRstyl64olXmg?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Dr. Tatjana Mandsjak",
+    "details_link": "https://www.google.com/maps/place/Dr.+Tatjana+Mandsjak/data=!4m7!3m6!1s0x47bd0e9ae4ea4ea5:0xb78ff14c9a967c47!8m2!3d50.112671!4d8.7054722!16s%2Fg%2F11fzykfnzc!19sChIJpU7q5JoOvUcRR3yWmkzxj7c?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Dental Practice Dr. med. dent. Julia Wachsmann",
+    "details_link": "https://www.google.com/maps/place/Dental+Practice+Dr.+med.+dent.+Julia+Wachsmann/data=!4m7!3m6!1s0x47bd0c1bbe04a4eb:0xd3bbb8dfc5a79ca0!8m2!3d50.0997081!4d8.6820024!16s%2Fg%2F1v3dr7dm!19sChIJ66QEvhsMvUcRoJynxd-4u9M?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Dental Practice Dr. Volkmar Karnstedt",
+    "details_link": "https://www.google.com/maps/place/Dental+Practice+Dr.+Volkmar+Karnstedt/data=!4m7!3m6!1s0x47bd094d22b3b53d:0x6624a244741ade6e!8m2!3d50.1194133!4d8.6687845!16s%2Fg%2F1thxk5hx!19sChIJPbWzIk0JvUcRbt4adESiJGY?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Herr Dr. Alexander Keichel",
+    "details_link": "https://www.google.com/maps/place/Herr+Dr.+Alexander+Keichel/data=!4m7!3m6!1s0x47bd0ea9304dc363:0x7daa617c14006be8!8m2!3d50.1114426!4d8.6766254!16s%2Fg%2F1vvr5bdj!19sChIJY8NNMKkOvUcR6GsAFHxhqn0?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Rostock Zahn\u00e4rzte Frankfurt",
+    "details_link": "https://www.google.com/maps/place/Rostock+Zahn%C3%A4rzte+Frankfurt/data=!4m7!3m6!1s0x47bd095400569c11:0xc8516d188eaf31c4!8m2!3d50.1098821!4d8.6622078!16s%2Fg%2F1tlzz8xh!19sChIJEZxWAFQJvUcRxDGvjhhtUcg?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "ENDOPUR Praxisklinik",
+    "details_link": "https://www.google.com/maps/place/ENDOPUR+Praxisklinik/data=!4m7!3m6!1s0x47bd095237da4d65:0xe1a5cb17407a883e!8m2!3d50.116016!4d8.664002!16s%2Fg%2F11b6zqcr60!19sChIJZU3aN1IJvUcRPoh6QBfLpeE?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Dentists Goethestra\u00dfe Frankfurt",
+    "details_link": "https://www.google.com/maps/place/Dentists+Goethestra%C3%9Fe+Frankfurt/data=!4m7!3m6!1s0x47bd0eac3a73e7cb:0xf9bb9cfe6d3b61fd!8m2!3d50.1138901!4d8.6740554!16s%2Fg%2F11h19dd2w!19sChIJy-dzOqwOvUcR_WE7bf6cu_k?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Thorn Zahnmedizin | Dr. Gerrit Thorn | Frankfurt am Main",
+    "details_link": "https://www.google.com/maps/place/Thorn+Zahnmedizin+%7C+Dr.+Gerrit+Thorn+%7C+Frankfurt+am+Main/data=!4m7!3m6!1s0x47bd0c10b18d80ff:0x98163367e0196984!8m2!3d50.0946521!4d8.6821335!16s%2Fg%2F1v5fr0b3!19sChIJ_4CNsRAMvUcRhGkZ4GczFpg?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarzt Frankfurt",
+    "details_link": "https://www.google.com/maps/place/Zahnarzt+Frankfurt/data=!4m7!3m6!1s0x47bd0eb332700001:0xa90a0f97cd6334e7!8m2!3d50.120695!4d8.6708883!16s%2Fg%2F11f71n3nnp!19sChIJAQBwMrMOvUcR5zRjzZcPCqk?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarztpraxis Zaghian",
+    "details_link": "https://www.google.com/maps/place/Zahnarztpraxis+Zaghian/data=!4m7!3m6!1s0x47bd0c036ed48c37:0x5b98c005872e69d7!8m2!3d50.10237!4d8.67614!16s%2Fg%2F1tksgxqs!19sChIJN4zUbgMMvUcR12kuhwXAmFs?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Taylan Can",
+    "details_link": "https://www.google.com/maps/place/Taylan+Can/data=!4m7!3m6!1s0x47bd0d81a5ed17a3:0xdef44487d5833890!8m2!3d50.1054651!4d8.670329!16s%2Fg%2F11px9kvf6p!19sChIJoxftpYENvUcRkDiD1YdE9N4?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Dr. White",
+    "details_link": "https://www.google.com/maps/place/Dr.+White/data=!4m7!3m6!1s0x47bd0fc474a8913d:0xa92c5ff1f0ebde33!8m2!3d50.1179173!4d8.6860509!16s%2Fg%2F11j5p639rr!19sChIJPZGodMQPvUcRM97r8PFfLKk?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarztpraxis Andrej Kovac",
+    "details_link": "https://www.google.com/maps/place/Zahnarztpraxis+Andrej+Kovac/data=!4m7!3m6!1s0x47bd0d2d5e5837ff:0x75c1d28e111ebb13!8m2!3d50.1065312!4d8.6719847!16s%2Fg%2F11p102tycy!19sChIJ_zdYXi0NvUcRE7seEY7SwXU?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarzt Dirk Schmidt Brandl und Katharina Geib, Frankfurt Bornheim/Ostend",
+    "details_link": "https://www.google.com/maps/place/Zahnarzt+Dirk+Schmidt+Brandl+und+Katharina+Geib,+Frankfurt+Bornheim%2FOstend/data=!4m7!3m6!1s0x47bd0e8c48f15833:0x6e43ee755f17a461!8m2!3d50.1208035!4d8.7144903!16s%2Fg%2F11g9dppbnh!19sChIJM1jxSIwOvUcRYaQXX3XuQ24?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Adeli J.K. Zahnarztpraxis",
+    "details_link": "https://www.google.com/maps/place/Adeli+J.K.+Zahnarztpraxis/data=!4m7!3m6!1s0x47bd0955de478d61:0x7f2e6488ec5bf71d!8m2!3d50.1149649!4d8.6833302!16s%2Fg%2F1tfpyz5x!19sChIJYY1H3lUJvUcRHfdb7IhkLn8?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarzt Frankfurt - Praxis f\u00fcr Implantologie und Zahnerhaltung Dr. Ralph R\u00f6ser",
+    "details_link": "https://www.google.com/maps/place/Zahnarzt+Frankfurt+-+Praxis+f%C3%BCr+Implantologie+und+Zahnerhaltung+Dr.+Ralph+R%C3%B6ser/data=!4m7!3m6!1s0x47bd0edc504f5035:0x206114cc4158b596!8m2!3d50.1392923!4d8.6989145!16s%2Fg%2F1thkwc_h!19sChIJNVBPUNwOvUcRlrVYQcwUYSA?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarztpraxis Dr. Jannes Vogt",
+    "details_link": "https://www.google.com/maps/place/Zahnarztpraxis+Dr.+Jannes+Vogt/data=!4m7!3m6!1s0x47bd0eb30a4f833f:0xeff1986cfe080b8c!8m2!3d50.1207556!4d8.6739002!16s%2Fg%2F1tct7vfq!19sChIJP4NPCrMOvUcRjAsI_myY8e8?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarztpraxis Frankfurt Nordend - Dr. Carolina Cioch",
+    "details_link": "https://www.google.com/maps/place/Zahnarztpraxis+Frankfurt+Nordend+-+Dr.+Carolina+Cioch/data=!4m7!3m6!1s0x47bd0ec7ff99d005:0x1bb65f56f3d69010!8m2!3d50.1183998!4d8.6800542!16s%2Fg%2F1q5bt2xgt!19sChIJBdCZ_8cOvUcREJDW81Zfths?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Dr.med.stom. Narcis Popita",
+    "details_link": "https://www.google.com/maps/place/Dr.med.stom.+Narcis+Popita/data=!4m7!3m6!1s0x47bd09530516b28f:0x8ba992a343e4b012!8m2!3d50.1154557!4d8.669536!16s%2Fg%2F11fy44tzwg!19sChIJj7IWBVMJvUcRErDkQ6OSqYs?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Praxis f\u00fcr Zahnheilkunde Leister & Schulz - Paradontologie, Implantologie, Prophylaxe",
+    "details_link": "https://www.google.com/maps/place/Praxis+f%C3%BCr+Zahnheilkunde+Leister+%26+Schulz+-+Paradontologie,+Implantologie,+Prophylaxe/data=!4m7!3m6!1s0x47bd0e9e27ad2723:0xf2705d6e26341f7f!8m2!3d50.1053093!4d8.6966586!16s%2Fg%2F1hc2g18lz!19sChIJIyetJ54OvUcRfx80Jm5dcPI?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Dentaloft | Zahnarztpraxis in Bornheim",
+    "details_link": "https://www.google.com/maps/place/Dentaloft+%7C+Zahnarztpraxis+in+Bornheim/data=!4m7!3m6!1s0x47bd0e94a9f8ec0f:0xbb4dbe6bf410b4c6!8m2!3d50.1252181!4d8.7047276!16s%2Fg%2F11g_4kpwv!19sChIJD-z4qZQOvUcRxrQQ9Gu-Tbs?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Pekcan",
+    "details_link": "https://www.google.com/maps/place/Pekcan/data=!4m7!3m6!1s0x47bd0dd67dd91db3:0x392339b6bc1c789b!8m2!3d50.1006797!4d8.7245552!16s%2Fg%2F11bc7s0z59!19sChIJsx3ZfdYNvUcRm3gcvLY5Izk?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Edelweiss Dr. Tim Kowalke M.Sc.",
+    "details_link": "https://www.google.com/maps/place/Edelweiss+Dr.+Tim+Kowalke+M.Sc./data=!4m7!3m6!1s0x47bd0c0f2f735a1b:0xb1046b119678ef7f!8m2!3d50.0947069!4d8.6699704!16s%2Fg%2F1tfcmg49!19sChIJG1pzLw8MvUcRf-94lhFrBLE?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Brilliant Zahnmedizin Frankfurt",
+    "details_link": "https://www.google.com/maps/place/Brilliant+Zahnmedizin+Frankfurt/data=!4m7!3m6!1s0x47bd0b929eb55d71:0xe9786d24e345307c!8m2!3d50.0866321!4d8.6463022!16s%2Fg%2F1tf19wb7!19sChIJcV21npILvUcRfDBF4yRteOk?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "ZAHNARZTPRAXIS DR. SIMON THEISSEN & DR. BEATRICE ADELMANN - DENTIST",
+    "details_link": "https://www.google.com/maps/place/ZAHNARZTPRAXIS+DR.+SIMON+THEISSEN+%26+DR.+BEATRICE+ADELMANN+-+DENTIST/data=!4m7!3m6!1s0x47bd09f13483ee31:0x9c1b67cfc46ed15e!8m2!3d50.116525!4d8.6587816!16s%2Fg%2F11vk8jfynf!19sChIJMe6DNPEJvUcRXtFuxM9nG5w?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Dr.med.dent. Liana Florea dentist",
+    "details_link": "https://www.google.com/maps/place/Dr.med.dent.+Liana+Florea+dentist/data=!4m7!3m6!1s0x47bd0e9a3660d235:0x4f20970f5fae9d61!8m2!3d50.1127649!4d8.7028897!16s%2Fg%2F1tfphybc!19sChIJNdJgNpoOvUcRYZ2uXw-XIE8?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarztpraxis Frankfurt Dr. med. dent. Ivanka Barashka & Krassimira Baraschka",
+    "details_link": "https://www.google.com/maps/place/Zahnarztpraxis+Frankfurt+Dr.+med.+dent.+Ivanka+Barashka+%26+Krassimira+Baraschka/data=!4m7!3m6!1s0x47bd0dfd22003847:0x5b843832f7ac7d52!8m2!3d50.1142682!4d8.6831836!16s%2Fg%2F1tgw90fl!19sChIJRzgAIv0NvUcRUn2s9zI4hFs?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Winau & Mag - Praxis f\u00fcr Oralchirurgie",
+    "details_link": "https://www.google.com/maps/place/Winau+%26+Mag+-+Praxis+f%C3%BCr+Oralchirurgie/data=!4m7!3m6!1s0x47bd0eb3890d9085:0x50f5aa562ad084e3!8m2!3d50.1225152!4d8.6762175!16s%2Fg%2F1tdkfrw_!19sChIJhZANibMOvUcR44TQKlaq9VA?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Dr. med. dent. Stefanie Br\u00fcck, dentists at the Goethe House",
+    "details_link": "https://www.google.com/maps/place/Dr.+med.+dent.+Stefanie+Br%C3%BCck,+dentists+at+the+Goethe+House/data=!4m7!3m6!1s0x47bd0ea8d3fa01b7:0x8ae1afb32a490f7c!8m2!3d50.1114493!4d8.6781749!16s%2Fg%2F1td9zt6w!19sChIJtwH606gOvUcRfA9JKrOv4Yo?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarztpraxis Dr. Thomas Dobbertin, Dr. Maximilian Dobbertin MSc, Dr. Katharina van Koolwijk",
+    "details_link": "https://www.google.com/maps/place/Zahnarztpraxis+Dr.+Thomas+Dobbertin,+Dr.+Maximilian+Dobbertin+MSc,+Dr.+Katharina+van+Koolwijk/data=!4m7!3m6!1s0x47bd0f003520d1a9:0x884b8b6a71212ccc!8m2!3d50.1208532!4d8.67623!16s%2Fg%2F11gtg89fh4!19sChIJqdEgNQAPvUcRzCwhcWqLS4g?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Frau Dr. \u00d6zlem Avci",
+    "details_link": "https://www.google.com/maps/place/Frau+Dr.+%C3%96zlem+Avci/data=!4m7!3m6!1s0x47bd0ea50aae152d:0xc39ea127c247212d!8m2!3d50.1139632!4d8.6833822!16s%2Fg%2F1tk4q84z!19sChIJLRWuCqUOvUcRLSFHwiehnsM?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarztpraxis Tre Dento",
+    "details_link": "https://www.google.com/maps/place/Zahnarztpraxis+Tre+Dento/data=!4m7!3m6!1s0x47bd0eaf6650320f:0xf3f093b6c4b3f2cc!8m2!3d50.1131602!4d8.6806215!16s%2Fg%2F1tffym7y!19sChIJDzJQZq8OvUcRzPKzxLaT8PM?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarztpraxis Dr. Kullmann",
+    "details_link": "https://www.google.com/maps/place/Zahnarztpraxis+Dr.+Kullmann/data=!4m7!3m6!1s0x47bd0eae54586d79:0x7e9d0bf5518fc837!8m2!3d50.1145158!4d8.6783317!16s%2Fg%2F1tdcl205!19sChIJeW1YVK4OvUcRN8iPUfULnX4?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarztpraxis B. Karami - Frankfurt a.M.",
+    "details_link": "https://www.google.com/maps/place/Zahnarztpraxis+B.+Karami+-+Frankfurt+a.M./data=!4m7!3m6!1s0x47bd0eb46fffda59:0xcb10e8017b4fc3e8!8m2!3d50.1228928!4d8.6754674!16s%2Fg%2F1tk6zm1z!19sChIJWdr_b7QOvUcR6MNPewHoEMs?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Praxisgemeinschaft Reister&L\u00f6ffler",
+    "details_link": "https://www.google.com/maps/place/Praxisgemeinschaft+Reister%26L%C3%B6ffler/data=!4m7!3m6!1s0x47bd094b996694e9:0xcaaaeeba67f3dd01!8m2!3d50.1238329!4d8.6676825!16s%2Fg%2F1tj49lfw!19sChIJ6ZRmmUsJvUcRAd3zZ7ruqso?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarztpraxis Svetlana Holstein \u0441\u0442\u043e\u043c\u0430\u0442\u043e\u043b\u043e\u0433",
+    "details_link": "https://www.google.com/maps/place/Zahnarztpraxis+Svetlana+Holstein+%D1%81%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%BE%D0%BB%D0%BE%D0%B3/data=!4m7!3m6!1s0x47bd0eaeec4e3771:0x10d9a95c81e0fa00!8m2!3d50.1133913!4d8.6774811!16s%2Fg%2F1tj7_2dr!19sChIJcTdO7K4OvUcRAPrggVyp2RA?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahn\u00e4rzte Westend 1",
+    "details_link": "https://www.google.com/maps/place/Zahn%C3%A4rzte+Westend+1/data=!4m7!3m6!1s0x47bd095447e138e3:0x9844a86852e0ee50!8m2!3d50.110925!4d8.662719!16s%2Fg%2F1tdbk2vd!19sChIJ4zjhR1QJvUcRUO7gUmioRJg?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarzt Dr. Lucas Awiszus Bornheim/Frankfurt Ost-End",
+    "details_link": "https://www.google.com/maps/place/Zahnarzt+Dr.+Lucas+Awiszus+Bornheim%2FFrankfurt+Ost-End/data=!4m7!3m6!1s0x47bd0e93db2ac14f:0x5a339bb0a11a6dc!8m2!3d50.12069!4d8.70567!16s%2Fg%2F1td9zt6l!19sChIJT8Eq25MOvUcR3KYRCrs5owU?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Praxis f\u00fcr Zahnheilkunde Dr. Torsten Wallerius M.S.D. - Zahnarzt in Frankfurt",
+    "details_link": "https://www.google.com/maps/place/Praxis+f%C3%BCr+Zahnheilkunde+Dr.+Torsten+Wallerius+M.S.D.+-+Zahnarzt+in+Frankfurt/data=!4m7!3m6!1s0x47bd0eade79c4839:0x94d374469467804b!8m2!3d50.1158583!4d8.6751729!16s%2Fg%2F1tdhkyqs!19sChIJOUic560OvUcRS4BnlEZ005Q?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Dr. Martina Lampert - Praxis f\u00fcr Zahnmedizin und Oralchirurgie",
+    "details_link": "https://www.google.com/maps/place/Dr.+Martina+Lampert+-+Praxis+f%C3%BCr+Zahnmedizin+und+Oralchirurgie/data=!4m7!3m6!1s0x47bd0eb170d731d3:0x7b840f43bda563bf!8m2!3d50.1198383!4d8.677917!16s%2Fg%2F1th7m02g!19sChIJ0zHXcLEOvUcRv2OlvUMPhHs?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Praxis Dr. Tessmer & colleagues",
+    "details_link": "https://www.google.com/maps/place/Praxis+Dr.+Tessmer+%26+colleagues/data=!4m7!3m6!1s0x47bd0e94f930754d:0x946a7eeb97e0f5a6!8m2!3d50.1232289!4d8.7023377!16s%2Fg%2F1ttdxkgq!19sChIJTXUw-ZQOvUcRpvXgl-t-apQ?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Miss Dr. med. dent. Stephanie Ott",
+    "details_link": "https://www.google.com/maps/place/Miss+Dr.+med.+dent.+Stephanie+Ott/data=!4m7!3m6!1s0x47bd094368a58491:0xd47fedf39083212e!8m2!3d50.1205647!4d8.6498952!16s%2Fg%2F1td_xqdh!19sChIJkYSlaEMJvUcRLiGDkPPtf9Q?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Dr. Schumacher FELDBERG 5",
+    "details_link": "https://www.google.com/maps/place/Dr.+Schumacher+FELDBERG+5/data=!4m7!3m6!1s0x47bd094c0937d621:0x65a2987f204e02cc!8m2!3d50.1227054!4d8.6656857!16s%2Fg%2F1tt1gb9l!19sChIJIdY3CUwJvUcRzAJOIH-YomU?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Dr. Eleonore Sach",
+    "details_link": "https://www.google.com/maps/place/Dr.+Eleonore+Sach/data=!4m7!3m6!1s0x47bd0ce7db52aadb:0xa06217084db691ec!8m2!3d50.1065342!4d8.694651!16s%2Fg%2F11c1rfky1n!19sChIJ26pS2-cMvUcR7JG2TQgXYqA?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Herr Dr. Milivoj Krstic",
+    "details_link": "https://www.google.com/maps/place/Herr+Dr.+Milivoj+Krstic/data=!4m7!3m6!1s0x47bd0eae84c731db:0x499fc515a6e15483!8m2!3d50.1138504!4d8.6757809!16s%2Fg%2F1tffng76!19sChIJ2zHHhK4OvUcRg1ThphXFn0k?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Herr Dr. Yves Mettlin",
+    "details_link": "https://www.google.com/maps/place/Herr+Dr.+Yves+Mettlin/data=!4m7!3m6!1s0x47bd0c008df9cd09:0x33a637539a311bd1!8m2!3d50.1041333!4d8.6667907!16s%2Fg%2F1tdpqsfd!19sChIJCc35jQAMvUcR0RsxmlM3pjM?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Zahnarztpraxis Stephen Andreas",
+    "details_link": "https://www.google.com/maps/place/Zahnarztpraxis+Stephen+Andreas/data=!4m7!3m6!1s0x47bd0c1da75adc9b:0xbc501ba67c78a757!8m2!3d50.1045291!4d8.6822112!16s%2Fg%2F1tghc7vc!19sChIJm9xapx0MvUcRV6d4fKYbULw?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Dr. El Gourari | Zahnarztpraxis Frankfurt",
+    "details_link": "https://www.google.com/maps/place/Dr.+El+Gourari+%7C+Zahnarztpraxis+Frankfurt/data=!4m7!3m6!1s0x47bd0eaed38e246f:0xad5fd75b91778b3f!8m2!3d50.111965!4d8.677398!16s%2Fg%2F11hckg2yyb!19sChIJbySO064OvUcRP4t3kVvXX60?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Dentaloft | Zahnarztpraxis im Nordend",
+    "details_link": "https://www.google.com/maps/place/Dentaloft+%7C+Zahnarztpraxis+im+Nordend/data=!4m7!3m6!1s0x47bd0ec8f6358f53:0x5e3f9b5a3e836d6f!8m2!3d50.1294072!4d8.6844911!16s%2Fg%2F11gzg4_6s!19sChIJU4819sgOvUcRb22DPlqbP14?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Dr. Z Zahnmedizinisches Versorgungszentrum Frankfurt",
+    "details_link": "https://www.google.com/maps/place/Dr.+Z+Zahnmedizinisches+Versorgungszentrum+Frankfurt/data=!4m7!3m6!1s0x47bd0ea57133f3d7:0x74f16d095d631920!8m2!3d50.114144!4d8.6830687!16s%2Fg%2F11_q_45nd!19sChIJ1_MzcaUOvUcRIBljXQlt8XQ?authuser=0&hl=en&rclk=1"
+  },
+  {
+    "name": "Implantologie Frankfurt Dr. Frank Spiegelberg Zahnarzt u. Oralchirurg",
+    "details_link": "https://www.google.com/maps/place/Implantologie+Frankfurt+Dr.+Frank+Spiegelberg+Zahnarzt+u.+Oralchirurg/data=!4m7!3m6!1s0x47bd0eae3340494d:0xbf15cd4b134f1d27!8m2!3d50.1158833!4d8.6789219!16s%2Fg%2F1tknzxk7!19sChIJTUlAM64OvUcRJx1PE0vNFb8?authuser=0&hl=en&rclk=1"
   }
 ]
