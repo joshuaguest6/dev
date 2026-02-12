@@ -166,6 +166,9 @@ def extract_details(records):
             context.close()
             time.sleep(random.uniform(2, 5))
 
+        logging.info(f'{len([record for record in records if record['website_link'] is not None])} website links found')
+        logging.info(f'{len([record for record in records if record['website_link'] is None])} website links not found')
+
         browser.close()
     
     return records
@@ -207,6 +210,9 @@ def enrich_data(records):
 
         logging.info('Finished visiting business websites...')
         
+        logging.info(f'{len([record for record in records if record['website_phone'] is not None])} phone numbers found')
+        logging.info(f'{len([record for record in records if record['website_phone'] is None])} phone numbers not found')
+
         browser.close()
 
     return records
