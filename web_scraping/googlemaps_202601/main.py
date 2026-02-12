@@ -220,7 +220,7 @@ def enrich_data(records):
 def save_records(records, search):
     client = storage.Client()
     bucket = client.bucket('maps-crawler')
-    blob = bucket.blob(f'germany/{search.replace(" ", "_").lower()}.json')
+    blob = bucket.blob(f'{search.replace(" ", "_").lower()}.json')
 
     blob.upload_from_string(json.dumps(records, indent=2), content_type='application/json')
 

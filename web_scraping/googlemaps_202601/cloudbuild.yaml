@@ -30,8 +30,8 @@ steps:
       - --region=australia-southeast1
       - --memory=4Gi
       - --cpu=2
-      - --tasks=2
-      - --parallelism=2
+      - --tasks=12
+      - --parallelism=12
       - --task-timeout=3600
       - --quiet
 
