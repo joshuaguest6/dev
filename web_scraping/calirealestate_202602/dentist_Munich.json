@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Alldent Zahnzentrum Munich",
+    "details_link": "https://www.google.com/maps/place/Alldent+Zahnzentrum+Munich/data=!4m7!3m6!1s0x479e75f9cf471811:0x181ae45585d4b729!8m2!3d48.139205!4d11.5616073!16s%2Fg%2F1tpc6z6p!19sChIJERhHz_l1nkcRKbfUhVXkGhg?authuser=0&hl=en&rclk=1",
+    "website_link": "https://www.alldent-zahnzentrum.de/",
+    "phone": "+49 89 54459898",
+    "website_phone": "0894523950"
+  },
+  {
+    "name": "Dental Health Center Dr. Berand",
+    "details_link": "https://www.google.com/maps/place/Dental+Health+Center+Dr.+Berand/data=!4m7!3m6!1s0x479e7620978c0087:0x80c23a8a1246ec30!8m2!3d48.1410144!4d11.5195641!16s%2Fg%2F11g65fsc_g!19sChIJhwCMlyB2nkcRMOxGEoo6woA?authuser=0&hl=en&rclk=1",
+    "website_link": "http://www.zahn-gesundheitszentrum.de/",
+    "phone": "+49 89 57909596",
+    "website_phone": null
+  },
+  {
+    "name": "dent + face Zahnzentrum M\u00fcnchen",
+    "details_link": "https://www.google.com/maps/place/dent+%2B+face+Zahnzentrum+M%C3%BCnchen/data=!4m7!3m6!1s0x479dd9784992027d:0x331dd8ade38f531!8m2!3d48.1311309!4d11.5312621!16s%2Fg%2F11fv73cc38!19sChIJfQKSSXjZnUcRMfU43ordMQM?authuser=0&hl=en&rclk=1",
+    "website_link": "https://www.dent-und-face.de/",
+    "phone": "+49 89 55292030",
+    "website_phone": "+498955292030"
+  },
+  {
+    "name": "Alldent Zahnzentrum Einstein",
+    "details_link": "https://www.google.com/maps/place/Alldent+Zahnzentrum+Einstein/data=!4m7!3m6!1s0x479e7564ad012b37:0x8f9346162f4f8d02!8m2!3d48.1362738!4d11.6139143!16s%2Fg%2F11b7qbwh2m!19sChIJNysBrWR1nkcRAo1PLxZGk48?authuser=0&hl=en&rclk=1",
+    "website_link": "https://www.alldent-zahnzentrum.de/",
+    "phone": "+49 89 4523950",
+    "website_phone": "0894523950"
+  },
+  {
+    "name": "Zahnarztpraxis im Lehel",
+    "details_link": "https://www.google.com/maps/place/Zahnarztpraxis+im+Lehel/data=!4m7!3m6!1s0x479e7584586e03f9:0x9defc2d05d0a785c!8m2!3d48.1403488!4d11.593613!16s%2Fg%2F1tfpt7rk!19sChIJ-QNuWIR1nkcRXHgKXdDC750?authuser=0&hl=en&rclk=1",
+    "website_link": "https://www.zahnarzt-lehel.de/",
+    "phone": "+49 89 25546888",
+    "website_phone": "+498925546888"
+  },
+  {
+    "name": "MunichDent Zahnarztpraxis",
+    "details_link": "https://www.google.com/maps/place/MunichDent+Zahnarztpraxis/data=!4m7!3m6!1s0x479dd9a02542c0d9:0xf6f34b54993baf45!8m2!3d48.0945639!4d11.5084035!16s%2Fg%2F1wnbw_bz!19sChIJ2cBCJaDZnUcRRa87mVRL8_Y?authuser=0&hl=en&rclk=1",
+    "website_link": "https://www.munich-dent.de/",
+    "phone": "+49 89 41115020",
+    "website_phone": "00498941115020"
+  }
+]

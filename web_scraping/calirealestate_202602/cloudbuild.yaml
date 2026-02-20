@@ -1,0 +1,39 @@
+steps:
+  # Delete job if it exists (ignore failure)
+  - name: gcr.io/google.com/cloudsdktool/cloud-sdk
+    entrypoint: bash
+    args:
+      - -c
+      - |
+        gcloud run jobs delete maps-crawler \
+          --region=australia-southeast1 \
+          --quiet || true
+          
+  # Build Docker image
+  - name: gcr.io/cloud-builders/docker
+    dir: web_scraping/googlemaps_202601
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/maps-crawler:$COMMIT_SHA', '.']
+
+  # Push Docker image
+  - name: gcr.io/cloud-builders/docker
+    args: ['push', 'gcr.io/$PROJECT_ID/maps-crawler:$COMMIT_SHA']
+
+  # Deploy to Cloud Run
+  - name: gcr.io/google.com/cloudsdktool/cloud-sdk
+    entrypoint: gcloud
+    args:
+      - run
+      - jobs
+      - create
+      - maps-crawler
+      - --image=gcr.io/$PROJECT_ID/maps-crawler:$COMMIT_SHA
+      - --region=australia-southeast1
+      - --memory=4Gi
+      - --cpu=2
+      - --quiet
+
+images:
+  - gcr.io/$PROJECT_ID/maps-crawler:$COMMIT_SHA
+
+options:
+  logging: CLOUD_LOGGING_ONLY
